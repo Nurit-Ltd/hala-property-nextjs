@@ -36,3 +36,12 @@ body {
 
   box-shadow: 0px 1px 2px 0px #3c40431c;
 }
+.nav-ai-button-box {
+  box-shadow: 0px 2px 4px 0px #1b1c1d2e;
+  background: linear-gradient(92.14deg, #3b48df 0%, #cd34db 102.52%),
+    radial-gradient(
+      100% 100% at 50% 0%,
+      rgba(255, 255, 255, 0.2) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+}

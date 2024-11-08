@@ -3,7 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
+import heartIcon from "../../../assets/home/heart.svg";
 import logo from "../../../assets/home/logo-main.svg";
+import starIcon from "../../../assets/home/starIcon.svg";
 
 const Navbar = () => {
   const [currentPath, setCurrentPath] = useState("");
@@ -90,31 +92,31 @@ const Navbar = () => {
                 </button>
 
                 <div
-                  className={`absolute right-0 mt-2 w-56 bg-white border border-gray-200 rounded-md shadow-lg transition-all duration-300 transform ${
+                  className={`absolute right-0 mt-2 w-[138px] bg-white border border-grey300 p-2 rounded-lg transition-all duration-300 transform ${
                     isOpen
                       ? "opacity-100 scale-100 visible"
                       : "opacity-0 scale-95 invisible"
                   }`}
                 >
-                  <div className="py-1">
+                  <div className="space-y-2">
                     <Link
                       href="/about-us"
                       passHref
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                      className="block px-3 py-1.5 font-medium text-grey600 hover:bg-primary50 hover:text-grey900 duration-300 rounded"
                     >
                       About Us
                     </Link>
                     <Link
                       href="/contact-us"
                       passHref
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                      className="block px-4 py-2 font-medium text-grey600 hover:bg-primary50 hover:text-grey900 duration-300 rounded"
                     >
                       Contact Us
                     </Link>
                     <Link
                       href="/blog"
                       passHref
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                      className="block px-4 py-2 font-medium text-grey600 hover:bg-primary50 hover:text-grey900 duration-300 rounded"
                     >
                       Blog
                     </Link>
@@ -124,10 +126,31 @@ const Navbar = () => {
             </ul>
 
             {/* Right-side buttons */}
-            <div className="flex items-center gap-2">
-              <button className="px-3 py-1 text-white">Love</button>
-              <button className="px-3 py-1 text-white">Find Al</button>
-              <button className="px-3 py-1 text-white">Sign In</button>
+            <div className="flex items-center gap-6">
+              <Link
+                href={"#"}
+                className="w-10 h-10 rounded-full bg-white/[10%] backdrop-blur-[9px] flex items-center justify-center relative"
+              >
+                <Image src={heartIcon} alt="heartIcon" />
+                <div className="absolute top-[-4px] right-[-4px] w-4 h-4 rounded-full bg-baseRed flex items-center justify-center">
+                  <span className="font-medium text-[10px] text-white">2</span>
+                </div>
+              </Link>
+              <div className="flex items-center gap-4">
+                <Link
+                  href={"#"}
+                  className="px-5 py-2 h-12 rounded-lg border border-white/[30%] nav-ai-button-box flex items-center justify-center gap-2 text-white font-medium"
+                >
+                  <Image src={starIcon} alt="starIcon" />
+                  Find Property with AI
+                </Link>
+                <Link
+                  href={"#"}
+                  className="h-12 px-8 py-2 bg-gradient-to-r from-[#0E5DF4] to-[#004BDC] border border-black/[8%] rounded-lg flex items-center justify-center text-white font-semibold "
+                >
+                  Sign in
+                </Link>
+              </div>
             </div>
           </div>
         </div>

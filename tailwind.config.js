@@ -9,8 +9,13 @@ module.exports = {
     extend: {
       colors: {
         primary:"#0954E5",
+        primary50:"#E6EEFC",
         darkBlue:"#04074E",
-        grey500:"#A0AEC0"
+        grey900:"#04074E",
+        grey600:"#687588",
+        grey500:"#A0AEC0",
+        grey300:"#E9EAEC",
+        baseRed:"#ED5763",
       },
       fontFamily: {
         Merriweather: "'Merriweather', 'serif'",
