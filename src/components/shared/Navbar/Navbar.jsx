@@ -1,4 +1,5 @@
 "use client";
+import { navItems } from "@/data/navItems";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
@@ -19,13 +20,7 @@ const Navbar = () => {
     }
   }, []);
 
-  // Define the navigation items
-  const navItems = [
-    { label: "Home", path: "/" },
-    { label: "Buy", path: "/buy" },
-    { label: "Golden Visa", path: "/golden-visa" },
-    { label: "Map View", path: "/map-view" },
-  ];
+ 
 
   const handleClick = (path) => {
     setCurrentPath(path);
@@ -69,7 +64,7 @@ const Navbar = () => {
                     className={`px-3 py-1.5 ${
                       currentPath === item.path
                         ? "text-white border-b-[1.5px] border-white font-bold"
-                        : "text-grey500 font-semibold"
+                        : "text-grey500 font-semibold hover:text-white duration-200"
                     }`}
                   >
                     {item.label}
