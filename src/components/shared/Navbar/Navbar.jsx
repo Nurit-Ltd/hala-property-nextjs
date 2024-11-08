@@ -42,7 +42,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="bg-darkBlue">
+    <nav className="bg-darkBlue hidden lg:block">
       <div className="container_fluid">
         <div className="w-full h-24 flex items-center">
           <div className="w-full h-12 flex items-center justify-between">

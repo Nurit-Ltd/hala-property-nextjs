@@ -11,12 +11,12 @@ const Footer = () => {
     <footer className="bg-darkBlue text-white">
       <section>
         <div className="container_fluid">
-          <div className="pt-25 pb-20">
-            <div className="grid grid-cols-7 gap-4">
-              <div className=" col-span-2 space-y-4">
+          <div className="pt-8 pb-8 lg:pt-25 lg:pb-20">
+            <div className="grid grid-cols-2  lg:grid-cols-7 gap-6 lg:gap-4">
+              <div className="col-span-2 space-y-3 sm:space-y-4">
                 <div className="flex items-center gap-2">
-                  <Image src={logo} alt="mainLogo" />
-                  <h4 className="text-[28px] tracking-[-2%] font-semibold text-white">
+                  <Image src={logo} alt="mainLogo" className="w-6 h-6 md:h-11 md:w-11" />
+                  <h4 className="text-xl sm:text-[28px] tracking-[-2%] font-semibold text-white">
                     Hala Property
                   </h4>
                 </div>
@@ -82,9 +82,9 @@ const Footer = () => {
                 </ul>
               </div>
 
-              <div className="col-span-1 space-y-4">
+              <div className="col-span-2 lg:col-span-1 space-y-4">
                 <h4 className="text-sm font-bold">Follow us</h4>
-                <ul className="space-y-3">
+                <ul className="flex flex-row items-center lg:flex-col lg:items-start lg:space-y-3 gap-6 lg:gap-0">
                   <li>
                     <Link href={"#"} className="text-sm">
                       Facebook
@@ -108,21 +108,21 @@ const Footer = () => {
                 </ul>
               </div>
               <div className="col-span-2 space-y-4">
-                <h4 className="text-sm font-bold">Stay up to date</h4>
+                <h4 className="text-sm font-bold uppercase">Stay up to date</h4>
                 <h4 className="text-sm">
                   Sign up for our newsletter and stay ahead of the game with all
                   the latest insights, news and updates!Yalla, what are you
                   waiting for?
                 </h4>
-                <div className="space-y-2.5">
+                <div className="flex flex-row lg:flex-col lg:space-y-2.5 gap-2 lg:gap-0">
                   <input
                     type="email"
                     placeholder="Your email"
-                    className="w-full h-11 px-5 py-2.5 rounded-md bg-grey100 outline-none placeholder:text-grey600 text-black"
+                    className="w-[70%] lg:w-full h-11 px-5 py-2.5 rounded-md bg-grey100 outline-none placeholder:text-grey600 text-black"
                   />
                   <button
                     type="submit"
-                    className="w-full h-[42px] py-1.5 px-8 bg-primary text-white rounded-md footer-subscription flex items-center justify-center text-sm font-semibold"
+                    className="w-[30%] lg:w-full h-11 lg:h-[42px] py-1.5 px-8 bg-primary text-white rounded-md footer-subscription flex items-center justify-center text-sm font-semibold"
                   >
                     Subscribe
                   </button>
@@ -135,8 +135,8 @@ const Footer = () => {
       <section>
         <div className="border-t border-white/[10%]">
           <div className="container_fluid">
-            <div className="py-[30px] flex items-center justify-between">
-              <h4 className="text-sm font-medium text-white">
+            <div className="pt-5  lg:pt-[30px] pb-[30px] flex flex-col lg:flex-row lg:items-center justify-between gap-4 lg:gap-0">
+              <h4 className="text-sm font-medium text-white opacity-75">
                 © 2024 Hala Property, Inc. All Rights Reserved.
               </h4>
               <div className="flex items-center gap-3">

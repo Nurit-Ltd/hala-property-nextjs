@@ -28,7 +28,7 @@ body {
 
 /* container style */
 .container_fluid {
-  @apply max-w-full 2xl:max-w-[1280px] px-3 lg:px-12 2xl:px-0 2xl:mx-auto;
+  @apply max-w-full 2xl:max-w-[1280px] px-4 lg:px-12 2xl:px-0 2xl:mx-auto;
 }
 
 .navbar-box-shadow {
