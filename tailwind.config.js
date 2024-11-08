@@ -21,6 +21,12 @@ module.exports = {
         Merriweather: "'Merriweather', 'serif'",
         Lexend: "'Lexend', 'sans-serif'",
       },
+      padding: {
+        '25': '100px',
+      },
+      margin: {
+        '25': '100px',
+      },
     },
   },
   plugins: [],
