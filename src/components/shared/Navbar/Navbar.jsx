@@ -47,12 +47,12 @@ const Navbar = () => {
         <div className="w-full h-24 flex items-center">
           <div className="w-full h-12 flex items-center justify-between">
             {/* Logo section */}
-            <div className="flex items-center gap-2.5">
+            <Link href={"#"} className="flex items-center gap-2.5">
               <Image src={logo} alt="mainLogo" />
               <h4 className="text-[28px] font-Lexend tracking-[-4%] font-medium text-white">
                 Hala Property
               </h4>
-            </div>
+            </Link>
 
             {/* menu list */}
             <ul className="flex items-center gap-1.5">

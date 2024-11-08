@@ -11,7 +11,7 @@ const Footer = () => {
             <div className="grid grid-cols-2 lg:grid-cols-7 gap-6 lg:gap-4">
               {/* Company Info */}
               <div className="col-span-2 space-y-3 sm:space-y-4">
-                <div className="flex items-center gap-2">
+                <Link href={"/"} className="flex items-center gap-2">
                   <Image
                     src={footerData.companyInfo.logo}
                     alt="Main Logo"
@@ -20,7 +20,7 @@ const Footer = () => {
                   <h4 className="text-xl sm:text-[28px] tracking-[-2%] font-semibold text-white">
                     {footerData.companyInfo.name}
                   </h4>
-                </div>
+                </Link>
                 <div className="flex items-center gap-3">
                   <Image
                     src={footerData.companyInfo.locationIcon}
