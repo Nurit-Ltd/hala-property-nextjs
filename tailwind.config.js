@@ -8,8 +8,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        primary:"#0954E5",
+        darkBlue:"#04074E",
+        grey500:"#A0AEC0"
+      },
+      fontFamily: {
+        Merriweather: "'Merriweather', 'serif'",
       },
     },
   },

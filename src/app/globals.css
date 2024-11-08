@@ -1,21 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* font-family: "Manrope", sans-serif; */
+/* font-family: "Merriweather", serif; */
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  margin: 0;
+  padding: 0;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  max-width: 1920px;
+  margin: 0 auto;
+  position: relative;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+}
+
+/* container style */
+.container_fluid {
+  @apply max-w-full 2xl:max-w-[1280px] px-3 lg:px-12 2xl:px-0 2xl:mx-auto;
+}
+
+.navbar-box-shadow {
+  box-shadow: 0px 1px 4px 2px #3c40430d;
+
+  box-shadow: 0px 1px 2px 0px #3c40431c;
 }
