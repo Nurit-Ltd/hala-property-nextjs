@@ -53,3 +53,13 @@ body {
 .footer-language {
   box-shadow: 0px 1px 2px 0px #0000001a;
 }
+.hero-info-box {
+  box-shadow: 0px 22.24px 37.07px -22.24px #0000001a;
+
+  box-shadow: 0px 3.71px 11.12px 0px #00000014;
+}
+.hero-search-box {
+  box-shadow: 0px 2px 4px 0px #0000001a;
+
+  box-shadow: 0px 2px 12px 0px #0000001f inset;
+}

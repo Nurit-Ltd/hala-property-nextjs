@@ -18,6 +18,7 @@ module.exports = {
         grey100:"#F8F8F8",
         grey50:"#E6E6E6",
         baseRed:"#ED5763",
+        grayLine:"#E2E8F0"
       },
       fontFamily: {
         Merriweather: "'Merriweather', 'serif'",
