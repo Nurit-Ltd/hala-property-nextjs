@@ -1,4 +1,6 @@
-
+import cardProduct2 from "../assets/home/card-image-2.jpeg";
+import cardProduct3 from "../assets/home/card-image-3.jpeg";
+import cardProduct1 from "../assets/home/card-image.jpeg";
 
 export const cardData = [
   {

@@ -24,7 +24,8 @@ module.exports = {
         secBg:"#f7f5f2",
         grayBorder:"#F1F2F4",
         success:"#E7F7EF",
-        errorDark:"#E03137"
+        errorDark:"#E03137",
+        errorRedLight:"#FFEDEC",
       },
       fontFamily: {
         Merriweather: "'Merriweather', 'serif'",
