@@ -1,5 +1,6 @@
 import ProductCard from "@/components/shared/ProductCard/ProductCard";
 import { cardData } from "@/data/productCardData";
+import { FaAngleRight } from "react-icons/fa6";
 
 const TrendProperties = () => {
   return (
@@ -20,6 +21,12 @@ const TrendProperties = () => {
             {cardData.map((card) => (
               <ProductCard key={card.id} card={card} />
             ))}
+          </div>
+          <div className="mt-12 flex items-center justify-center">
+             <button className="w-[144px] h-12 rounded-[40px] border border-darkBlue flex items-center justify-center gap-1 bg-transparent font-bold text-base text-darkBlue hover:bg-darkBlue hover:text-white duration-200">
+                 View More
+                 <FaAngleRight />
+             </button>
           </div>
         </div>
       </div>
