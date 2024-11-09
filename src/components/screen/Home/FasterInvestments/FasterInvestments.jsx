@@ -8,7 +8,8 @@ import clientIcon from "../../../../assets/home/user-faster.svg";
 const FasterInvestments = () => {
  
   return (
-    <section className="bg-darkBlue">
+    <section className="pt-15">
+      <div className="bg-darkBlue">
       <div className="container_fluid">
         <div className="pt-15 pb-25">
           <div className="max-w-[610px] mx-auto">
@@ -68,6 +69,7 @@ const FasterInvestments = () => {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </section>
   );
