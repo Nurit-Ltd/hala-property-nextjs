@@ -8,7 +8,7 @@ import shower from "../../../../assets/home/shower-icon.svg";
 const LuxuryProperties = () => {
   return (
     <section className="bg-secBg">
-      <div className="mt-[-60px] max-w-[1424px] mx-auto pt-12 pb-[60px] px-[72px] bg-white rounded-3xl luxury-properties">
+      <div className=" max-w-[1424px] mx-auto pt-12 pb-[60px] px-[72px] bg-white rounded-3xl luxury-properties">
         <h2 className="text-[48px] font-bold text-darkBlue text-center">
           Luxury Properties{" "}
           <span className="text-primary">You&apos;ll Love</span>
@@ -55,10 +55,10 @@ const LuxuryProperties = () => {
                   style={{
                     display: "-webkit-box",
                     WebkitBoxOrient: "vertical",
-                    WebkitLineClamp: 3, 
-                    overflow: "hidden", 
+                    WebkitLineClamp: 3,
+                    overflow: "hidden",
                     textOverflow: "ellipsis",
-                    maxHeight: "48px", 
+                    maxHeight: "48px",
                   }}
                 >
                   Experience refined urban living with stunning views of
@@ -109,10 +109,10 @@ const LuxuryProperties = () => {
                   style={{
                     display: "-webkit-box",
                     WebkitBoxOrient: "vertical",
-                    WebkitLineClamp: 3, 
-                    overflow: "hidden", 
+                    WebkitLineClamp: 3,
+                    overflow: "hidden",
                     textOverflow: "ellipsis",
-                    maxHeight: "48px", 
+                    maxHeight: "48px",
                   }}
                 >
                   Experience refined urban living with stunning views of
@@ -163,10 +163,10 @@ const LuxuryProperties = () => {
                   style={{
                     display: "-webkit-box",
                     WebkitBoxOrient: "vertical",
-                    WebkitLineClamp: 3, 
-                    overflow: "hidden", 
+                    WebkitLineClamp: 3,
+                    overflow: "hidden",
                     textOverflow: "ellipsis",
-                    maxHeight: "48px", 
+                    maxHeight: "48px",
                   }}
                 >
                   Experience refined urban living with stunning views of

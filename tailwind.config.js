@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       colors: {
         primary:"#0954E5",
+        primary75:"#9AB9F4",
         primary50:"#E6EEFC",
         darkBlue:"#04074E",
         grey900:"#04074E",
@@ -29,9 +30,11 @@ module.exports = {
       },
       padding: {
         '25': '100px',
+        '15': '60px',
       },
       margin: {
         '25': '100px',
+        '15': '60px',
       },
     },
   },
