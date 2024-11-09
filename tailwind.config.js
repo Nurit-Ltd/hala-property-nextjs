@@ -22,7 +22,9 @@ module.exports = {
         baseRed:"#ED5763",
         grayLine:"#E2E8F0",
         secBg:"#f7f5f2",
-        grayBorder:"#F1F2F4"
+        grayBorder:"#F1F2F4",
+        success:"#E7F7EF",
+        errorDark:"#E03137"
       },
       fontFamily: {
         Merriweather: "'Merriweather', 'serif'",
@@ -36,6 +38,9 @@ module.exports = {
       margin: {
         '25': '100px',
         '18': '72px',
+      },
+      backdropBlur: {
+        'card-custom': '9px',
       },
     },
   },
