@@ -38,6 +38,7 @@ module.exports = {
       },
       margin: {
         '25': '100px',
+        '15': '60px',
         '18': '72px',
       },
       backdropBlur: {

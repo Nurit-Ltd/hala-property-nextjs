@@ -8,7 +8,7 @@ const TrendProperties = () => {
       <div className="container_fluid">
         <div className="pt-20 pb-18">
           <div className="flex flex-col items-center justify-center space-y-[6px] md:space-y-2">
-            <h2 className="text-xl md:text-[48px] md:leading-[67px] font-bold text-darkBlue text-center">
+            <h2 className="section-header-title text-center text-darkBlue">
               Trending <span className="text-primary">Properties</span>
             </h2>
             <h4 className="max-w-[784px] mx-auto text-sm md:text-lg text-grey700 text-center">
