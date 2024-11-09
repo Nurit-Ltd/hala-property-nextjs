@@ -4,7 +4,7 @@ import { FaAngleRight } from "react-icons/fa6";
 
 const TrendProperties = () => {
   return (
-    <section>
+    <section className="bg-white">
       <div className="container_fluid">
         <div className="pt-20 pb-18">
           <div className="flex flex-col items-center justify-center space-y-[6px] md:space-y-2">

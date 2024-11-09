@@ -13,9 +13,11 @@ module.exports = {
         primary50:"#E6EEFC",
         darkBlue:"#04074E",
         grey900:"#04074E",
+        grey800:"#1F2937",
         grey700:"#323B49",
         grey600:"#687588",
         grey500:"#A0AEC0",
+        grey400:"#CBD5E0",
         grey300:"#E9EAEC",
         grey100:"#F8F8F8",
         grey50:"#E6E6E6",
@@ -26,6 +28,7 @@ module.exports = {
         success:"#E7F7EF",
         errorDark:"#E03137",
         errorRedLight:"#FFEDEC",
+        grayTextAd:"#6D6E73"
       },
       fontFamily: {
         Merriweather: "'Merriweather', 'serif'",

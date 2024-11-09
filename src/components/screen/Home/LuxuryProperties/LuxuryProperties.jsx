@@ -7,7 +7,7 @@ import shower from "../../../../assets/home/shower-icon.svg";
 
 const LuxuryProperties = () => {
   return (
-    <section className="bg-secBg">
+    <section>
       <div className=" max-w-[1424px] mx-auto pt-12 pb-[60px] px-[72px] bg-white rounded-3xl luxury-properties">
         <h2 className="text-[48px] font-bold text-darkBlue text-center">
           Luxury Properties{" "}
