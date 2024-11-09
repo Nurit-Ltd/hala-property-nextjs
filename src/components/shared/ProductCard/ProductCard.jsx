@@ -13,7 +13,7 @@ const ProductCard = ({ card }) => {
         <Image
           src={card.image}
           alt={`cardProduct${card.id}`}
-          className="w-full h-[256px] rounded-tl-2xl rounded-tr-2xl"
+          className="w-full h-[190px] md:h-[256px] rounded-tl-2xl rounded-tr-2xl"
         />
         <div className="absolute top-[15px] left-[15px] flex items-center gap-[10px]">
           <div className="rounded-md border-[.5px] bg-black/[25%] border-white/[20%] w-20 h-7 flex items-center justify-center backdrop-blur-card-custom text-sm font-semibold text-white">
@@ -21,7 +21,7 @@ const ProductCard = ({ card }) => {
           </div>
           <div className="rounded-md border-[.5px] bg-black/[25%] border-white/[20%] w-[75px] h-7 flex items-center justify-center gap-[6px] backdrop-blur-card-custom text-sm font-semibold text-white">
             <div
-              className={`w-[22px] h-5 rounded ${
+              className={`w-[22px] h-5 rounded flex items-center justify-center ${
                 card.isPercentageUp ? "bg-success" : "bg-errorRedLight"
               } py-[2px] px-1`}
             >
