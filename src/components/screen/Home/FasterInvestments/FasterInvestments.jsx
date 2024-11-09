@@ -24,7 +24,7 @@ const FasterInvestments = () => {
                 alt="clockIcon"
                 className="w-5 h-5 md:w-20 md:h-20"
               />
-              <div className="px-5 md:px-9 flex flex-col items-center space-y-[.43px] md:space-y-[2px]">
+              <div className="px-2 md:px-9 flex flex-col items-center space-y-[.43px] md:space-y-[2px]">
                 <h2 className="title-text text-white">
                   <CountUp end={10000} />+
                 </h2>
@@ -33,14 +33,14 @@ const FasterInvestments = () => {
                 </h4>
               </div>
             </div>
-            <div className="mx-2 md:mx-15 w-[1px] md:w-[2px] h-[196px] bg-white/[20%] md:bg-white/[10%]"></div>
+            <div className="mx-2 md:mx-15 w-[1px] md:w-[2px] h-[63px] md:h-[196px] bg-white/[20%] md:bg-white/[10%]"></div>
             <div className="flex flex-col items-center gap-[5px] md:gap-5">
               <Image
                 src={clientIcon}
                 alt="clientIcon"
                 className="w-5 h-5 md:w-20 md:h-20"
               />
-              <div className="px-5 md:px-9 flex flex-col items-center space-y-[.43px] md:space-y-[2px]">
+              <div className="px-2 md:px-9 flex flex-col items-center space-y-[.43px] md:space-y-[2px]">
                 <h2 className="title-text text-white">
                   <CountUp end={250} />+
                 </h2>
@@ -49,7 +49,7 @@ const FasterInvestments = () => {
                 </h4>
               </div>
             </div>
-            <div className="mx-2 md:mx-15 w-[1px] md:w-[2px] h-[196px] bg-white/[20%] md:bg-white/[10%]"></div>
+            <div className="mx-2 md:mx-15 w-[1px] md:w-[2px] h-[63px] md:h-[196px] bg-white/[20%] md:bg-white/[10%]"></div>
 
             <div className="flex flex-col items-center gap-[5px] md:gap-5">
               <Image
@@ -57,11 +57,11 @@ const FasterInvestments = () => {
                 alt="Investment"
                 className="w-5 h-5 md:w-20 md:h-20"
               />
-              <div className="px-5 md:px-9 flex flex-col items-center space-y-[.43px] md:space-y-[2px]">
+              <div className="px-2 md:px-9 flex flex-col items-center space-y-[.43px] md:space-y-[2px]">
                 <h2 className="title-text text-white">
                   <CountUp end={100} />+
                 </h2>
-                <h4 className="text-[10px] md:text-lg font-medium text-white text-center">
+                <h4 className="text-[10px] md:text-lg tracking-[-0.5px] md:tracking-normal font-medium text-white text-center">
                   Investment Data Sources
                 </h4>
               </div>
