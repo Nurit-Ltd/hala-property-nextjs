@@ -1,6 +1,7 @@
 import ElevateProperty from "@/components/screen/Home/ElevateProperty/ElevateProperty";
 import ExploreMapping from "@/components/screen/Home/ExploreMapping/ExploreMapping";
 import FasterInvestments from "@/components/screen/Home/FasterInvestments/FasterInvestments";
+import FreqAskQuestions from "@/components/screen/Home/FreqAskQuestions/FreqAskQuestions";
 import Hero from "@/components/screen/Home/Hero/Hero";
 import LuxuryProperties from "@/components/screen/Home/LuxuryProperties/LuxuryProperties";
 import OurClients from "@/components/screen/Home/OurClients/OurClients";
@@ -20,6 +21,7 @@ export default function Home() {
       <ThreeStepDream />
       <OurPartner />
       <OurClients />
+      <FreqAskQuestions />
     </>
   );
 }
