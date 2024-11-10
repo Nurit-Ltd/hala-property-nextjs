@@ -47,9 +47,9 @@ const Navbar = () => {
         <div className="w-full h-24 flex items-center">
           <div className="w-full h-12 flex items-center justify-between">
             {/* Logo section */}
-            <Link href={"#"} className="flex items-center gap-2.5">
-              <Image src={logo} alt="mainLogo" />
-              <h4 className="text-[28px] font-Lexend tracking-[-4%] font-medium text-white">
+            <Link href={"/"} className="flex items-center gap-1 xl:gap-2.5">
+              <Image src={logo} alt="mainLogo" className="w-8 h-8 xl:w-11 xl:h-11" />
+              <h4 className="text-xl xl:text-[28px] font-Lexend tracking-[-4%] font-medium text-white">
                 Hala Property
               </h4>
             </Link>
@@ -61,7 +61,7 @@ const Navbar = () => {
                   <Link
                     href={item.path}
                     onClick={() => handleClick(item.path)}
-                    className={`px-3 py-1.5 ${
+                    className={`px-1 xl:px-3 py-1 xl:py-1.5 ${
                       currentPath === item.path
                         ? "text-white border-b-[1.5px] border-white font-bold"
                         : "text-grey500 font-semibold hover:text-white duration-200"
@@ -131,17 +131,17 @@ const Navbar = () => {
                   <span className="font-medium text-[10px] text-white">2</span>
                 </div>
               </Link>
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-2 xl:gap-4">
                 <Link
                   href={"#"}
-                  className="px-5 py-2 h-12 rounded-lg border border-white/[30%] nav-ai-button-box flex items-center justify-center gap-2 text-white font-medium"
+                  className="px-2 xl:px-5 py-2 h-12 rounded-lg border border-white/[30%] nav-ai-button-box flex items-center justify-center gap-1 xl:gap-2 text-xs xl:text-base text-white font-medium"
                 >
                   <Image src={starIcon} alt="starIcon" />
                   Find Property with AI
                 </Link>
                 <Link
                   href={"#"}
-                  className="h-12 px-8 py-2 bg-gradient-to-r from-[#0E5DF4] to-[#004BDC] border border-black/[8%] rounded-lg flex items-center justify-center text-white font-semibold "
+                  className="h-12 px-3 xl:px-8 py-2 bg-gradient-to-r from-[#0E5DF4] to-[#004BDC] border border-black/[8%] text-xs xl:text-base rounded-lg flex items-center justify-center text-white font-semibold "
                 >
                   Sign in
                 </Link>
