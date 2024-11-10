@@ -14,7 +14,8 @@ const LuxuryProperties = () => {
     <section>
       <div className="mt-[-130px] max-w-[1424px] mx-auto pt-12 pb-[60px] px-[72px] bg-white rounded-3xl luxury-properties">
         <h2 className="section-header-title text-darkBlue text-center">
-          Luxury Properties <span className="text-primary">You&apos;ll Love</span>
+          Luxury Properties{" "}
+          <span className="text-primary">You&apos;ll Love</span>
         </h2>
         <div className="mt-10 relative">
           {/* Custom Navigation Buttons with Icons */}
@@ -22,13 +23,17 @@ const LuxuryProperties = () => {
             className="swiper-button-prev custom-prev-button"
             aria-label="Previous Slide"
           >
-            <FaArrowLeft size={24} />
+            <div className="w-5 h-5">
+              <FaArrowLeft />
+            </div>
           </button>
           <button
             className="swiper-button-next custom-next-button"
             aria-label="Next Slide"
           >
-            <FaArrowRight size={24} />
+            <div className="w-5 h-5">
+              <FaArrowRight />
+            </div>
           </button>
 
           <Swiper
