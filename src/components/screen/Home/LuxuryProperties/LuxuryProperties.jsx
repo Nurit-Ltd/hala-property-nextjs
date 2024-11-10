@@ -12,7 +12,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 const LuxuryProperties = () => {
   return (
     <section>
-      <div className="mt-[-130px] max-w-[1424px] mx-auto pt-12 pb-[60px] px-[72px] bg-white rounded-3xl luxury-properties">
+      <div className="xl:mt-[-130px] max-w-[1424px] mx-auto pt-12 pb-[60px] px-[72px] bg-white rounded-3xl luxury-properties">
         <h2 className="section-header-title text-darkBlue text-center">
           Luxury Properties{" "}
           <span className="text-primary">You&apos;ll Love</span>
