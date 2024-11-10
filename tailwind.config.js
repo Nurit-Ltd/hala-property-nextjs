@@ -28,7 +28,8 @@ module.exports = {
         success:"#E7F7EF",
         errorDark:"#E03137",
         errorRedLight:"#FFEDEC",
-        grayTextAd:"#6D6E73"
+        grayTextAd:"#6D6E73",
+        logBg:"#FAFAFA"
       },
       fontFamily: {
         Merriweather: "'Merriweather', 'serif'",

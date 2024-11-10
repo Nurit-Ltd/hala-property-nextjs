@@ -4,7 +4,7 @@ import searchIcon from "../../../../assets/home/hero-search-icon.svg";
 
 const Hero = () => {
   return (
-    <section className="bg-[url('/hero-banner.png')] w-full h-[292px] lg:h-[900px] bg-no-repeat bg-cover flex items-center justify-center">
+    <section className="mt-15 lg:mt-24 bg-[url('/hero-banner.png')] w-full h-[292px] lg:h-[900px] bg-no-repeat bg-cover flex items-center justify-center">
       <div className="container_fluid">
         <div className="flex flex-col items-center justify-center space-y-4 lg:space-y-8">
           <div className="max-w-[903px] mx-auto space-y-2 lg:space-y-3">
