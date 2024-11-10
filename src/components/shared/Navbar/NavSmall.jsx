@@ -1,9 +1,12 @@
 "use client";
+import { navItems } from "@/data/navItems";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { FiChevronDown, FiChevronUp } from "react-icons/fi";
 import aiIcon from "../../../assets/home/aiIcon.svg";
 import closeIcon from "../../../assets/home/closeIcon.svg";
+import heartMenu from "../../../assets/home/heart-sm-menu.svg";
 import logoIconSm from "../../../assets/home/logoIconSm.svg";
 import menubar from "../../../assets/home/menubar.svg";
 import signInIcon from "../../../assets/home/signInIcon.svg";
@@ -12,6 +15,11 @@ import whatsApp from "../../../assets/home/whatsApp.svg";
 
 const NavSmall = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen);
+  };
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -78,11 +86,65 @@ const NavSmall = () => {
             </button>
           </div>
           <div className="w-full h-[1px] bg-grey300 my-4"></div>
-          <div id="middle-side" className="">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem ab
-            perspiciatis illo recusandae nihil culpa atque animi porro in quia
-            laboriosam totam temporibus, facilis, cupiditate optio, commodi
-            similique fugiat sunt?
+          <div id="middle-side" className="h-[260px] overflow-y-auto">
+            <div className="py-2 flex items-center gap-4">
+              <Image src={heartMenu} alt="heartMenu" />
+              <h4 className="font-semibold text-grey600">Favorites</h4>
+            </div>
+            <div className="w-full h-[1px] bg-grey300 my-4"></div>
+            <ul className="space-y-4">
+              {navItems.map((item, index) => {
+                return (
+                  <li key={index}>
+                    <Link
+                      href={`${item.path}`}
+                      className="font-semibold text-grey600"
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+            <div className="w-full h-[1px] bg-grey300 my-4"></div>
+            <div className="pb-4 w-full">
+              <button
+                onClick={toggleDropdown}
+                className="flex items-center justify-between w-full font-semibold text-grey600"
+              >
+                <span>More</span>
+                {isOpen ? <FiChevronUp /> : <FiChevronDown />}
+              </button>
+
+              {/* Dropdown Items (shown in flow of layout) */}
+              {isOpen && (
+                <div className="mt-4 px-4">
+                  <ul className="space-y-3">
+                    <li>
+                      <Link
+                        href="/about-us"
+                        className="font-semibold text-grey600"
+                      >
+                        About Us
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/blog" className="font-semibold text-grey600">
+                        Blog
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/contact"
+                        className="font-semibold text-grey600"
+                      >
+                        Contact
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              )}
+            </div>
           </div>
           <div id="bottom-side" className="flex flex-col gap-2">
             <Link
