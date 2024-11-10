@@ -30,9 +30,9 @@ const QuestionTabs = () => {
       {faqData.map((item, i) => (
         <div
           key={i}
-          className="border-b border-[#04074E1A]/[10%] py-2 sm:py-5 xl:py-6 flex items-start justify-between gap-2 mt-4"
+          className="border-b border-[#04074E1A]/[10%] mt-3 md:mt-4"
         >
-          <div className="w-full">
+          <div className="py-3 md:py-6 flex items-center justify-between gap-2">
             <div
               onClick={() => toggle(i)}
               className="w-full transition-colors cursor-pointer"
@@ -41,23 +41,33 @@ const QuestionTabs = () => {
                 {item.Question}
               </h3>
             </div>
-            <div
-              ref={(el) => (contentRefs.current[i] = el)}
-              className={`transition-all duration-700 ease-in-out overflow-hidden`}
-              style={{ maxHeight: selected === i ? "500px" : "0px" }}
-            >
-              <div className="pt-3 sm:pt-4 text-sm md:text-lg text-grey700 max-w-[980px]">
-                {item.Answer}
+
+            <div onClick={() => toggle(i)} className="pt-1 cursor-pointer">
+              <div className="w-5 h-5 md:w-6 md:h-6 text-navy-black transition-transform">
+                {selected === i ? (
+                  <Image
+                    src={upArrow}
+                    alt="upArrow"
+                    className="w-5 h-5 md:w-6 md:h-6"
+                  />
+                ) : (
+                  <Image
+                    src={downArrow}
+                    alt="downArrow"
+                    className="w-5 h-5 md:w-6 md:h-6"
+                  />
+                )}
               </div>
             </div>
           </div>
-          <div onClick={() => toggle(i)} className="pt-1 cursor-pointer">
-            <div className="w-5 h-5 md:w-6 md:h-6 text-navy-black transition-transform">
-              {selected === i ? (
-                <Image src={upArrow} alt="upArrow" className="w-5 h-5 md:w-6 md:h-6" />
-              ) : (
-                <Image src={downArrow} alt="downArrow" className="w-5 h-5 md:w-6 md:h-6" />
-              )}
+
+          <div
+            ref={(el) => (contentRefs.current[i] = el)}
+            className={`transition-all duration-700 ease-in-out overflow-hidden`}
+            style={{ maxHeight: selected === i ? "500px" : "0px" }}
+          >
+            <div className="pb-3 md:pb-6 pr-4 md:pr-0 text-sm md:text-lg text-grey700 max-w-max md:max-w-[980px]">
+              {item.Answer}
             </div>
           </div>
         </div>
