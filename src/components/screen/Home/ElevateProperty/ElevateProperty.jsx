@@ -19,13 +19,13 @@ const ElevateProperty = () => {
                 Elevate{" "}
                 <span className="relative">
                   your
-                  <div className="absolute right-[-20px] md:right-[-45px] top-[-5px] md:top-[-17px] lg:top-[-15px]">
-                    <Image
-                      src={shapesText}
-                      alt="shapesText"
-                      className="w-5 h-5 md:w-[45px] md:h-[45px]"
-                    />
-                  </div>
+                  <div className="absolute right-[-20px] md:right-[-18px] xl:right-[-45px] top-[-5px] md:top-[-2px] xl:top-[-15px]">
+                        <Image
+                          src={shapesText}
+                          alt="shapesText"
+                          className="w-5 h-5 xl:w-[45px] xl:h-[45px]"
+                        />
+                      </div>
                 </span>
               </h2>
               <h2 className="section-header-title text-primary text-center xl:text-start">
