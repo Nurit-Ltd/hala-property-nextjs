@@ -1,4 +1,4 @@
-// import ElevateProperty from "@/components/screen/Home/ElevateProperty/ElevateProperty";
+import ElevateProperty from "@/components/screen/Home/ElevateProperty/ElevateProperty";
 // import ExploreMapping from "@/components/screen/Home/ExploreMapping/ExploreMapping";
 import FasterInvestments from "@/components/screen/Home/FasterInvestments/FasterInvestments";
 // import FreqAskQuestions from "@/components/screen/Home/FreqAskQuestions/FreqAskQuestions";
@@ -16,7 +16,8 @@ export default function Home() {
       <LuxuryProperties />
       <FasterInvestments />
       <TrendProperties />
-      {/* <ElevateProperty />
+      <ElevateProperty />
+      {/*
       <ExploreMapping />
       <ThreeStepDream />
       <OurPartner />
