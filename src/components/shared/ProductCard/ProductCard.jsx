@@ -54,7 +54,7 @@ const ProductCard = ({ card }) => {
           </div>
         )}
       </div>
-      <div className="pt-4 pb-5 px-5">
+      <div className="pt-4 pb-5 px-4 sm:px-5">
         <div className="flex items-center justify-between">
           <div className="space-y-[1px]">
             <h5 className="text-xs text-grey600">Starting Price</h5>

@@ -38,7 +38,7 @@ const LuxuryProperties = () => {
 
           <Swiper
             spaceBetween={16} 
-            slidesPerView={1.3}
+            slidesPerView={1.2}
             centeredSlides={false}
             navigation={{
               nextEl: ".custom-next-button",

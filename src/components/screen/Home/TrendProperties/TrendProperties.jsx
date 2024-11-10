@@ -29,12 +29,11 @@ const TrendProperties = () => {
               ))}
             </div>
           </div>
+          {/* slider use for small screen */}
           <div className="mt-6 md:mt-12 relative lg:hidden">
-            {/* Custom Navigation Buttons with Icons - hidden on small screens */}
-
             <Swiper
               spaceBetween={16}
-              slidesPerView={1.3}
+              slidesPerView={1.2}
               centeredSlides={false}
               breakpoints={{
                 640: {

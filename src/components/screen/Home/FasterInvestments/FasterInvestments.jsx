@@ -12,7 +12,7 @@ const FasterInvestments = () => {
       <div className="bg-darkBlue">
       <div className="container_fluid">
         <div className="pt-5 pb-5 md:pt-15 md:pb-25">
-          <div className="max-w-[202px] sm:max-w-[450px] lg:max-w-[610px] mx-auto">
+          <div className="max-w-[202px] md:max-w-[450px] lg:max-w-[610px] mx-auto">
             <h2 className="title-text text-center text-primary75">
               Harnessing AI for Smarter,
               <span className="text-white"> Faster Investments</span>
