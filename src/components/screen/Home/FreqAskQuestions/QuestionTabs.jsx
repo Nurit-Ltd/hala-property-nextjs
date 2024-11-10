@@ -26,7 +26,7 @@ const QuestionTabs = () => {
   }, [selected]);
 
   return (
-    <div className="mt-12">
+    <div className="mt-4 md:mt-12">
       {faqData.map((item, i) => (
         <div
           key={i}
@@ -37,7 +37,7 @@ const QuestionTabs = () => {
               onClick={() => toggle(i)}
               className="w-full transition-colors cursor-pointer"
             >
-              <h3 className="text-2xl font-bold text-darkBlue">
+              <h3 className="text-base md:text-2xl font-semibold md:font-bold text-darkBlue">
                 {item.Question}
               </h3>
             </div>
@@ -46,17 +46,17 @@ const QuestionTabs = () => {
               className={`transition-all duration-700 ease-in-out overflow-hidden`}
               style={{ maxHeight: selected === i ? "500px" : "0px" }}
             >
-              <div className="pt-3 sm:pt-4 text-lg text-grey700 max-w-[980px]">
+              <div className="pt-3 sm:pt-4 text-sm md:text-lg text-grey700 max-w-[980px]">
                 {item.Answer}
               </div>
             </div>
           </div>
           <div onClick={() => toggle(i)} className="pt-1 cursor-pointer">
-            <div className="w-6 h-6 text-navy-black transition-transform">
+            <div className="w-5 h-5 md:w-6 md:h-6 text-navy-black transition-transform">
               {selected === i ? (
-                <Image src={upArrow} alt="upArrow" />
+                <Image src={upArrow} alt="upArrow" className="w-5 h-5 md:w-6 md:h-6" />
               ) : (
-                <Image src={downArrow} alt="downArrow" />
+                <Image src={downArrow} alt="downArrow" className="w-5 h-5 md:w-6 md:h-6" />
               )}
             </div>
           </div>
