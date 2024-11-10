@@ -8,18 +8,18 @@ import clientIcon from "../../../../assets/home/user-faster.svg";
 const FasterInvestments = () => {
  
   return (
-    <section className="pt-15">
+    <section className="pt-4 md:pt-15">
       <div className="bg-darkBlue">
       <div className="container_fluid">
-        <div className="pt-15 pb-25">
-          <div className="max-w-[610px] mx-auto">
+        <div className="pt-5 pb-5 md:pt-15 md:pb-25">
+          <div className="max-w-[202px] sm:max-w-[450px] lg:max-w-[610px] mx-auto">
             <h2 className="title-text text-center text-primary75">
               Harnessing AI for Smarter,
               <span className="text-white"> Faster Investments</span>
             </h2>
           </div>
           <div className="mt-4 md:mt-15 flex items-center justify-center ">
-            <div className="w-[103px] lg:w-[260px] flex flex-col items-center gap-[5px] md:gap-5">
+            <div className="w-[103px] md:w-[260px] flex flex-col items-center gap-[5px] md:gap-5">
               <Image
                 src={clockIcon}
                 alt="clockIcon"
@@ -34,8 +34,8 @@ const FasterInvestments = () => {
                 </h4>
               </div>
             </div>
-            <div className="mx-2 md:mx-15 w-[1px] md:w-[2px] h-[63px] md:h-[196px] bg-white/[20%] md:bg-white/[10%]"></div>
-            <div className="w-[103px] lg:w-[260px] flex flex-col items-center gap-[5px] md:gap-5">
+            <div className="mx-2 md:mx-10 lg:mx-15 w-[1px] md:w-[2px] h-[63px] md:h-[196px] bg-white/[20%] md:bg-white/[10%]"></div>
+            <div className="w-[103px] md:w-[260px] flex flex-col items-center gap-[5px] md:gap-5">
               <Image
                 src={clientIcon}
                 alt="clientIcon"
@@ -50,9 +50,9 @@ const FasterInvestments = () => {
                 </h4>
               </div>
             </div>
-            <div className="mx-2 md:mx-15 w-[1px] md:w-[2px] h-[63px] md:h-[196px] bg-white/[20%] md:bg-white/[10%]"></div>
+            <div className="mx-2 md:mx-10 lg:mx-15 w-[1px] md:w-[2px] h-[63px] md:h-[196px] bg-white/[20%] md:bg-white/[10%]"></div>
 
-            <div className="w-[103px] lg:w-[260px] flex flex-col items-center gap-[5px] md:gap-5">
+            <div className="w-[103px] md:w-[260px] flex flex-col items-center gap-[5px] md:gap-5">
               <Image
                 src={Investment}
                 alt="Investment"
