@@ -1,6 +1,6 @@
 "use client";
 
-import ProductCard from "@/components/shared/ProductCard/ProductCard";
+import ProductCardFirst from "@/components/shared/ProductCard/ProductCardFirst";
 import { cardData } from "@/data/productCardData";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa"; // Import arrow icons
 import "swiper/css";
@@ -51,11 +51,11 @@ const LuxuryProperties = () => {
               },
               1024: {
                 slidesPerView: 3,
-                spaceBetween: 30,
+                spaceBetween: 20,
               },
               1280: {
                 slidesPerView: 3,
-                spaceBetween: 30,
+                spaceBetween: 24,
               },
             }}
             modules={[Pagination, Navigation]}
@@ -63,7 +63,7 @@ const LuxuryProperties = () => {
           >
             {cardData.map((card) => (
               <SwiperSlide key={card.id}>
-                <ProductCard card={card} />
+                <ProductCardFirst card={card} />
               </SwiperSlide>
             ))}
           </Swiper>

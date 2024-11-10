@@ -6,14 +6,14 @@ import shower from "../../../assets/home/shower-icon.svg";
 import upScales from "../../../assets/home/upScales.svg";
 import verifiedIcon from "../../../assets/home/verifiedIcon.svg";
 
-const ProductCard = ({ card }) => {
+const ProductCardFirst = ({ card }) => {
   return (
-    <div className="rounded-2xl border border-grayBorder product-card-shadow">
+    <div className="rounded-2xl border border-grayBorder product-card-shadow-first">
       <div className="relative">
         <Image
           src={card.image}
           alt={`cardProduct${card.id}`}
-          className="w-full h-[190px] md:h-[256px] rounded-tl-2xl rounded-tr-2xl"
+          className="w-full h-[190px] md:h-[256px] rounded-br-lg rounded-bl-lg rounded-tl-2xl rounded-tr-2xl"
         />
         <div className="absolute top-[15px] left-[15px] flex items-center gap-[10px]">
           <div className="rounded-md border-[.5px] bg-black/[25%] border-white/[20%] w-20 h-7 flex items-center justify-center backdrop-blur-card-custom text-sm font-semibold text-white">
@@ -103,4 +103,4 @@ const ProductCard = ({ card }) => {
   );
 };
 
-export default ProductCard;
+export default ProductCardFirst;
