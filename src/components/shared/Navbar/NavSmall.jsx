@@ -78,97 +78,83 @@ const NavSmall = () => {
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <div className="px-4 pt-4 pb-5">
-          <div id="top-side" className="flex items-center justify-between">
-            <h4 className="text-darkBlue font-bold">Welcome</h4>
-            <button onClick={toggleMenu}>
-              <Image src={closeIcon} alt="closeIcon" />
-            </button>
-          </div>
-          <div className="w-full h-[1px] bg-grey300 my-4"></div>
-          <div id="middle-side" className="h-[260px] overflow-y-auto">
-            <div className="py-2 flex items-center gap-4">
-              <Image src={heartMenu} alt="heartMenu" />
-              <h4 className="font-semibold text-grey600">Favorites</h4>
-            </div>
-            <div className="w-full h-[1px] bg-grey300 my-4"></div>
-            <ul className="space-y-4">
-              {navItems.map((item, index) => {
-                return (
-                  <li key={index}>
-                    <Link
-                      href={`${item.path}`}
-                      className="font-semibold text-grey600"
-                    >
-                      {item.label}
-                    </Link>
-                  </li>
-                );
-              })}
-            </ul>
-            <div className="w-full h-[1px] bg-grey300 my-4"></div>
-            <div className="pb-4 w-full">
-              <button
-                onClick={toggleDropdown}
-                className="flex items-center justify-between w-full font-semibold text-grey600"
-              >
-                <span>More</span>
-                {isOpen ? <FiChevronUp /> : <FiChevronDown />}
-              </button>
+        <div className="flex flex-col min-h-screen">
+  {/* Top section */}
+  <div id="top-side" className="px-4 pt-4 pb-5 flex items-center justify-between">
+    <h4 className="text-darkBlue font-bold">Welcome</h4>
+    <button onClick={toggleMenu}>
+      <Image src={closeIcon} alt="closeIcon" />
+    </button>
+  </div>
 
-              {/* Dropdown Items (shown in flow of layout) */}
-              {isOpen && (
-                <div className="mt-4 px-4">
-                  <ul className="space-y-3">
-                    <li>
-                      <Link
-                        href="/about-us"
-                        className="font-semibold text-grey600"
-                      >
-                        About Us
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/blog" className="font-semibold text-grey600">
-                        Blog
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href="/contact"
-                        className="font-semibold text-grey600"
-                      >
-                        Contact
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-              )}
-            </div>
-          </div>
-          <div id="bottom-side" className="flex flex-col gap-2">
-            <Link
-              href={"#"}
-              className="w-full h-[38px] bg-primary rounded-lg flex items-center justify-center gap-2"
-            >
-              <Image src={signInIcon} alt="signInIcon" />
-              <h4 className="font-semibold text-white">Sign in</h4>
-            </Link>
-            <button className="w-full h-[38px] border border-[#03A841] bg-transparent rounded-lg flex items-center justify-center gap-2 font-semibold text-[#03A841]">
-              <Image src={whatsApp} alt="whatsApp" />
-              WhatsApp
-            </button>
-            <Link
-              href={"#"}
-              className="w-full h-[38px] bg-primary rounded-lg border border-white/[30%] nav-ai-button-box flex items-center justify-center gap-2"
-            >
-              <Image src={aiSp} alt="aiSp" />
-              <h4 className="font-semibold text-white">
-                Find Property with AI
-              </h4>
-            </Link>
-          </div>
+  {/* Middle section with scroll */}
+  <div id="middle-side" className="flex-grow overflow-y-auto px-4 pb-5">
+    <div className="w-full h-[1px] bg-grey300 my-4"></div>
+    <div className="py-2 flex items-center gap-4">
+      <Image src={heartMenu} alt="heartMenu" />
+      <h4 className="font-semibold text-grey600">Favorites</h4>
+    </div>
+    <div className="w-full h-[1px] bg-grey300 my-4"></div>
+    <ul className="space-y-4">
+      {navItems.map((item, index) => (
+        <li key={index}>
+          <Link href={`${item.path}`} className="font-semibold text-grey600">
+            {item.label}
+          </Link>
+        </li>
+      ))}
+    </ul>
+    <div className="w-full h-[1px] bg-grey300 my-4"></div>
+    <div className="pb-4 w-full">
+      <button
+        onClick={toggleDropdown}
+        className="flex items-center justify-between w-full font-semibold text-grey600"
+      >
+        <span>More</span>
+        {isOpen ? <FiChevronUp /> : <FiChevronDown />}
+      </button>
+      {/* Dropdown Items */}
+      {isOpen && (
+        <div className="mt-4 px-4">
+          <ul className="space-y-3">
+            <li>
+              <Link href="/about-us" className="font-semibold text-grey600">
+                About Us
+              </Link>
+            </li>
+            <li>
+              <Link href="/blog" className="font-semibold text-grey600">
+                Blog
+              </Link>
+            </li>
+            <li>
+              <Link href="/contact" className="font-semibold text-grey600">
+                Contact
+              </Link>
+            </li>
+          </ul>
         </div>
+      )}
+    </div>
+  </div>
+
+  {/* Bottom section */}
+  <div id="bottom-side" className="px-4 py-5 flex flex-col gap-2">
+    <Link href="#" className="w-full h-[38px] bg-primary rounded-lg flex items-center justify-center gap-2">
+      <Image src={signInIcon} alt="signInIcon" />
+      <h4 className="font-semibold text-white">Sign in</h4>
+    </Link>
+    <button className="w-full h-[38px] border border-[#03A841] bg-transparent rounded-lg flex items-center justify-center gap-2 font-semibold text-[#03A841]">
+      <Image src={whatsApp} alt="whatsApp" />
+      WhatsApp
+    </button>
+    <Link href="#" className="w-full h-[38px] bg-primary rounded-lg border border-white/[30%] flex items-center justify-center gap-2">
+      <Image src={aiSp} alt="aiSp" />
+      <h4 className="font-semibold text-white">Find Property with AI</h4>
+    </Link>
+  </div>
+</div>
+
       </div>
     </div>
   );
