@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import EstimatedHistory from "./EstimatedHistory";
 import MarketCard from "./MarketCard";
 
 const EstimatedMarket = () => {
@@ -34,6 +35,7 @@ const EstimatedMarket = () => {
         </div>
       </div>
       <MarketCard />
+      <EstimatedHistory />
     </div>
   );
 };
