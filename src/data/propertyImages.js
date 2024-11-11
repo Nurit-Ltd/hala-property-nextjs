@@ -22,4 +22,12 @@ export const propertyImages = [
       { src: property6, alt: "property6" },
     ],
   },
+  {
+    id: 3,
+    largeImage: { src: property6, alt: "property6" },
+    smallImages: [
+      { src: property2, alt: "property2" },
+      { src: property4, alt: "property4" },
+    ],
+  },
 ];

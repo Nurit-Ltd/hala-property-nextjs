@@ -14,10 +14,10 @@ export default function PhotoSlider({ photos }) {
       <div className="mt-24">
         <div className="container_fluid">
           <div className="pt-15">
-            <div className="mt-4 md:mt-10 relative">
+            <div className="relative">
               {/* Custom Navigation Buttons with Icons - hidden on small screens */}
               <button
-                className="swiper-button-prev custom-prev-button !hidden lg:!flex"
+                className="swiper-button-prev property-custom-prev-button !hidden lg:!flex"
                 aria-label="Previous Slide"
               >
                 <div className="w-5 h-5">
@@ -25,7 +25,7 @@ export default function PhotoSlider({ photos }) {
                 </div>
               </button>
               <button
-                className="swiper-button-next custom-next-button !hidden lg:!flex"
+                className="swiper-button-next property-custom-next-button !hidden lg:!flex"
                 aria-label="Next Slide"
               >
                 <div className="w-5 h-5">
@@ -37,8 +37,8 @@ export default function PhotoSlider({ photos }) {
                 slidesPerView={1}
                 centeredSlides={false}
                 navigation={{
-                  nextEl: ".custom-next-button",
-                  prevEl: ".custom-prev-button",
+                  nextEl: ".property-custom-next-button",
+                  prevEl: ".property-custom-prev-button",
                 }}
                
                 modules={[Pagination, Navigation]}
