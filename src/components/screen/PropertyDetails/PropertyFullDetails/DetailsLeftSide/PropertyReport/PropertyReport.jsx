@@ -21,8 +21,13 @@ const PropertyReport = () => {
               <AvPriceChart />
             </div>
           </div>
-          <div className="w-[55%]">
-            <PopularLocations />
+          <div className="w-[55%] space-y-4">
+            <h4 className="text-lg font-bold text-grey700">
+              Popular Locations
+            </h4>
+            <div className="px-4 pt-6 pb-4 rounded-lg border border-grey400">
+              <PopularLocations />
+            </div>
           </div>
         </div>
       </div>

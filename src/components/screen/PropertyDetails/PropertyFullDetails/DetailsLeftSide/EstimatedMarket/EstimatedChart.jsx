@@ -34,7 +34,7 @@ const EstimatedChart = () => {
     ],
   };
 
-  // Options for the chart
+  
   const options = {
     responsive: true,
     maintainAspectRatio: false,
@@ -48,18 +48,18 @@ const EstimatedChart = () => {
         yAlign: "bottom",
         callbacks: {
           title: function (tooltipItem) {
-            return "Year " + tooltipItem[0].label; // Year in tooltip title
+            return "Year " + tooltipItem[0].label; 
           },
           label: function (tooltipItem) {
             return "AED " + tooltipItem.raw.toLocaleString();
           },
         },
-        backgroundColor: "#101828", // Tooltip background color
+        backgroundColor: "#101828",
         padding: {
-          x: 8, // Horizontal padding
-          y: 4, // Vertical padding
+          x: 8,
+          y: 4,
         },
-        cornerRadius: 8, // Rounded corners
+        cornerRadius: 8,
         bodyFont: {
           size: 12,
           weight: "normal",
@@ -87,7 +87,7 @@ const EstimatedChart = () => {
         ticks: {
           stepSize: 200000,
           callback: function (value) {
-            return value / 1000 + "k"; // Format Y-axis labels as "k"
+            return value / 1000 + "k";
           },
         },
       },
