@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import MarketCard from "./MarketCard";
 
 const EstimatedMarket = () => {
   const [isChecked, setIsChecked] = useState(true); // Initialize with true if you want it checked initially
@@ -32,6 +33,7 @@ const EstimatedMarket = () => {
           </label>
         </div>
       </div>
+      <MarketCard />
     </div>
   );
 };
