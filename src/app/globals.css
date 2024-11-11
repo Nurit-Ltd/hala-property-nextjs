@@ -176,6 +176,7 @@ body {
   cursor: pointer;
   z-index: 10;
 }
+
 .property-custom-prev-button {
   left: -25px !important;
   color: #04074e !important;
@@ -188,4 +189,21 @@ body {
 .property-custom-next-button:hover {
   background-color: #0954e5 !important;
   color: white !important;
+}
+@media (max-width: 1280px) {
+  .property-custom-prev-button,
+  .property-custom-next-button {
+    top: 166px !important;
+    width: 32px !important;
+    height: 32px !important;
+    border: 1px solid white;
+  }
+  .property-custom-prev-button {
+    left: -16px !important;
+    color: #04074e !important;
+  }
+  .property-custom-next-button {
+    right: -16px !important;
+    color: #04074e !important;
+  }
 }

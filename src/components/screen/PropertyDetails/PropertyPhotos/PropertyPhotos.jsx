@@ -10,7 +10,7 @@ const PropertyPhotos = ({propertyImage}) => {
         <Image
           src={propertyImage.largeImage.src}
           alt={propertyImage.largeImage.alt}
-          className="w-full h-[490px] rounded-lg"
+          className="w-full h-[288px] xl:h-[490px] rounded-lg"
         />
       </div>
 
@@ -21,7 +21,7 @@ const PropertyPhotos = ({propertyImage}) => {
             key={index}
             src={image.src}
             alt={image.alt}
-            className="w-full h-[241px] rounded-lg"
+            className="w-full h-[140px] xl:h-[241px] rounded-lg"
           />
         ))}
       </div>

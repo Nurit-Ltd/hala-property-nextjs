@@ -17,18 +17,18 @@ export default function PhotoSlider({ photos }) {
             <div className="relative">
               {/* Custom Navigation Buttons with Icons - hidden on small screens */}
               <button
-                className="swiper-button-prev property-custom-prev-button !hidden lg:!flex"
+                className="swiper-button-prev property-custom-prev-button"
                 aria-label="Previous Slide"
               >
-                <div className="w-5 h-5">
+                <div className="w-3 h-3 xl:w-5 xl:h-5">
                   <FaArrowLeft />
                 </div>
               </button>
               <button
-                className="swiper-button-next property-custom-next-button !hidden lg:!flex"
+                className="swiper-button-next property-custom-next-button"
                 aria-label="Next Slide"
               >
-                <div className="w-5 h-5">
+                <div className="w-3 h-3 xl:w-5 xl:h-5">
                   <FaArrowRight />
                 </div>
               </button>
