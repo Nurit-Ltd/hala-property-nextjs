@@ -12,14 +12,19 @@ const PropertyReport = () => {
         </h5>
       </div>
       <div className="space-y-3">
-         <div className="w-full flex gap-6">
-           <div className="w-[45%]">
+        <div className="w-full flex gap-6">
+          <div className="w-[45%] space-y-4">
+            <h4 className="text-lg font-bold text-grey700">
+              Average Price/Sqft
+            </h4>
+            <div className="px-4 pt-6 pb-4 rounded-lg border border-grey400">
               <AvPriceChart />
-           </div>
-           <div className="w-[55%]">
-             <PopularLocations />  
-           </div>
-         </div>
+            </div>
+          </div>
+          <div className="w-[55%]">
+            <PopularLocations />
+          </div>
+        </div>
       </div>
     </div>
   );
