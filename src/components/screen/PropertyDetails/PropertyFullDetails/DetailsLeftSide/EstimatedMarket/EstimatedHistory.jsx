@@ -29,6 +29,7 @@ const EstimatedHistory = () => {
           </div>
         </div>
       </div>
+      <div className="w-full h-[1px] my-4 border border-grey300"></div>
       <div>
         <EstimatedChart />
       </div>

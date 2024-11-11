@@ -96,7 +96,7 @@ const EstimatedChart = () => {
 
   return (
     <div style={{ width: "100%", height: "290px" }}>
-      <Line data={data} options={options} />;
+      <Line data={data} options={options} />
     </div>
   );
 };
