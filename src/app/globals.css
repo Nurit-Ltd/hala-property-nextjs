@@ -38,6 +38,10 @@ body {
   @apply text-xl leading-[30px] md:text-3xl xl:text-[48px] xl:leading-[67px] font-bold;
 }
 
+.property-text-title {
+  @apply text-2xl font-bold text-darkBlue;
+}
+
 .navbar-box-shadow {
   box-shadow: 0px 1px 4px 2px #3c40430d;
 

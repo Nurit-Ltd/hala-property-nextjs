@@ -19,7 +19,7 @@ const NameAndFeatures = () => {
           </h2>
           <div className="space-y-[2px]">
             <h4 className="font-medium text-grey600">Starting price from</h4>
-            <h3 className="text-2xl font-bold text-darkBlue">AED 16,174,828</h3>
+            <h3 className="property-text-title">AED 16,174,828</h3>
           </div>
           <div className="max-w-full">
             <h4
