@@ -4,7 +4,7 @@ import SimilarProperties from "@/components/screen/PropertyDetails/SimilarProper
 
 const PropertyDetailsPage = () => {
   return (
-    <div className="bg-white">
+    <div className="bg-white pb-25">
       <PhotoSlider />
       <PropertyFullDetails />
       <SimilarProperties />
