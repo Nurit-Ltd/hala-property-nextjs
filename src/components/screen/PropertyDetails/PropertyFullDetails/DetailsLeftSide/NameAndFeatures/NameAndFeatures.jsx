@@ -24,7 +24,7 @@ const NameAndFeatures = () => {
           <div className="max-w-full">
             <h4
               className={`transition-all text-sm md:text-base ${
-                isExpanded ? "h-auto" : "h-24 overflow-hidden"
+                isExpanded ? "h-auto" : "h-[60px] md:h-24 overflow-hidden"
               } text-ellipsis text-grey700`}
             >
               Luxurious Sanctuary villas in Mohammed Bin Rashid City offer

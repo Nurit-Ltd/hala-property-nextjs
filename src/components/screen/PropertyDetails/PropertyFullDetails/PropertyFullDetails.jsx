@@ -1,5 +1,5 @@
 import DetailsLeftSide from "./DetailsLeftSide/DetailsLeftSide";
-// import DetailsRightSide from "./DetailsRightSide/DetailsRightSide";
+import DetailsRightSide from "./DetailsRightSide/DetailsRightSide";
 
 const PropertyFullDetails = () => {
   return (
@@ -9,8 +9,8 @@ const PropertyFullDetails = () => {
           <div className="col-span-8">
             <DetailsLeftSide />
           </div>
-          <div className="col-span-4">
-            {/* <DetailsRightSide /> */}
+          <div className="col-span-4 hidden xl:block">
+            <DetailsRightSide />
           </div>
         </div>
         <div className="my-8 w-full h-[1px] bg-grey400"></div>

@@ -12,7 +12,7 @@ const DetailsLeftSide = () => {
       <RightMortgage />
       <EstimatedMarket />
       <PropertyReport /> 
-      
+    
     </>
   );
 };
