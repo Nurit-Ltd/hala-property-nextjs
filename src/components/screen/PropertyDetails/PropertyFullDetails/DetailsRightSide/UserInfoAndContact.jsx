@@ -2,6 +2,7 @@ import Image from "next/image";
 import UserPro from "../../../../../assets/property-details/UserPro.svg";
 import emailUser from "../../../../../assets/property-details/emailUser.svg";
 import phoneIcon from "../../../../../assets/property-details/phone-icon.svg";
+import whatsappUserInfo from "../../../../../assets/property-details/whatsapp-icon-userInfo.svg";
 
 const UserInfoAndContact = () => {
   return (
@@ -30,6 +31,10 @@ const UserInfoAndContact = () => {
         <button className="h-12 px-4 py-3 rounded-lg bg-redBase flex items-center justify-center gap-2 font-bold text-white">
           <Image src={emailUser} alt="emailUser" />
           E-mail
+        </button>
+        <button className="h-12  p-3 rounded-lg bg-lightGreenBase flex items-center justify-center gap-2 font-bold text-white">
+          <Image src={whatsappUserInfo} alt="whatsappUserInfo" />
+          WhatsApp
         </button>
       </div>
     </div>
