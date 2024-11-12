@@ -39,7 +39,7 @@ body {
 }
 
 .property-text-title {
-  @apply text-2xl font-bold text-darkBlue;
+  @apply text-base md:text-2xl font-bold text-darkBlue;
 }
 
 .navbar-box-shadow {

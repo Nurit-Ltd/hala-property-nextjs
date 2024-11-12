@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import FeaturesOfProperty from "./FeaturesOfProperty";
+// import FeaturesOfProperty from "./FeaturesOfProperty";
 import FigureAndLocation from "./FigureAndLocation";
 
 const NameAndFeatures = () => {
@@ -11,19 +11,19 @@ const NameAndFeatures = () => {
   };
   return (
     <section>
-      <div className="space-y-6">
+      <div className="space-y-[10px] md:space-y-6">
         {/* top-side */}
-        <div className="space-y-3">
-          <h2 className="text-[40px] leading-[56px] font-bold text-darkBlue">
+        <div className="space-y-[5px] md:space-y-3">
+          <h2 className="text-xl md:text-[40px] md:leading-[56px] font-bold text-darkBlue">
             The Sanctury
           </h2>
-          <div className="space-y-[2px]">
-            <h4 className="font-medium text-grey600">Starting price from</h4>
+          <div className="space-y-[1px] md:space-y-[2px]">
+            <h4 className="text-xs md:text-base font-medium text-grey600">Starting price from</h4>
             <h3 className="property-text-title">AED 16,174,828</h3>
           </div>
           <div className="max-w-full">
             <h4
-              className={`transition-all ${
+              className={`transition-all text-sm md:text-base ${
                 isExpanded ? "h-auto" : "h-24 overflow-hidden"
               } text-ellipsis text-grey700`}
             >
@@ -47,7 +47,7 @@ const NameAndFeatures = () => {
         {/* middle-side */}
         <FigureAndLocation />
         {/* bottom or features */}
-        <FeaturesOfProperty />
+        {/* <FeaturesOfProperty /> */}
       </div>
     </section>
   );

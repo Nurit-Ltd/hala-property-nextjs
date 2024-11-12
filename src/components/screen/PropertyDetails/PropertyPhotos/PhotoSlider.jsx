@@ -14,7 +14,7 @@ export default function PhotoSlider({ photos }) {
       <div className="mt-24">
         <div className="container_fluid">
           <div className="pt-15">
-            <div className="relative">
+            <div className="hidden md:block relative">
               {/* Custom Navigation Buttons with Icons - hidden on small screens */}
               <button
                 className="swiper-button-prev property-custom-prev-button"
