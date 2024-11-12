@@ -6,7 +6,7 @@ import EstimatedChart from "./EstimatedChart";
 const EstimatedHistory = () => {
   return (
     <div className="mt-4 p-6 bg-white border border-grey400 rounded-lg">
-      <div className="flex items-center justify-between">
+      <div className="flex flex-col md:flex-row items-center md:justify-between">
         <h4 className="text-lg font-bold text-grey700">Estimated history</h4>
         <div className="flex items-center gap-2">
           <button className="h-[32px] px-3 py-1.5 rounded-md flex items-center justify-center border border-grey400 text-sm font-semibold text-grey600">

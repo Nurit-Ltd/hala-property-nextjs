@@ -1,4 +1,4 @@
-// import EstimatedMarket from './EstimatedMarket/EstimatedMarket';
+import EstimatedMarket from './EstimatedMarket/EstimatedMarket';
 import ExploreTheArea from './ExploreTheArea/ExploreTheArea';
 import NameAndFeatures from './NameAndFeatures/NameAndFeatures';
 // import PropertyReport from './PropertyReport/PropertyReport';
@@ -10,9 +10,10 @@ const DetailsLeftSide = () => {
       <NameAndFeatures />
       <ExploreTheArea />
       <RightMortgage />
+      <EstimatedMarket />
       {/* 
       
-      <EstimatedMarket />
+      
       <PropertyReport /> */}
     </>
   );
