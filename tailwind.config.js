@@ -1,6 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/pages/**/*.{js,ts,jsx,tsx,mdx}", "./src/components/**/*.{js,ts,jsx,tsx,mdx}", "./src/app/**/*.{js,ts,jsx,tsx,mdx}"],
+  darkMode: ["class"],
+  content: [
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
   theme: {
     extend: {
       colors: {
@@ -36,19 +41,19 @@ module.exports = {
         Manrope: "'Manrope', 'sans-serif'",
       },
       padding: {
-        25: "100px",
         15: "60px",
         18: "72px",
+        25: "100px",
       },
       margin: {
-        25: "100px",
         15: "60px",
         18: "72px",
+        25: "100px",
       },
       backdropBlur: {
         "card-custom": "9px",
       },
     },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-animate")],
 };
