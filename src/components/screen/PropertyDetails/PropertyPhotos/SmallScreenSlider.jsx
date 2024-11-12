@@ -1,5 +1,6 @@
 "use client";
 
+import { propertyImageSliderData } from "@/data/propertyImageSliderData";
 import Image from "next/image";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import "swiper/css";
@@ -7,9 +8,6 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import property2 from "../../../../assets/property-details/property2.jpeg";
-import property3 from "../../../../assets/property-details/property3.jpeg";
-import property1 from "../../../../assets/property-details/propertyOne.jpeg";
 
 const SmallScreenSlider = () => {
   return (
@@ -24,15 +22,29 @@ const SmallScreenSlider = () => {
         modules={[Pagination, Navigation]}
         className="mySwiper"
       >
-        <SwiperSlide>
-          <Image src={property1} alt="property1" className="w-full h-[203px]" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image src={property2} alt="property2" className="w-full h-[203px]" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image src={property3} alt="property3" className="w-full h-[203px]" />
-        </SwiperSlide>
+        {propertyImageSliderData.map((slide, index) => (
+          <SwiperSlide key={index}>
+            <div className="relative">
+              <Image
+                src={slide.image}
+                alt={slide.alt}
+                className="w-full h-[203px]"
+              />
+              <div className="absolute left-4 bottom-2 flex items-center gap-2 z-20">
+                {slide.buttons.map((button, btnIndex) => (
+                  <button
+                    key={btnIndex}
+                    className="h-[30px] px-3 py-1.5 rounded-md bg-black/[25px] border border-white/[60%] flex items-center justify-center gap-1 text-xs font-medium text-white app-button-box-pro"
+                  >
+                    <Image src={button.icon} alt={button.label} />
+                    {button.label}
+                  </button>
+                ))}
+              </div>
+            </div>
+          </SwiperSlide>
+        ))}
+
         <button
           className="swiper-button-prev property-sm-custom-prev-button"
           aria-label="Previous Slide"
