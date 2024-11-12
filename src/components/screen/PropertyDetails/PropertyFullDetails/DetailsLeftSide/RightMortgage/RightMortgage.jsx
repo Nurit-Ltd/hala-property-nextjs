@@ -2,7 +2,7 @@ import AllPaymentAndPrice from "./AllPaymentAndPrice";
 
 const RightMortgage = () => {
   return (
-    <div className="relative mt-12">
+    <div className="mt-12">
       <h3 className="property-text-title">Get the right mortgage for you</h3>
       <div className="mt-6 p-6 border border-grey400 rounded-lg">
         <div className="grid grid-cols-5 gap-8">
