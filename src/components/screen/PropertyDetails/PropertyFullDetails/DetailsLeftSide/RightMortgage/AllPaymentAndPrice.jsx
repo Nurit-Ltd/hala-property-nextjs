@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import DownPaymentRanger from "./DownPaymentRanger";
+import LoanPeriodRanger from "./LoanPeriodRanger";
 import PurchasePriceRanger from "./PurchasePriceRanger";
 
 const AllPaymentAndPrice = () => {
@@ -60,21 +61,7 @@ const AllPaymentAndPrice = () => {
       {/* Loan period */}
       <div className="space-y-3">
         <h4 className="font-semibold text-grey700">Loan period</h4>
-        <div className="space-y-2">
-          <input
-            placeholder="20"
-            type="text"
-            className="h-12 w-full px-4 py-3 border border-grey400 rounded-lg bg-logBg flex items-center font-medium text-grey700 placeholder:text-grey700 outline-none"
-          />
-
-          <div>
-            {/* RANGER HERE */}
-            <div className="flex items-center justify-between">
-              <p className="text-xs text-grey600">1 year</p>
-              <p className="text-xs text-grey600">30 year</p>
-            </div>
-          </div>
-        </div>
+        <LoanPeriodRanger />
       </div>
     </div>
   );

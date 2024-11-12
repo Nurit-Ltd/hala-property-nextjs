@@ -223,7 +223,7 @@ body {
   appearance: none;
   height: 12px;
   width: 12px;
-  background-color: #1d4ed8; /* Custom thumb color */
+  background-color: #0954e5;
   border-radius: 50%;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   cursor: pointer;
@@ -232,7 +232,7 @@ body {
   appearance: none;
   height: 12px;
   width: 12px;
-  background-color: #1d4ed8;
+  background-color: #0954e5;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
