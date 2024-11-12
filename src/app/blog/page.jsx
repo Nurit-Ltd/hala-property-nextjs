@@ -130,7 +130,7 @@ const Blog = () => {
             backdropFilter: "blur(1px)",
           }}
         ></div>
-        <div className="container_fluid absolute top-0 left-0 z-50 flex justify-start items-end right-0 bottom-0">
+        <div className="container_fluid absolute top-0 left-0 z-30 flex justify-start items-end right-0 bottom-0">
           <div className="flex flex-col items-start max-w-[765px] gap-4 pb-[24px] xl:pb-[64px]">
             <h1 className="text-xl font-Merriweather xl:text-[60px] font-bold  text-white leading-tight">Top Property Investment Strategies for 2024</h1>
             <p className="text-base xl:text-lg font-Manrope  text-white">A guide to the best investment opportunities in real estate, covering the latest market trends and tips for maximizing returns.</p>
