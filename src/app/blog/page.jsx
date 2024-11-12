@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { useState } from "react";
-
 import { FaArrowRightLong } from "react-icons/fa6";
 import { HiOutlineBriefcase } from "react-icons/hi";
 import { TbGavel } from "react-icons/tb";
@@ -10,13 +9,14 @@ import { TbHomeSearch } from "react-icons/tb";
 import { TbHanger2 } from "react-icons/tb";
 import { TbBuildingBank } from "react-icons/tb";
 
+// Internal Imports
+
 import HeaderImg from "@/assets/blog/blog-header.jpg";
 import fiveTips from "@/assets/blog/5-tips.jpg";
 import whyLocation from "@/assets/blog/why-location.jpg";
 import understandingProperty from "@/assets/blog/understanding-property.jpg";
 import theHombebuyers from "@/assets/blog/the-homebuyers.jpg";
 import roger from "@/assets/blog/roger.png";
-
 import theFirstTime from "@/assets/blog/the-first-time.jpg";
 import realState from "@/assets/blog/real-state.jpg";
 import aGuideTo from "@/assets/blog/a-guide-to.jpg";
@@ -154,7 +154,7 @@ const Blog = () => {
               <Image className=" rounded-2xl w-full h-auto" src={fiveTips} alt="blogHeader" />
               <h3 className=" mt-6    xl:text-[32px] font-bold  text-gray-800 leading-tight">5 Tips for First-Time Home Buyers What You Need to Know</h3>
               <p className=" mt-2 text-sm xl:text-base       text-gray-700">Help first-time buyers navigate the process with key advice on budgeting, mortgage options, and avoiding common mistakes.</p>
-              <a href="#" className="mt-4 text-primary font-semibold flex items-center justify-start h-[22px]">
+              <a href="/blog/123" className="mt-4 text-primary font-semibold flex items-center justify-start h-[22px]">
                 <span>Read details </span>
                 <FaArrowRightLong className="text-primary ml-1 mt-[5px] " />
               </a>
@@ -168,7 +168,7 @@ const Blog = () => {
                   <div className="w-[60%] xl:w-[65%]  flex flex-col  ">
                     <h3 className="   text-sm  xl:text-2xl font-bold  text-gray-800 leading-tight">{limitCharacters(blog.title, 50)}</h3>
                     <p className=" mt-[6px] xl:mt-3 text-xs xl:text-base       text-gray-700">{limitCharacters(blog.description, 70)}</p>
-                    <a href="#" className=" mt-2 xl:mt-4 text-sm xl:text-base text-primary font-semibold flex items-center justify-start h-[22px]">
+                    <a href="/blog/123" className=" mt-2 xl:mt-4 text-sm xl:text-base text-primary font-semibold flex items-center justify-start h-[22px]">
                       <span>Read details </span>
                       <FaArrowRightLong className="text-primary ml-1 mt-[5px] " />
                     </a>
@@ -208,7 +208,7 @@ const Blog = () => {
                 </div>
                 <h3 className="text-2xl font-bold text-gray-800">{limitCharacters(blog.title, 50)}</h3>
                 <p className="text-base mt-2 text-gray-600">{limitCharacters(blog.description, 90)}</p>
-                <a href="#" className="text-primary text-base mt-4 lg:mt-2 font-semibold flex items-center justify-start h-[22px]">
+                <a href="/blog/123" className="text-primary text-base mt-4 lg:mt-2 font-semibold flex items-center justify-start h-[22px]">
                   <span>Read details </span>
                   <FaArrowRightLong className="text-primary ml-1 mt-[5px] " />
                 </a>

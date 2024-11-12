@@ -1,17 +1,19 @@
 "use client";
 // LOGIN / SIGNUP PAGE
 import React, { useState } from "react";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { useForm } from "react-hook-form";
-import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import { FaRegEyeSlash, FaRegEye } from "react-icons/fa6";
-
-import logo from "@/assets/home/logo-main.svg";
 import { FcGoogle } from "react-icons/fc";
 import { FaApple } from "react-icons/fa";
 
+// Internal imports
+import logo from "@/assets/home/logo-main.svg";
+
 const AuthForm = () => {
+  const router = useRouter();
   const {
     register,
     handleSubmit,
@@ -26,6 +28,7 @@ const AuthForm = () => {
   const onSubmit = (data) => {
     console.log(data);
     reset();
+    router.push("/verify-email"); // Redirect to verify email page
   };
 
   return (
@@ -66,7 +69,18 @@ const AuthForm = () => {
           {/* Email */}
           <div>
             <label className="block text-gray-700 text-sm  font-semibold lg:font-normal  mb-2">{isSignUp ? "Email" : "Email or phone"}</label>
-            <input type="email" {...register("email", { required: "Email is required" })} className="  appearance-none border rounded-lg w-full py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder={isSignUp ? "Email Address" : "Email or phone"} />
+            <input
+              type="email"
+              {...register("email", {
+                required: "Email is required",
+                pattern: {
+                  value: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+                  message: "Please enter a valid email address",
+                },
+              })}
+              className="  appearance-none border rounded-lg w-full py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              placeholder={isSignUp ? "Email Address" : "Email or phone"}
+            />
             {errors.email && <p className="text-red-500 text-xs italic">{errors.email.message}</p>}
           </div>
 

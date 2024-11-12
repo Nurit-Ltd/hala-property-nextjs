@@ -265,3 +265,11 @@ body {
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
 }
+
+/* Blog page Single */
+
+.blogContent ul li {
+  list-style: disc;
+  margin-left: 20px;
+  margin-bottom: 16px;
+}
