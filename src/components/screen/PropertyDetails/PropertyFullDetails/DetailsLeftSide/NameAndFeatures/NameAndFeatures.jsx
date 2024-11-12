@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-// import FeaturesOfProperty from "./FeaturesOfProperty";
+import FeaturesOfProperty from "./FeaturesOfProperty";
 import FigureAndLocation from "./FigureAndLocation";
 
 const NameAndFeatures = () => {
@@ -47,7 +47,7 @@ const NameAndFeatures = () => {
         {/* middle-side */}
         <FigureAndLocation />
         {/* bottom or features */}
-        {/* <FeaturesOfProperty /> */}
+        <FeaturesOfProperty />
       </div>
     </section>
   );
