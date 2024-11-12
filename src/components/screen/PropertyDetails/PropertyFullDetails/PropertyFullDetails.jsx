@@ -3,13 +3,13 @@ import DetailsRightSide from "./DetailsRightSide/DetailsRightSide";
 
 const PropertyFullDetails = () => {
   return (
-    <section className="mt-10">
+    <section className="mt-4 md:mt-10">
       <div className="container_fluid">
-        <div className="grid grid-cols-12 gap-10">
+        <div className="grid xl:grid-cols-12 xl:gap-8">
           <div className="col-span-8">
             <DetailsLeftSide />
           </div>
-          <div className="col-span-4">
+          <div className="col-span-4 hidden xl:block">
             <DetailsRightSide />
           </div>
         </div>

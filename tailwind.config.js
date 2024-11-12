@@ -31,10 +31,14 @@ module.exports = {
         errorRedLight: "#FFEDEC",
         grayTextAd: "#6D6E73",
         logBg: "#FAFAFA",
+        greenBase:"#058949",
+        redBase:"#EA4335",
+        lightGreenBase:"#03A841"
       },
       fontFamily: {
-        Merriweather: ["Merriweather", "serif"],
-        Lexend: ["Lexend", "sans-serif"],
+        Merriweather: "'Merriweather', 'serif'",
+        Lexend: "'Lexend', 'sans-serif'",
+        Manrope: "'Manrope', 'sans-serif'",
       },
       padding: {
         15: "60px",
