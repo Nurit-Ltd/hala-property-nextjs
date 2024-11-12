@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: ["class"],
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -32,23 +33,23 @@ module.exports = {
         logBg: "#FAFAFA",
       },
       fontFamily: {
-        Merriweather: "'Merriweather', 'serif'",
-        Lexend: "'Lexend', 'sans-serif'",
+        Merriweather: ["Merriweather", "serif"],
+        Lexend: ["Lexend", "sans-serif"],
       },
       padding: {
-        25: "100px",
         15: "60px",
         18: "72px",
+        25: "100px",
       },
       margin: {
-        25: "100px",
         15: "60px",
         18: "72px",
+        25: "100px",
       },
       backdropBlur: {
         "card-custom": "9px",
       },
     },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-animate")],
 };
