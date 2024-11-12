@@ -5,17 +5,19 @@ import EstimatedHistory from "./EstimatedHistory";
 import MarketCard from "./MarketCard";
 
 const EstimatedMarket = () => {
-  const [isChecked, setIsChecked] = useState(true); // Initialize with true if you want it checked initially
+  const [isChecked, setIsChecked] = useState(true);
 
   const handleToggle = () => {
     setIsChecked(!isChecked);
   };
   return (
-    <div className="mt-12">
+    <div className="mt-6 md:mt-12">
       <div className="flex items-center justify-between">
         <h3 className="property-text-title">Estimated Market Value</h3>
-        <div className="flex items-center gap-3">
-          <h5 className="font-medium text-grey600">Price History</h5>
+        <div className="flex items-center gap-2 md:gap-3">
+          <h5 className="text-[10px] md:text-base font-medium text-grey600">
+            Price History
+          </h5>
           <label className="inline-flex items-center cursor-pointer">
             <input
               type="checkbox"

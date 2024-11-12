@@ -11,7 +11,8 @@ const DetailsLeftSide = () => {
       <ExploreTheArea />
       <RightMortgage />
       <EstimatedMarket />
-      <PropertyReport />
+      <PropertyReport /> 
+    
     </>
   );
 };
