@@ -19,12 +19,14 @@ const DownPaymentRanger = () => {
 
   // Calculate the dynamic percentage based on the current slider value
   const calculateDynamicPercentage = () => {
-    return ((value - min) / (max - min) * 100).toFixed(2);
+    return (((value - min) / (max - min)) * 100).toFixed(2);
   };
 
   return (
     <div className="space-y-2">
-      <div className="flex items-center justify-between h-12 w-full px-4 py-3 border border-grey400 rounded-lg bg-logBg">
+      <div
+        className="flex items-center justify-between h-[34px] md:h-12 w-full px-3 md:px-4 py-2 md:py-3 border border-grey400 rounded-md md:rounded-lg bg-logBg text-xs md:text-base"
+      >
         <input
           value={Number(value).toLocaleString()}
           onChange={(e) => setValue(e.target.value.replace(/,/g, ""))}
@@ -49,8 +51,8 @@ const DownPaymentRanger = () => {
           }}
         />
         <div className="flex items-center justify-between">
-          <p className="text-xs text-grey600">AED 1,00,000</p>
-          <p className="text-xs text-grey600">AED 15,00,000</p>
+          <p className="text-[10px] md:text-xs text-grey600">AED 1,00,000</p>
+          <p className="text-[10px] md:text-xs text-grey600">AED 15,00,000</p>
         </div>
       </div>
     </div>

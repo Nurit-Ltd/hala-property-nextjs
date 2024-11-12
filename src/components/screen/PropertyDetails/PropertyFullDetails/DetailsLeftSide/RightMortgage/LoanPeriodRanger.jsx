@@ -23,7 +23,7 @@ const LoanPeriodRanger = () => {
         onChange={(e) => setValue(Number(e.target.value.replace(/,/g, "")))}
         placeholder="20"
         type="text"
-        className="h-12 w-full px-4 py-3 border border-grey400 rounded-lg bg-logBg flex items-center font-medium text-grey700 placeholder:text-grey700 outline-none"
+        className="h-[34px] md:h-12 w-full px-3 md:px-4 py-2 md:py-3 border border-grey400 rounded-md md:rounded-lg bg-logBg text-xs md:text-base flex items-center font-medium text-grey700 placeholder:text-grey700 outline-none"
       />
 
       <div className="space-y-[2px]">
@@ -40,8 +40,8 @@ const LoanPeriodRanger = () => {
           }}
         />
         <div className="flex items-center justify-between">
-          <p className="text-xs text-grey600">1 Year</p>
-          <p className="text-xs text-grey600">30 Year</p>
+          <p className="text-[10px] md:text-xs text-grey600">1 Year</p>
+          <p className="text-[10px] md:text-xs text-grey600">30 Year</p>
         </div>
       </div>
     </div>
