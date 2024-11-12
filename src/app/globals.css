@@ -215,3 +215,24 @@ body {
     color: #04074e !important;
   }
 }
+
+/* Ranger Custom Design */
+
+/* Custom styles for the slider */
+.slider-thumb::-webkit-slider-thumb {
+  appearance: none;
+  height: 12px;
+  width: 12px;
+  background-color: #1d4ed8; /* Custom thumb color */
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+.slider-thumb::-moz-range-thumb {
+  appearance: none;
+  height: 12px;
+  width: 12px;
+  background-color: #1d4ed8;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}

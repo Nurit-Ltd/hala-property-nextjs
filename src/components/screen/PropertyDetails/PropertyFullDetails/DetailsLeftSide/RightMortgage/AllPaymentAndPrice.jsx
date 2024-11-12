@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import PurchasePriceRanger from "./PurchasePriceRanger";
 
 const AllPaymentAndPrice = () => {
   const [activeTab, setActiveTab] = useState(1);
@@ -12,21 +13,7 @@ const AllPaymentAndPrice = () => {
       {/* Purchase price*/}
       <div className="space-y-3">
         <h4 className="font-semibold text-grey700">Purchase price</h4>
-        <div className="space-y-2">
-          <input
-            placeholder="8,132,000"
-            type="text"
-            className="h-12 w-full px-4 py-3 border border-grey400 rounded-lg bg-logBg flex items-center font-medium text-grey700 placeholder:text-grey700 outline-none"
-          />
-
-          <div>
-            {/* RANGER HERE */}
-            <div className="flex items-center justify-between">
-              <p className="text-xs text-grey600">AED 2,00,000</p>
-              <p className="text-xs text-grey600">AED 30,00,000</p>
-            </div>
-          </div>
-        </div>
+        <PurchasePriceRanger />
       </div>
       {/* Residency status */}
       <div className="space-y-3">
@@ -69,12 +56,12 @@ const AllPaymentAndPrice = () => {
         <h4 className="font-semibold text-grey700">Down payment</h4>
         <div className="space-y-2">
           <div className="flex items-center justify-between h-12 w-full px-4 py-3 border border-grey400 rounded-lg bg-logBg">
-          <input
-            placeholder="3,420,000"
-            type="text"
-            className="w-[85%] h-full bg-transparent font-medium text-grey700 placeholder:text-grey700 outline-none"
-          />
-          <h4 className="text-primary">25%</h4>
+            <input
+              placeholder="3,420,000"
+              type="text"
+              className="w-[85%] h-full bg-transparent font-medium text-grey700 placeholder:text-grey700 outline-none"
+            />
+            <h4 className="text-primary">25%</h4>
           </div>
 
           <div>
