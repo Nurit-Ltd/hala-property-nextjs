@@ -38,8 +38,29 @@ const ContactForm = () => {
             className="w-full h-[125px] px-4 py-[14px] rounded-lg bg-grey100 border border-grey300 outline-none resize-none"
           ></textarea>
         </div>
-        <div>notify me</div>
-        <button className="w-full h-12 px-6 py-3 bg-primary bg-opacity-50">submite</button>
+        <div className="space-y-2">
+          <div className="flex items-center gap-2">
+            <input
+              type="checkbox"
+              class="w-[17px] h-[17px] border-[1.5px] border-grey500 rounded cursor-pointer"
+            />
+            <h4 className="text-grey600">
+              Notify me via email when listings appear
+            </h4>
+          </div>
+          <div className="flex items-center gap-2">
+            <input
+              type="checkbox"
+              class="w-[17px] h-[17px] border-[1.5px] border-grey500 rounded cursor-pointer"
+            />
+            <h4 className="text-grey600">
+            I agree to Terms of Use and Privacy Policy
+            </h4>
+          </div>
+        </div>
+        <button className="w-full h-12 px-6 py-3 rounded-lg bg-primary bg-opacity-50 text-white font-bold flex items-center justify-center">
+          Submit
+        </button>
       </form>
     </div>
   );
