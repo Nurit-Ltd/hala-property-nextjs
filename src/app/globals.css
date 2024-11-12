@@ -56,7 +56,12 @@ body {
 }
 .nav-ai-button-box {
   box-shadow: 0px 2px 4px 0px #1b1c1d2e;
-  background: linear-gradient(92.14deg, #3b48df 0%, #cd34db 102.52%), radial-gradient(100% 100% at 50% 0%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(92.14deg, #3b48df 0%, #cd34db 102.52%),
+    radial-gradient(
+      100% 100% at 50% 0%,
+      rgba(255, 255, 255, 0.2) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
 }
 .footer-subscription {
   box-shadow: 0px 2px 4px 0px #0000001a;
@@ -221,7 +226,6 @@ body {
     color: #04074e !important;
   }
 }
-}
 
 /* SignIn SignUP */
 
@@ -288,6 +292,7 @@ body {
   list-style: disc;
   margin-left: 20px;
   margin-bottom: 16px;
+}
 /* ###### slider custom design SMALL Screen Property page ########## */
 
 .property-sm-custom-prev-button,
