@@ -373,3 +373,8 @@ body {
 .filter-check-texts {
   @apply inline-block text-sm leading-none peer-disabled:cursor-not-allowed text-[#323B49];
 }
+
+.range-slider__range,
+.range-slider__thumb {
+  @apply !bg-primary;
+}
