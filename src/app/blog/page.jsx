@@ -8,6 +8,7 @@ import { TbGavel } from "react-icons/tb";
 import { TbHomeSearch } from "react-icons/tb";
 import { TbHanger2 } from "react-icons/tb";
 import { TbBuildingBank } from "react-icons/tb";
+import { FaAngleRight } from "react-icons/fa6";
 
 // Internal Imports
 
@@ -217,8 +218,9 @@ const Blog = () => {
         </div>
         {/* Load More Button */}
         <div className="flex justify-center mt-8 lg:mt-16">
-          <button className="border border-gray-900 text-gray-900 font-bold text-base px-4 py-3 rounded-[40px] h-[48px]   flex items-center justify-center gap-1 mt-8 hover:border-primary hover:text-primary hover:bg-primary/5 transition ">
-            Load More <span>{">"}</span>
+          <button className="border border-gray-900 text-gray-900  text-base px-4 py-3 rounded-[40px] w-[144px] h-12   flex items-center justify-center gap-1 mt-8 bg-transparent font-bold hover:border-darkBlue hover:bg-darkBlue hover:text-white duration-200 transition ">
+            Load More
+            <FaAngleRight />
           </button>
         </div>
       </div>
