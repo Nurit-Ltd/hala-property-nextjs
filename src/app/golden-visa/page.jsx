@@ -1,4 +1,5 @@
 
+import CommonQuestions from "@/components/screen/GoldenVisa/CommonQuestions/CommonQuestions";
 import FreSecAndOpportunity from "@/components/screen/GoldenVisa/FreSecAndOpportunity/FreSecAndOpportunity";
 import HeroVisa from "@/components/screen/GoldenVisa/HeroVisa/HeroVisa";
 import InvestInProperty from "@/components/screen/GoldenVisa/InvestInProperty/InvestInProperty";
@@ -15,6 +16,7 @@ const GoldenVisaPage = () => {
       <OurProcess />
       <ServiceRefund />
       <VisaContactForm />
+      <CommonQuestions />
     </>
   );
 };
