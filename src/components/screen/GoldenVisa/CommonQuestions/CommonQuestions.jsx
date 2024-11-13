@@ -1,3 +1,4 @@
+import Button48 from "@/components/shared/Button/Button48";
 import Image from "next/image";
 import line from "../../../../assets/golden-visa/line-text.svg";
 import CommonQuestionTabs from "./CommonQuestionTabs";
@@ -23,6 +24,9 @@ const CommonQuestions = () => {
               </h2>
             </div>
             <CommonQuestionTabs />
+            <div className="mt-8 md:mt-12 flex items-center justify-center">
+               <Button48 buttonTitle="Speak to an Expert" />
+            </div>
           </div>
         </div>
       </div>

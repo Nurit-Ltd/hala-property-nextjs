@@ -38,7 +38,7 @@ const ProcessCard = () => {
         </div>
       </div>
       <div className="mt-12 flex items-center justify-center">
-        <Button48 />
+        <Button48 buttonTitle="Book a Free Consultation" />
       </div>
     </div>
   );
