@@ -368,3 +368,8 @@ body {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
+
+/* filter */
+.filter-check-texts {
+  @apply inline-block text-sm leading-none peer-disabled:cursor-not-allowed text-[#323B49];
+}
