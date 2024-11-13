@@ -7,8 +7,8 @@ import rightLine from "../../../../assets/golden-visa/right-line.svg";
 
 const HeroVisa = () => {
   return (
-    <section className="mt-15 lg:mt-24 pt-6 pb-5 md:pt-0 bg-[url('/golden-visa/visa-hero-bg.png')] w-full h-[380px] md:h-[640px] bg-cover relative">
-      <div className="container_fluid bg-[url('/golden-visa/visa-hero-bg.png')] relative w-full h-[352px] md:h-[609px] flex items-center justify-center z-20">
+    <section className="mt-15 lg:mt-24 pt-6 md:pt-0 bg-[url('/golden-visa/visa-hero-bg.png')] w-full h-[380px] md:h-[640px] bg-cover relative">
+      <div className="container_fluid relative w-full h-[352px] md:h-[609px] flex items-center justify-center z-20">
         <div className="max-w-[940px] mx-auto flex flex-col items-center justify-center  space-y-6 md:space-y-10 relative z-20">
           <div className="space-y-4">
             <div className="space-y-2 md:space-y-4">
@@ -40,7 +40,7 @@ const HeroVisa = () => {
           <Image src={map} alt="map" className="opacity-5" />
         </div>
       </div>
-      <div className="absolute left-0 lg:left-[85px] top-[215px] md:top-[140px]">
+      <div className="absolute left-0 lg:left-[85px] top-[230px] md:top-[140px]">
         <Image
           src={leftLine}
           alt="leftLine"
