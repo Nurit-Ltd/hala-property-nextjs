@@ -57,6 +57,7 @@ const TabFilter = () => {
       </div>
       {isOpen && (
         <FilterDrawer
+          side="left"
           open={isOpen}
           setOpen={setIsOpen}
         >
