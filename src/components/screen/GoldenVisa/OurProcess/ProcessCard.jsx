@@ -9,7 +9,7 @@ const ProcessCard = () => {
         {stepCardData.slice(0, 3).map((step, index) => (
           <div
             key={index}
-            className="w-full min-h-[126px] md:min-h-[153px] p-4 md:p-6 rounded-lg lg:rounded-2xl border border-[#e5ecf8] bg-[#eaedf2] text-center relative flex items-center justify-center"
+            className="w-full min-h-[126px] md:min-h-[153px] p-4 md:p-6 rounded-2xl border border-[#e5ecf8] bg-[#eaedf2] text-center relative flex items-center justify-center"
           >
             <h4 className="text-base lg:text-lg text-grey700">
               {step.description}
@@ -35,7 +35,7 @@ const ProcessCard = () => {
           {stepCardData.slice(3).map((step, index) => (
             <div
               key={index}
-              className="w-full min-h-[126px] md:min-h-[153px] md:max-w-[33%] p-4 md:p-6 rounded-lg lg:rounded-2xl border border-primary/[4%] bg-[#eaedf2] text-center relative flex items-center justify-center"
+              className="w-full min-h-[126px] md:min-h-[153px] md:max-w-[33%] p-4 md:p-6 rounded-2xl border border-primary/[4%] bg-[#eaedf2] text-center relative flex items-center justify-center"
             >
               
               <h4 className="text-base lg:text-lg text-grey700">
