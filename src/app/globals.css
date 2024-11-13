@@ -131,7 +131,9 @@ body {
 
   box-shadow: 0px 4px 8px -2px #1018281a;
 }
-
+.our-client-card-sm-box {
+  box-shadow: 0px 1px 2px 0px #1018280d;
+}
 .right-side-box-property {
   box-shadow: 0px 4px 6px -2px #10182808;
 
