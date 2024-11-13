@@ -27,6 +27,27 @@ body {
   background-color: #f7f5f2;
 }
 
+/* Custom scrollbar for FilterDrawer */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px; /* Width of the scrollbar */
+}
+.custom-scrollbar-tab::-webkit-scrollbar {
+  display: none;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Track color */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #cbd5e0; /* Scrollbar thumb color */
+  border-radius: 20px; /* Rounded corners */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #949ca5; /* Thumb color on hover */
+}
+
 /* container style */
 .container_fluid {
   @apply max-w-full 2xl:max-w-[1280px] px-4 lg:px-12 2xl:px-0 2xl:mx-auto;
@@ -363,4 +384,14 @@ body {
   background-color: #0954e5;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   cursor: pointer;
+}
+
+/* filter */
+.filter-check-texts {
+  @apply inline-block text-sm leading-none peer-disabled:cursor-not-allowed text-[#323B49];
+}
+
+.range-slider__range,
+.range-slider__thumb {
+  @apply !bg-primary;
 }

@@ -18,10 +18,8 @@ const BuyPage = () => {
     <>
       <BuyHero />
       <section className="container_fluid pb-15 lg:pb-24">
-        <div className="hidden lg:block">
-          <SearchFilter />
-          <TabFilter />
-        </div>
+        <SearchFilter />
+        <TabFilter />
 
         <div className="space-y-6">
           <h2 className="section-header-title !text-2xl pt-8 lg:pt-0">

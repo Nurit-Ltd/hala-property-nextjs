@@ -52,6 +52,7 @@ module.exports = {
         25: "100px",
         30: "120px",
       },
+
       backdropBlur: {
         "card-custom": "9px",
       },

@@ -126,3 +126,23 @@ export const RentalIcon = () => {
     </svg>
   );
 };
+
+export const ClearFilterIcon = ({ ...props }) => {
+  return (
+    <svg
+      width={25}
+      height={24}
+      viewBox="0 0 25 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M8.25 9C7.7 9 7.25 8.55 7.25 8C7.25 7.45 7.7 7 8.25 7H20.25C20.8 7 21.25 7.45 21.25 8C21.25 8.55 20.8 9 20.25 9H8.25ZM6.25 13H18.25C18.8 13 19.25 12.55 19.25 12C19.25 11.45 18.8 11 18.25 11H6.25C5.7 11 5.25 11.45 5.25 12C5.25 12.55 5.7 13 6.25 13ZM4.25 17H16.25C16.8 17 17.25 16.55 17.25 16C17.25 15.45 16.8 15 16.25 15H4.25C3.7 15 3.25 15.45 3.25 16C3.25 16.55 3.7 17 4.25 17Z"
+        fill="currentColor"
+      />
+    </svg>
+  );
+};
