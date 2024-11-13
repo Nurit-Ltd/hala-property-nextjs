@@ -33,7 +33,7 @@ const HeroVisa = () => {
               fully guided process.
             </h4>
           </div>
-          <Button52 />
+          <Button52 buttonTittle="Get Started Today" />
         </div>
 
         <div className="absolute top-0 left-0 right-0">
