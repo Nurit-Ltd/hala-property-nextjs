@@ -1,3 +1,5 @@
+"use client";
+import FilterDrawer from "@/components/shared/FilterDrawer";
 import { Button } from "@/components/ui/button";
 import {
   Select,
@@ -7,10 +9,13 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { ChevronDown } from "lucide-react";
+import { useState } from "react";
 import { LuSearch } from "react-icons/lu";
 import { MdClose } from "react-icons/md";
+import SearchFilterContent from "./SearchFilterContent";
 
 const SearchFilter = () => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="bg-white py-1 px-2 lg:p-6 -mt-[22.5px] lg:-mt-[2.90625rem]  rounded-[100px] flex items-center justify-between md:justify-start  2xl:justify-between gap-4 2xl:gap-1 border shadow-md border-[#CBD5E0] lg:flex-wrap">
       {/* Property type */}
@@ -88,6 +93,7 @@ const SearchFilter = () => {
 
       <div className="flex items-center gap-1 lg:gap-4">
         <Button
+          onClick={() => setIsOpen(!isOpen)}
           variant="outline"
           className="text-lg font-normal rounded-full inline-flex md:hidden"
         >
@@ -104,6 +110,16 @@ const SearchFilter = () => {
           Search
         </Button>
       </div>
+
+      {isOpen && (
+        <FilterDrawer
+          side="right"
+          open={isOpen}
+          setOpen={setIsOpen}
+        >
+          <SearchFilterContent setOpen={setIsOpen} />
+        </FilterDrawer>
+      )}
     </div>
   );
 };
