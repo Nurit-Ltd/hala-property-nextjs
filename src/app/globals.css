@@ -18,13 +18,31 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  /* max-width: 1920px; */
+  max-width: 1920px;
   margin: 0 auto;
   position: relative;
   box-sizing: border-box;
   font-family: "Manrope", sans-serif;
   font-size: 16px;
   background-color: #f7f5f2;
+}
+
+/* Custom scrollbar for FilterDrawer */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px; /* Width of the scrollbar */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Track color */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #cbd5e0; /* Scrollbar thumb color */
+  border-radius: 20px; /* Rounded corners */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #949ca5; /* Thumb color on hover */
 }
 
 /* container style */
