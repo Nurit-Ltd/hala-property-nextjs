@@ -31,9 +31,9 @@ module.exports = {
         errorRedLight: "#FFEDEC",
         grayTextAd: "#6D6E73",
         logBg: "#FAFAFA",
-        greenBase:"#058949",
-        redBase:"#EA4335",
-        lightGreenBase:"#03A841"
+        greenBase: "#058949",
+        redBase: "#EA4335",
+        lightGreenBase: "#03A841",
       },
       fontFamily: {
         Merriweather: "'Merriweather', 'serif'",
@@ -44,11 +44,13 @@ module.exports = {
         15: "60px",
         18: "72px",
         25: "100px",
+        30: "120px",
       },
       margin: {
         15: "60px",
         18: "72px",
         25: "100px",
+        30: "120px",
       },
       backdropBlur: {
         "card-custom": "9px",
