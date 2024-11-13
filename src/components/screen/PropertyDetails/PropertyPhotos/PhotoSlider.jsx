@@ -11,7 +11,7 @@ import SmallScreenSlider from "./SmallScreenSlider";
 
 export default function PhotoSlider({ photos }) {
   return (
-    <section className="mt-15 md:mt-24">
+    <section className="mt-15 lg:mt-24">
       
         <div className="container_fluid">
           <div className="md:pt-15">
