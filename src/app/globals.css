@@ -31,6 +31,9 @@ body {
 .custom-scrollbar::-webkit-scrollbar {
   width: 6px; /* Width of the scrollbar */
 }
+.custom-scrollbar-tab::-webkit-scrollbar {
+  display: none;
+}
 
 .custom-scrollbar::-webkit-scrollbar-track {
   background: #f1f1f1; /* Track color */

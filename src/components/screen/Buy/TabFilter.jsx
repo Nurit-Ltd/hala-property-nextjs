@@ -27,8 +27,8 @@ const TabFilter = () => {
   ];
 
   return (
-    <>
-      <div className="mt-6 mb-8 flex items-center justify-between gap-2 w-full">
+    <div className="overflow-hidden">
+      <div className="mt-6 mb-8 flex items-center justify-between gap-2 w-full overflow-y-scroll custom-scrollbar-tab">
         <div>
           <Button
             onClick={() => setIsOpen(!isOpen)}
@@ -63,7 +63,7 @@ const TabFilter = () => {
           <FilterContent setOpen={setIsOpen} />
         </FilterDrawer>
       )}
-    </>
+    </div>
   );
 };
 
