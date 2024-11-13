@@ -8,6 +8,7 @@ import { TbGavel } from "react-icons/tb";
 import { TbHomeSearch } from "react-icons/tb";
 import { TbHanger2 } from "react-icons/tb";
 import { TbBuildingBank } from "react-icons/tb";
+import { FaAngleRight } from "react-icons/fa6";
 
 // Internal Imports
 
@@ -130,7 +131,7 @@ const Blog = () => {
             backdropFilter: "blur(1px)",
           }}
         ></div>
-        <div className="container_fluid absolute top-0 left-0 z-50 flex justify-start items-end right-0 bottom-0">
+        <div className="container_fluid absolute top-0 left-0 z-30 flex justify-start items-end right-0 bottom-0">
           <div className="flex flex-col items-start max-w-[765px] gap-4 pb-[24px] xl:pb-[64px]">
             <h1 className="text-xl font-Merriweather xl:text-[60px] font-bold  text-white leading-tight">Top Property Investment Strategies for 2024</h1>
             <p className="text-base xl:text-lg font-Manrope  text-white">A guide to the best investment opportunities in real estate, covering the latest market trends and tips for maximizing returns.</p>
@@ -217,8 +218,9 @@ const Blog = () => {
         </div>
         {/* Load More Button */}
         <div className="flex justify-center mt-8 lg:mt-16">
-          <button className="border border-gray-900 text-gray-900 font-bold text-base px-4 py-3 rounded-[40px] h-[48px]   flex items-center justify-center gap-1 mt-8 hover:border-primary hover:text-primary hover:bg-primary/5 transition ">
-            Load More <span>{">"}</span>
+          <button className="border border-gray-900 text-gray-900  text-base px-4 py-3 rounded-[40px] w-[144px] h-12   flex items-center justify-center gap-1 mt-8 bg-transparent font-bold hover:border-darkBlue hover:bg-darkBlue hover:text-white duration-200 transition ">
+            Load More
+            <FaAngleRight />
           </button>
         </div>
       </div>
