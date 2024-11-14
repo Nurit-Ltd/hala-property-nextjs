@@ -6,16 +6,16 @@ import { PiPaperPlaneRight } from "react-icons/pi";
 
 const QA = [
   {
-    question: "Do you able to find best properties in UAE?",
-    answer: "I can definitely help guide you! Whether you're looking for luxurious apartments in Dubai or cozy villas in Abu Dhabi, this sites should have you covered. What type of property are you thinking about?",
+    question: "Are you able to find the best properties in UAE?",
+    answer: "I can definitely help guide you! Whether you &apos; re looking for luxurious apartments in Dubai or cozy villas in Abu Dhabi, this site should have you covered. What type of property are you thinking about?",
   },
   {
     question: "I’ve been considering the Brookfield and Maple Grove areas. I’ve heard they’re family-friendly and have good schools.",
     answer: "Yes, both are excellent choices. Brookfield has a slightly higher average home price but offers larger lot sizes, while Maple Grove is known for its parks and proximity to shopping centers.",
   },
   {
-    question: "Ive been considering the Brookfield and Maple Grove areas. I’ve heard they’re family-friendly and have good schools.",
-    answer: "Yes, both are excellent choices. Brookfield has a slightly higher average home price but offers larger lot sizes, while Maple Grove is known for its parks and proximity to shopping centers.",
+    question: "What types of properties are available in Dubai?",
+    answer: "Dubai offers a wide range of properties, including high-rise apartments, beachfront villas, and luxury penthouses. Each area has its own unique character, so there &apos; s something for everyone.",
   },
 ];
 
@@ -37,12 +37,10 @@ const CopilotSearch = ({ setOpen }) => {
         <div className="w-full  max-w-[352px] h-[177px] mx-auto mt-[18px] mb-[42px] flex flex-col items-center ">
           <Image src={copilotIcon} alt="copilot" className="w-[72px]" />
           <h5 className="font-bold h-[25px] mt-4 text-darkBlue text-lg">Your Copilot AI Assistant</h5>
-          <p className="text-center mt-1 text-[#687588] text-sm">It's the AI-powered companion that keeps you organized and efficient, so you can focus on what matters most</p>
+          <p className="text-center mt-1 text-[#687588] text-sm">Its the AI-powered companion that keeps you organized and efficient, so you can focus on what matters most</p>
         </div>
         {/* Question and Answer */}
         <div className="">
-          {/* <div className="h-[44px] rounded-lg w-[304px] ml-auto bg-[#0954E5] text-sm shadow-sm py-3 px-2 text-white">Do you able to find best properties in UAE?</div>
-        <div className="  rounded-lg mt-4 w-[304px] mr-auto bg-[#E6EEFC] text-sm shadow-sm py-3 px-2 text-[#04074E]">I can definitely help guide you! Whether you're looking for luxurious apartments in Dubai or cozy villas in Abu Dhabi, this sites should have you covered. What type of property are you thinking about?</div> */}
           {QA.map((qa) => (
             <div key={qa.question} className="flex flex-col mt-4">
               <div className="  rounded-lg w-[304px] ml-auto bg-[#0954E5] text-sm shadow-sm py-3 px-2 text-white">{qa.question}</div>
