@@ -70,7 +70,7 @@ const Hero = () => {
                 </div>
               ))}
             </div>
-            <Button className="w-8 h-8 lg:w-16 lg:h-16 rounded-full bg-primary hero-search-box flex items-center justify-center">
+            <Button className="w-8 h-8 lg:w-16 lg:h-16 rounded-full bg-primary hover:scale-95 transition-all duration-300 hero-search-box flex items-center justify-center">
               <Image
                 src={searchIcon}
                 alt="searchIcon"
