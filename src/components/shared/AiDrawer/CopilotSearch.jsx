@@ -37,7 +37,7 @@ const CopilotSearch = ({ setOpen }) => {
         <div className="w-full  max-w-[352px] h-[177px] mx-auto mt-[18px] mb-[42px] flex flex-col items-center ">
           <Image src={copilotIcon} alt="copilot" className="w-[72px]" />
           <h5 className="font-bold h-[25px] mt-4 text-darkBlue text-lg">Your Copilot AI Assistant</h5>
-          <p className="text-center mt-1 text-[#687588] text-sm">It's the AI-powered companion that keeps you organized and efficient, so you can focus on what matters most</p>
+          <p className="text-center mt-1 text-[#687588] text-sm">It&apos;s the AI-powered companion that keeps you organized and efficient, so you can focus on what matters most</p>
         </div>
         {/* Question and Answer */}
         <div className="">
