@@ -53,6 +53,10 @@ module.exports = {
         30: "120px",
       },
 
+      screens: {
+        desk: "1745px",
+      },
+
       backdropBlur: {
         "card-custom": "9px",
       },
