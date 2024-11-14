@@ -25,18 +25,18 @@ const ContactUs = () => {
     alert("Your message has been sent!"); // Temporary alert to confirm submission
   };
 
-  const socialLinks = [
-    { title: "facebook", icon: FaFacebookF, link: "#" },
-    { title: "twitter", icon: FaXTwitter, link: "#" },
-    { title: "linkedin", icon: FaLinkedinIn, link: "#" },
-    { title: "Instagram", icon: FaInstagram, link: "#" },
-    { title: "Youtube", icon: FaYoutube, link: "#" },
-  ];
+  // const socialLinks = [
+  //   { title: "facebook", icon: FaFacebookF, link: "#", hoverBg: "bg-blue-800", hoverText: "text-white" },
+  //   { title: "twitter", icon: FaXTwitter, link: "#", hoverBg: "bg-black", hoverText: "text-white" },
+  //   { title: "linkedin", icon: FaLinkedinIn, link: "#", hoverBg: "bg-[#0a66c2]", hoverText: "text-white" },
+  //   { title: "Instagram", icon: FaInstagram, link: "#", hoverBg: "bg-[#e4405f]", hoverText: "text-white" },
+  //   { title: "Youtube", icon: FaYoutube, link: "#", hoverBg: "bg-white", hoverText: "text-[#ff0000]" },
+  // ];
 
   return (
     <div className="pt-[60px] lg:pt-24 font-Manrope bg-white">
       {/* Top Part */}
-      <div className="relative h-[530px] xl:h-[650px]  bg-[#f7f5f2] xl:bg-white ">
+      <div className="relative h-[530px] xl:h-[650px]  bg-[#f7f5f2] xl:bg-white    ">
         {/* Heading */}
         <div className="  pt-10 xl:pt-[100px] flex flex-col items-center max-w-[1015px] mx-auto px-4 xl:px-0  gap-2  ">
           <h2 className="text-xl lg:text-3xl  xl:text-[60px]  font-bold  text-darkBlue  leading-tight h-[30px] lg:h-[45px] xl:h-[84px] flex items-center">
@@ -184,11 +184,21 @@ const ContactUs = () => {
                 , or by filling out the contact form on our website. We look forward to hearing from you!
               </p>
               <div className="flex gap-4 mt-6 xl:mt-[60px]">
-                {socialLinks.map((link, index) => (
-                  <a alt={link.title} key={index} href={link.link} className="w-[32px] h-[32px] rounded-full bg-darkBlue hover:bg-blue-800 transition flex items-center justify-center text-white">
-                    <link.icon className="text-base" />
-                  </a>
-                ))}
+                <a alt="facebook" href="#" className={`w-[32px] h-[32px] rounded-full bg-darkBlue hover:bg-blue-800 hover:text-white transition flex items-center justify-center text-white`}>
+                  <FaFacebookF className="text-base" />
+                </a>
+                <a alt="twitter" href="#" className={`w-[32px] h-[32px] rounded-full bg-darkBlue hover:bg-white hover:text-black hover:border hover:border-black transition flex items-center justify-center text-white`}>
+                  <FaXTwitter className="text-base" />
+                </a>
+                <a alt="linkedin" href="#" className={`w-[32px] h-[32px] rounded-full bg-darkBlue hover:bg-[#0a66c2] hover:text-white transition flex items-center justify-center text-white`}>
+                  <FaLinkedinIn className="text-base" />
+                </a>
+                <a alt="instagram" href="#" className={`w-[32px] h-[32px] rounded-full bg-darkBlue hover:bg-[#e4405f] hover:text-white transition flex items-center justify-center text-white`}>
+                  <FaInstagram className="text-base" />
+                </a>
+                <a alt="youtube" href="#" className={`w-[32px] h-[32px] rounded-full bg-darkBlue hover:bg-white hover:text-[#ff0000] hover:border hover:border-[#ff0000]  transition flex items-center justify-center text-white`}>
+                  <FaYoutube className="text-base" />
+                </a>
               </div>
             </div>
           </div>

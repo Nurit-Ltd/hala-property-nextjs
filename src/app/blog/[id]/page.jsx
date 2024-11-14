@@ -70,12 +70,12 @@ const SingleBlog = () => {
     reset();
   };
 
-  const socialLinks = [
-    { title: "facebook", icon: FaFacebookF, link: "#" },
-    { title: "twitter", icon: FaXTwitter, link: "#" },
-    { title: "linkedin", icon: FaLinkedinIn, link: "#" },
-    { title: "share", icon: FaShareNodes, link: "#" },
-  ];
+  // const socialLinks = [
+  //   { title: "facebook", icon: FaFacebookF, link: "#" },
+  //   { title: "twitter", icon: FaXTwitter, link: "#" },
+  //   { title: "linkedin", icon: FaLinkedinIn, link: "#" },
+  //   { title: "share", icon: FaShareNodes, link: "#" },
+  // ];
 
   const rightBlogs = [
     {
@@ -158,11 +158,18 @@ const SingleBlog = () => {
               </div>
               {/* social links 32x32px fully roundeed with bg-gray-900 and text white class */}
               <div className="flex gap-4 mt-4">
-                {socialLinks.map((link, index) => (
-                  <a alt={link.title} key={index} href={link.link} className="w-[32px] h-[32px] rounded-full bg-darkBlue hover:bg-blue-800 transition flex items-center justify-center text-white">
-                    <link.icon className="text-base" />
-                  </a>
-                ))}
+                <a alt="facebook" href="#" className={`w-[32px] h-[32px] rounded-full bg-darkBlue hover:bg-blue-800 hover:text-white transition flex items-center justify-center text-white`}>
+                  <FaFacebookF className="text-base" />
+                </a>
+                <a alt="twitter" href="#" className={`w-[32px] h-[32px] rounded-full bg-darkBlue hover:bg-white hover:text-black hover:border hover:border-black transition flex items-center justify-center text-white`}>
+                  <FaXTwitter className="text-base" />
+                </a>
+                <a alt="linkedin" href="#" className={`w-[32px] h-[32px] rounded-full bg-darkBlue hover:bg-[#0a66c2] hover:text-white transition flex items-center justify-center text-white`}>
+                  <FaLinkedinIn className="text-base" />
+                </a>
+                <a alt="share" href="#" className={`w-[32px] h-[32px] rounded-full bg-darkBlue hover:bg-[#0a66c2] hover:text-white transition flex items-center justify-center text-white`}>
+                  <FaShareNodes className="text-base" />
+                </a>
               </div>
               <Image className=" rounded-2xl w-full h-auto mt-[22px]" src={fiveTips} alt="blogHeader" />
               {/* blog content */}
