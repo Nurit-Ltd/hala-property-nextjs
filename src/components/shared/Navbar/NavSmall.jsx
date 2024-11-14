@@ -68,7 +68,7 @@ const NavSmall = () => {
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <div className="flex flex-col min-h-[calc(100vh-60px)]">
+        <div className="flex flex-col min-h-[calc(100vh-100px)]">
           {/* Top section */}
           <div id="top-side" className="px-4 pt-4 pb-5 flex items-center justify-between">
             <h4 className="text-darkBlue font-bold">Welcome</h4>
