@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import bedCardIcon from "../../../assets/home/bed-card-icon.svg";
 import downScales from "../../../assets/home/downScales.svg";
@@ -8,8 +9,13 @@ import upScales from "../../../assets/home/upScales.svg";
 import verifiedIcon from "../../../assets/home/verifiedIcon.svg";
 
 const ProductCard = ({ card }) => {
+  const [isFavorited, setIsFavorited] = useState(card.isFavorited);
+
+  const handleFavoriteClick = () => {
+    setIsFavorited((prev) => !prev);
+  };
   return (
-    <div className="rounded-2xl border border-grayBorder product-card-shadow">
+    <div className="rounded-2xl border border-grayBorder for-hover-card-box product-card-shadow">
       <div className="relative">
         <Link href={`/property-details/${card.id}`}>
           <Image
@@ -39,11 +45,12 @@ const ProductCard = ({ card }) => {
         </div>
         <div className="absolute top-[15px] right-[15px]">
           <button
+            onClick={handleFavoriteClick}
             className={`w-8 h-8 rounded-full flex items-center justify-center backdrop-blur-card-custom border-[0.5px] border-white/[20%] ${
-              card.isFavorited ? "bg-errorDark" : "bg-black/[40%]"
+              isFavorited ? "bg-errorDark" : "bg-black/[40%]"
             }`}
           >
-            {card.isFavorited ? (
+            {isFavorited ? (
               <AiFillHeart size={20} className="text-white" />
             ) : (
               <AiOutlineHeart size={20} className="text-white" />
