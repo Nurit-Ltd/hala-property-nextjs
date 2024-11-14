@@ -1,3 +1,5 @@
+import Image from "next/image";
+import shapes from "../../../../assets/about-us/shapes.svg";
 import VisionGallery from "./VisionGallery";
 
 const OurVision = () => {
@@ -6,7 +8,14 @@ const OurVision = () => {
       <div className="container_fluid">
         <div className="py-8 md:py-15 lg:grid lg:grid-cols-2 items-center gap-0 lg:gap-5 xl:gap-0">
           <div className="max-w-max lg:max-w-[600px] space-y-4 text-white">
-            <h2 className="section-header-title text-center lg:text-start">Our Vision</h2>
+            <h2 className="section-header-title text-center lg:text-start">Our Visio<span className="relative">
+            n
+            <span className="absolute top-[-10px] right-[-30px] xl:right-[-40px]">
+            <Image src={shapes} alt="shapes" className="w-7 h-7 xl:w-11 xl:h-11" />
+            </span>
+            </span>
+            
+            </h2>
             <div className="space-y-2 lg:space-y-4">
               <h4 className="text-sm text-center lg:text-start">
                 Navigating the ever-changing real estate market can be a
