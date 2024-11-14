@@ -30,7 +30,7 @@ const CopilotSearch = ({ setOpen }) => {
           <Image src={copilotIcon} alt="copilot" className="w-[32px]" />
           <h5 className="font-bold text-darkBlue text-lg">Search with Copilot</h5>
         </div>
-        <IoMdClose onClick={() => setOpen(false)} className="cursor-pointer" />
+        <IoMdClose onClick={() => setOpen(false)} className="cursor-pointer text-[32px] " />
       </div>
       {/* Copilot Icon */}
       <div className="max-h-[calc(100vh-380px)] overflow-y-scroll ">
@@ -55,9 +55,9 @@ const CopilotSearch = ({ setOpen }) => {
       <div className="mt-[50px] mb-[28px] flex justify-center items-center gap-2">
         {/* <div className="border inline-block border-[#687588] px-4 py-2 rounded-[100px]">Show more properties</div> */}
         {Suggestions.map((suggestion) => (
-          <div key={suggestion} className="border inline-block border-[#687588] px-4 py-2 rounded-[100px]">
+          <button key={suggestion} className="border hover:bg-primary/10 transition inline-block border-[#687588] hover:border-primary px-4 py-2 rounded-[100px]">
             {suggestion}
-          </div>
+          </button>
         ))}
       </div>
       <div className="pb-[32px]">
