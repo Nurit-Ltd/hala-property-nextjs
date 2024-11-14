@@ -1,6 +1,7 @@
 "use client";
 import ProductCard from "@/components/shared/ProductCard/ProductCard";
 import { cardData } from "@/data/productCardData";
+import Link from "next/link";
 import { FaAngleRight } from "react-icons/fa6";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -53,10 +54,10 @@ const SimilarProperties = () => {
             </Swiper>
           </div>
           <div className="mt-6 md:mt-8 flex items-center justify-center">
-            <button className="w-[144px] h-12 rounded-[40px] border border-darkBlue flex items-center justify-center gap-1 bg-transparent font-bold text-base text-darkBlue hover:bg-darkBlue hover:text-white duration-200">
+            <Link href={"./buy"} className="w-[144px] h-12 rounded-[40px] border border-darkBlue flex items-center justify-center gap-1 bg-transparent font-bold text-base text-darkBlue hover:bg-darkBlue hover:text-white duration-200">
               View More
               <FaAngleRight />
-            </button>
+            </Link>
           </div>
           </div>
         </div>
