@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -55,15 +56,24 @@ const ProductCard = ({ card }) => {
             }`}
           >
             {isFavorited ? (
-              <AiFillHeart size={20} className="text-white" />
+              <AiFillHeart
+                size={20}
+                className="text-white"
+              />
             ) : (
-              <AiOutlineHeart size={20} className="text-white" />
+              <AiOutlineHeart
+                size={20}
+                className="text-white"
+              />
             )}
           </button>
         </div>
         {card.isVerified && (
           <div className="absolute bottom-[15px] right-[15px] w-[88px] h-7 rounded-md bg-primary bg-opacity-100 hover:bg-opacity-85 flex items-center justify-center gap-1 cursor-default">
-            <Image src={verifiedIcon} alt="verifiedIcon" />
+            <Image
+              src={verifiedIcon}
+              alt="verifiedIcon"
+            />
             <h5 className="text-sm font-semibold text-white">Verified</h5>
           </div>
         )}
@@ -86,11 +96,17 @@ const ProductCard = ({ card }) => {
           <div className="w-[1px] h-8 bg-grey300"></div>
           <div className="flex items-center gap-2">
             <div className="flex items-center gap-[6px]">
-              <Image src={bedCardIcon} alt="bedCardIcon" />
+              <Image
+                src={bedCardIcon}
+                alt="bedCardIcon"
+              />
               <h4 className="font-medium text-grey600">{card.beds}</h4>
             </div>
             <div className="flex items-center gap-[6px]">
-              <Image src={shower} alt="showerIcon" />
+              <Image
+                src={shower}
+                alt="showerIcon"
+              />
               <h4 className="font-medium text-grey600">{card.baths}</h4>
             </div>
           </div>
