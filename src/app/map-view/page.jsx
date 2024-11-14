@@ -1,5 +1,7 @@
 "use client";
 
+import SearchFilterContent from "@/components/screen/Buy/SearchFilterContent";
+import FilterDrawer from "@/components/shared/FilterDrawer";
 import ProductCard from "@/components/shared/ProductCard/ProductCard";
 import {
   DiamondIcon,
@@ -18,7 +20,7 @@ import {
 } from "@/components/ui/select";
 import { cardData } from "@/data/productCardData";
 import { cn } from "@/lib/utils";
-import { MapIcon } from "lucide-react";
+import { ChevronDown, MapIcon } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
 import { HiViewList } from "react-icons/hi";
@@ -26,6 +28,7 @@ import { HiViewList } from "react-icons/hi";
 const MapViewPage = () => {
   const [activeTab, setActiveTab] = useState(1);
   const [isMapView, setIsMapView] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   // Define an array of tab objects
   const tabs = [
@@ -180,8 +183,8 @@ const MapViewPage = () => {
 
         <div className={`${isMapView ? "hidden" : "block"}`}>
           {/* tabs */}
-          <div className="lg:absolute top-6 left-24 ">
-            <div className="flex items-center gap-4 rounded-[42px] p-3 bg-white">
+          <div className="lg:absolute top-6 left-24 overflow-hidden">
+            <div className="flex items-center gap-4 rounded-[42px] p-3 bg-white overflow-y-scroll custom-scrollbar-tab">
               {tabs.map((tab) => (
                 <Button
                   key={tab.id}
@@ -262,7 +265,7 @@ const MapViewPage = () => {
                   </Select>
                 </div>
                 {/* Developers */}
-                <div className="hidden lg:block">
+                <div className="hidden md:block">
                   <Select>
                     <SelectTrigger className="w-full gap-10 font-semibold">
                       <SelectValue placeholder="Developers" />
@@ -275,6 +278,15 @@ const MapViewPage = () => {
                       <SelectItem value="Developer 5">Developer 5</SelectItem>
                     </SelectContent>
                   </Select>
+                </div>
+                <div className="block md:hidden">
+                  <Button
+                    onClick={() => setIsOpen(!isOpen)}
+                    variant="outline"
+                    className="text-lg font-normal rounded-full inline-flex md:hidden"
+                  >
+                    More <ChevronDown />{" "}
+                  </Button>
                 </div>
               </div>
               <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6">
@@ -306,6 +318,15 @@ const MapViewPage = () => {
           </Button>
         )}
       </div>
+      {isOpen && (
+        <FilterDrawer
+          side="right"
+          open={isOpen}
+          setOpen={setIsOpen}
+        >
+          <SearchFilterContent setOpen={setIsOpen} />
+        </FilterDrawer>
+      )}
     </div>
   );
 };

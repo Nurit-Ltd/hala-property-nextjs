@@ -105,7 +105,7 @@ const SearchFilter = () => {
         >
           Clear filter <MdClose />{" "}
         </Button>
-        <Button className="bg-primary text-white rounded-full">
+        <Button className="bg-primary text-white rounded-full hidden md:inline-flex">
           <LuSearch />
           Search
         </Button>
