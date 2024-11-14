@@ -14,10 +14,10 @@ const OurClients = () => {
   return (
     <section className="md:pt-20">
       <div className="bg-darkBlue py-8 md:py-20 relative">
-        <h2 className="section-header-title text-white text-center relative z-30">
+        <h2 className="section-header-title text-white text-center relative z-20">
           What Our Clients Are Saying
         </h2>
-        <div className="mt-12 relative z-30">
+        <div className="mt-12 relative z-20">
           <Swiper
             spaceBetween={16}
             slidesPerView={1.2}

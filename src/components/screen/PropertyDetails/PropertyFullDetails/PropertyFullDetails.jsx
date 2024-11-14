@@ -5,11 +5,11 @@ const PropertyFullDetails = () => {
   return (
     <section className="mt-4 md:mt-10">
       <div className="container_fluid">
-        <div className="grid xl:grid-cols-12 xl:gap-8">
-          <div className="col-span-8">
+        <div className="grid xl:grid-cols-12 md:gap-8">
+          <div className="xl:col-span-8">
             <DetailsLeftSide />
           </div>
-          <div className="col-span-4 hidden xl:block">
+          <div className="xl:col-span-4 hidden md:block">
             <DetailsRightSide />
           </div>
         </div>

@@ -3,7 +3,8 @@ import UserInfoAndContact from "./UserInfoAndContact";
 
 const DetailsRightSide = () => {
   return (
-    <div className="px-6 pt-[30px] pb-6 border border-grey400 rounded-lg bg-white right-side-box-property">
+    <div className="max-w-[620px] xl:max-w-max mx-auto xl:mx-0">
+      <div className="px-6 pt-[30px] pb-6 border border-grey400 rounded-lg bg-white right-side-box-property">
       <UserInfoAndContact />
       <div className="w-full h-[1px] my-6 bg-grey400"></div>
       <div>
@@ -13,6 +14,7 @@ const DetailsRightSide = () => {
         </h4>
       </div>
       <ContactForm />
+    </div>
     </div>
   );
 };

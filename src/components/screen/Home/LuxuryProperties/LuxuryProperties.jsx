@@ -62,7 +62,7 @@ const LuxuryProperties = () => {
             className="mySwiper"
           >
             {cardData.map((card) => (
-              <SwiperSlide key={card.id}>
+              <SwiperSlide key={card.id} className="pb-5">
                 <ProductCardFirst card={card} />
               </SwiperSlide>
             ))}
