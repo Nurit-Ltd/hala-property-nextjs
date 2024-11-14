@@ -59,19 +59,9 @@ const NavSmall = () => {
         </div>
       </div>
 
-      {isMenuOpen && (
-        <div
-          onClick={toggleMenu}
-          className="fixed top-0 left-0 right-0 h-[60px] bg-black opacity-50 z-40"
-        ></div>
-      )}
+      {isMenuOpen && <div onClick={toggleMenu} className="fixed top-0 left-0 right-0 h-[60px] bg-black opacity-50 z-40"></div>}
 
-      {isMenuOpen && (
-        <div
-          onClick={toggleMenu}
-          className="fixed top-[60px] inset-x-0 bottom-0 bg-black opacity-50 z-50"
-        ></div>
-      )}
+      {isMenuOpen && <div onClick={toggleMenu} className="fixed top-[60px] inset-x-0 bottom-0 bg-black opacity-50 z-50"></div>}
 
       <div
         className={`fixed top-[60px] right-0 z-50 h-full w-[70%] bg-white shadow-lg transition-transform duration-300 ease-in-out ${
@@ -80,10 +70,7 @@ const NavSmall = () => {
       >
         <div className="flex flex-col min-h-[calc(100vh-60px)]">
           {/* Top section */}
-          <div
-            id="top-side"
-            className="px-4 pt-4 pb-5 flex items-center justify-between"
-          >
+          <div id="top-side" className="px-4 pt-4 pb-5 flex items-center justify-between">
             <h4 className="text-darkBlue font-bold">Welcome</h4>
             <button onClick={toggleMenu}>
               <Image src={closeIcon} alt="closeIcon" />
@@ -101,10 +88,7 @@ const NavSmall = () => {
             <ul className="space-y-4">
               {navItems.map((item, index) => (
                 <li key={index}>
-                  <Link
-                    href={`${item.path}`}
-                    className="font-semibold text-grey600"
-                  >
+                  <Link href={`${item.path}`} className="font-semibold text-grey600">
                     {item.label}
                   </Link>
                 </li>
@@ -112,10 +96,7 @@ const NavSmall = () => {
             </ul>
             <div className="w-full h-[1px] bg-grey300 my-4"></div>
             <div className="pb-4 w-full">
-              <button
-                onClick={toggleDropdown}
-                className="flex items-center justify-between w-full font-semibold text-grey600"
-              >
+              <button onClick={toggleDropdown} className="flex items-center justify-between w-full font-semibold text-grey600">
                 <span>More</span>
                 {isOpen ? <FiChevronUp /> : <FiChevronDown />}
               </button>
@@ -124,10 +105,7 @@ const NavSmall = () => {
                 <div className="mt-4 px-4">
                   <ul className="space-y-3">
                     <li>
-                      <Link
-                        href="/about-us"
-                        className="font-semibold text-grey600"
-                      >
+                      <Link href="/about-us" className="font-semibold text-grey600">
                         About Us
                       </Link>
                     </li>
@@ -137,10 +115,7 @@ const NavSmall = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link
-                        href="/contact"
-                        className="font-semibold text-grey600"
-                      >
+                      <Link href="/contact" className="font-semibold text-grey600">
                         Contact
                       </Link>
                     </li>
@@ -152,10 +127,7 @@ const NavSmall = () => {
 
           {/* Bottom section */}
           <div id="bottom-side" className="px-4 py-5 flex flex-col gap-2">
-            <Link
-              href="#"
-              className="w-full h-[38px] bg-primary rounded-lg flex items-center justify-center gap-2"
-            >
+            <Link href="/auth" className="w-full h-[38px] bg-primary rounded-lg flex items-center justify-center gap-2">
               <Image src={signInIcon} alt="signInIcon" />
               <h4 className="font-semibold text-white">Sign in</h4>
             </Link>
@@ -168,9 +140,7 @@ const NavSmall = () => {
               className="w-full h-[38px] nav-ai-button-box rounded-lg border border-white/[30%] flex items-center justify-center gap-2"
             >
               <Image src={aiSp} alt="aiSp" />
-              <h4 className="font-semibold text-white">
-                Find Property with AI
-              </h4>
+              <h4 className="font-semibold text-white">Find Property with AI</h4>
             </Link>
           </div>
         </div>
