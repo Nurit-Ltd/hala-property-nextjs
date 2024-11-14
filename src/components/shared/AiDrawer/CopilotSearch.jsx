@@ -23,17 +23,17 @@ const Suggestions = ["Show more properties", "Latest properties"];
 
 const CopilotSearch = ({ setOpen }) => {
   return (
-    <div className="w-full  ">
+    <div className="w-full relative h-full ">
       {/* height h-screen minus 96px */}
       <div className="flex w-full relative items-center py-4 px-6 justify-between gap-2  shadow pb-4 border-b border-[#CBD5E0]">
         <div className="flex items-center justify-center  gap-3 ">
           <Image src={copilotIcon} alt="copilot" className="w-[32px]" />
           <h5 className="font-bold text-darkBlue text-lg">Search with Copilot</h5>
         </div>
-        <IoMdClose onClick={() => setOpen(false)} className="cursor-pointer text-[32px] " />
+        <IoMdClose onClick={() => setOpen(false)} className="cursor-pointer text-[32px] text-[#04074E] " />
       </div>
       {/* Copilot Icon */}
-      <div className="max-h-[calc(100vh-380px)] overflow-y-scroll ">
+      <div className="max-h-[calc(100vh-230px)] xl:max-h-[calc(100vh-320px)] overflow-y-scroll  px-6">
         <div className="w-full  max-w-[352px] h-[177px] mx-auto mt-[18px] mb-[42px] flex flex-col items-center ">
           <Image src={copilotIcon} alt="copilot" className="w-[72px]" />
           <h5 className="font-bold h-[25px] mt-4 text-darkBlue text-lg">Your Copilot AI Assistant</h5>
@@ -52,16 +52,16 @@ const CopilotSearch = ({ setOpen }) => {
         </div>
       </div>
       {/* Suggestions */}
-      <div className="mt-[50px] mb-[28px] flex justify-center items-center gap-2">
+      <div className="   mt-[20px] mb-[28px] flex  justify-start items-center gap-2 px-6">
         {/* <div className="border inline-block border-[#687588] px-4 py-2 rounded-[100px]">Show more properties</div> */}
         {Suggestions.map((suggestion) => (
-          <button key={suggestion} className="border hover:bg-primary/10 transition inline-block border-[#687588] hover:border-primary px-4 py-2 rounded-[100px]">
+          <button key={suggestion} className="border hover:bg-primary/10 transition inline-block text-sm   border-[#687588] hover:border-primary px-4 py-2 rounded-[100px]">
             {suggestion}
           </button>
         ))}
       </div>
-      <div className="pb-[32px]">
-        <div className="h-[48px]  max-w-[352px]  mx-auto py-[10px]  px-[16px] border border-[#CBD5E0] rounded-lg flex justify-between items-center w-full">
+      <div className="pb-[32px] px-4">
+        <div className="h-[48px]    mx-auto py-[10px]  px-[16px] border border-[#CBD5E0] rounded-lg flex justify-between items-center w-full">
           <input type="text" className=" w-full border-none focus:outline-none placeholder:text-sm placeholder:text-[#687588] " placeholder="Ask me anything..." />
 
           <button className="flex items-center  ">
