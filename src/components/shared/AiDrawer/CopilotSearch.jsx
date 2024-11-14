@@ -7,7 +7,7 @@ import { PiPaperPlaneRight } from "react-icons/pi";
 const QA = [
   {
     question: "Are you able to find the best properties in UAE?",
-    answer: "I can definitely help guide you! Whether you &apos; re looking for luxurious apartments in Dubai or cozy villas in Abu Dhabi, this site should have you covered. What type of property are you thinking about?",
+    answer: "I can definitely help guide you! Whether you are looking for luxurious apartments in Dubai or cozy villas in Abu Dhabi, this site should have you covered. What type of property are you thinking about?",
   },
   {
     question: "I’ve been considering the Brookfield and Maple Grove areas. I’ve heard they’re family-friendly and have good schools.",
@@ -15,7 +15,7 @@ const QA = [
   },
   {
     question: "What types of properties are available in Dubai?",
-    answer: "Dubai offers a wide range of properties, including high-rise apartments, beachfront villas, and luxury penthouses. Each area has its own unique character, so there &apos; s something for everyone.",
+    answer: "Dubai offers a wide range of properties, including high-rise apartments, beachfront villas, and luxury penthouses. Each area has its own unique character, so there is something for everyone.",
   },
 ];
 
