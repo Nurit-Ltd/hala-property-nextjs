@@ -54,7 +54,7 @@ const ExploreMapping = () => {
               <div className="mt-6 xl:mt-8 flex items-center md:items-start justify-center md:justify-start">
                 <Link
                   href={"#"}
-                  className="w-[175px] h-[42px] md:w-[188px] md:h-12 rounded-md border-[.5px] bg-primary  flex items-center justify-center gap-2 button-shadow-explore text-white button-shadow-explore text-sm md:text-base font-semibold md:font-bold"
+                  className="w-[175px] h-[42px] md:w-[188px] md:h-12 rounded-md border-[.5px] bg-primary hover:bg-[#004BDCCC]  flex items-center justify-center gap-2 button-shadow-explore text-white button-shadow-explore text-sm md:text-base font-semibold md:font-bold"
                 >
                   Explore Now <Image src={rightArrow} alt="rightArrow" />{" "}
                 </Link>

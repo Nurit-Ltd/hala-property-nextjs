@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import bedCardIcon from "../../../assets/home/bed-card-icon.svg";
 import downScales from "../../../assets/home/downScales.svg";
@@ -8,21 +9,30 @@ import upScales from "../../../assets/home/upScales.svg";
 import verifiedIcon from "../../../assets/home/verifiedIcon.svg";
 
 const ProductCard = ({ card }) => {
+  const [isFavorited, setIsFavorited] = useState(card.isFavorited);
+
+  const handleFavoriteClick = () => {
+    setIsFavorited((prev) => !prev);
+  };
   return (
-    <div className="rounded-2xl border border-grayBorder product-card-shadow">
+    <div className="rounded-2xl border border-grayBorder for-hover-card-box product-card-shadow">
       <div className="relative">
-        <Link href={`/property-details/${card.id}`}>
-          <Image
-            src={card.image}
-            alt={`cardProduct${card.id}`}
-            className="w-full h-[190px] md:h-[256px] rounded-tl-2xl rounded-tr-2xl"
-          />
-        </Link>
+        <div className="relative overflow-hidden rounded-tl-2xl rounded-tr-2xl">
+          <Link href={`/property-details/${card.id}`}>
+            <Image
+              src={card.image}
+              alt={`cardProduct${card.id}`}
+              className="w-full h-[190px] md:h-[256px] transition-all duration-300 transform hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-black opacity-0 hover:opacity-30 transition-opacity duration-300"></div>
+          </Link>
+        </div>
+
         <div className="absolute top-[15px] left-[15px] flex items-center gap-[10px]">
-          <div className="rounded-md border-[.5px] bg-black/[25%] border-white/[20%] w-20 h-7 flex items-center justify-center backdrop-blur-card-custom text-sm font-semibold text-white">
+          <div className="rounded-md border-[.5px] bg-black/[25%] hover:bg-black/[15%] border-white/[20%] w-20 h-7 flex items-center justify-center backdrop-blur-card-custom text-sm font-semibold text-white cursor-default">
             {card.label}
           </div>
-          <div className="rounded-md border-[.5px] bg-black/[25%] border-white/[20%] w-[75px] h-7 flex items-center justify-center gap-[6px] backdrop-blur-card-custom text-sm font-semibold text-white">
+          <div className="rounded-md border-[.5px] bg-black/[25%] hover:bg-black/[15%] border-white/[20%] w-[75px] h-7 flex items-center justify-center gap-[6px] backdrop-blur-card-custom text-sm font-semibold text-white cursor-default">
             <div
               className={`w-[22px] h-5 rounded flex items-center justify-center ${
                 card.isPercentageUp ? "bg-success" : "bg-errorRedLight"
@@ -39,11 +49,12 @@ const ProductCard = ({ card }) => {
         </div>
         <div className="absolute top-[15px] right-[15px]">
           <button
+            onClick={handleFavoriteClick}
             className={`w-8 h-8 rounded-full flex items-center justify-center backdrop-blur-card-custom border-[0.5px] border-white/[20%] ${
-              card.isFavorited ? "bg-errorDark" : "bg-black/[40%]"
+              isFavorited ? "bg-errorDark" : "bg-black/[40%]"
             }`}
           >
-            {card.isFavorited ? (
+            {isFavorited ? (
               <AiFillHeart size={20} className="text-white" />
             ) : (
               <AiOutlineHeart size={20} className="text-white" />
@@ -51,7 +62,7 @@ const ProductCard = ({ card }) => {
           </button>
         </div>
         {card.isVerified && (
-          <div className="absolute bottom-[15px] right-[15px] w-[88px] h-7 rounded-md bg-primary flex items-center justify-center gap-1">
+          <div className="absolute bottom-[15px] right-[15px] w-[88px] h-7 rounded-md bg-primary bg-opacity-100 hover:bg-opacity-85 flex items-center justify-center gap-1 cursor-default">
             <Image src={verifiedIcon} alt="verifiedIcon" />
             <h5 className="text-sm font-semibold text-white">Verified</h5>
           </div>

@@ -24,15 +24,15 @@ const UserInfoAndContact = () => {
         </div>
       </div>
       <div className="flex items-center justify-between">
-        <button className="h-12 px-4 py-3 rounded-lg bg-greenBase flex items-center justify-center gap-2 font-bold text-white">
+        <button className="h-12 px-4 py-3 rounded-lg bg-greenBase hover:bg-opacity-90 bg-opacity-100 flex items-center justify-center gap-2 font-bold text-white">
           <Image src={phoneIcon} alt="phoneIcon" />
           Call
         </button>
-        <button className="h-12 px-4 py-3 rounded-lg bg-redBase flex items-center justify-center gap-2 font-bold text-white">
+        <button className="h-12 px-4 py-3 rounded-lg bg-redBase hover:bg-opacity-90 bg-opacity-100 flex items-center justify-center gap-2 font-bold text-white">
           <Image src={emailUser} alt="emailUser" />
           E-mail
         </button>
-        <button className="h-12  p-3 rounded-lg bg-lightGreenBase flex items-center justify-center gap-2 font-bold text-white">
+        <button className="h-12  p-3 rounded-lg bg-lightGreenBase hover:bg-opacity-90 bg-opacity-100 flex items-center justify-center gap-2 font-bold text-white">
           <Image src={whatsappUserInfo} alt="whatsappUserInfo" />
           WhatsApp
         </button>

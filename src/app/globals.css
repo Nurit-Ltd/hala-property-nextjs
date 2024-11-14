@@ -86,6 +86,16 @@ body {
       rgba(255, 255, 255, 0.2) 0%,
       rgba(255, 255, 255, 0) 100%
     );
+  transition: transform 0.5s ease;
+}
+.nav-ai-button-box:hover {
+  box-shadow: 0px 2px 4px 0px #1b1c1d2e;
+  background: linear-gradient(92.14deg, #cd34db 0%, #3b48df 102.52%),
+    radial-gradient(
+      100% 100% at 50% 0%,
+      rgba(255, 255, 255, 0.2) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
 }
 .tong {
   box-shadow: 7px -7px 0 7px #f7f5f2;
@@ -111,6 +121,20 @@ body {
 
   box-shadow: 0px 2px 12px 0px #0000001f inset;
 }
+.fixed-box-details {
+  box-shadow: 0px -4px 12px -2px #10182814;
+
+  box-shadow: 0px -12px 16px -4px #10182814;
+}
+
+.for-hover-card-box:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.for-hover-box:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
 @media (max-width: 640px) {
   .product-card-shadow-first {
     box-shadow: 0px 1px 2px 0px #1018280f, 0px 1px 3px 0px #1018281a;
