@@ -39,9 +39,29 @@ const Hero = () => {
                       className="w-4 h-4 lg:w-7 lg:h-7"
                     />
                     <div className="flex flex-col items-start">
-                      <h4 className="text-sm leading-[19px] lg:text-lg lg:leading-[25px] font-semibold lg:font-bold text-grey600 lg:text-darkBlue">
+                      <h4 className="hidden lg:block text-sm leading-[19px] lg:text-lg lg:leading-[25px] font-semibold lg:font-bold text-grey600 lg:text-darkBlue">
                         {item.title}
                       </h4>
+                      <div className="block lg:hidden">
+                        <Select>
+                          <SelectTrigger
+                            icon={false}
+                            className="w-full lg:min-w-[140px] text-sm p-0 h-auto border-0 bg-transparent ring-0 focus:ring-0 outline-none shadow-none rounded-none leading-[19px] lg:text-lg lg:leading-[25px] font-semibold lg:font-bold text-grey600 lg:text-darkBlue"
+                          >
+                            <SelectValue placeholder={item.title} />
+                          </SelectTrigger>
+                          <SelectContent className="text-xs">
+                            {item.options.map((option, idx) => (
+                              <SelectItem
+                                key={idx}
+                                value={option}
+                              >
+                                {option}
+                              </SelectItem>
+                            ))}
+                          </SelectContent>
+                        </Select>
+                      </div>
                       <div className="hidden lg:block text-sm text-grey600 leading-[19px]">
                         <Select>
                           <SelectTrigger
@@ -70,7 +90,7 @@ const Hero = () => {
                 </div>
               ))}
             </div>
-            <Button className="w-8 h-8 lg:w-16 lg:h-16 rounded-full bg-primary hover:scale-95 transition-all duration-300 hero-search-box flex items-center justify-center">
+            <Button className="w-8 h-8 lg:w-16 lg:h-16 rounded-full bg-primary hover:scale-95 transition-all duration-300 hero-search-box p-0 flex items-center justify-center">
               <Image
                 src={searchIcon}
                 alt="searchIcon"
