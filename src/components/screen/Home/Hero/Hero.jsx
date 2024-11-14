@@ -1,4 +1,11 @@
 import { Button } from "@/components/ui/button";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { heroItems } from "@/data/heroData";
 import Image from "next/image";
 import searchIcon from "../../../../assets/home/hero-search-icon.svg";
@@ -32,12 +39,29 @@ const Hero = () => {
                       className="w-4 h-4 lg:w-7 lg:h-7"
                     />
                     <div className="flex flex-col items-start">
-                      <h4 className="text-sm leading-[19px] lg:text-lg lg:leading-[25px]   font-semibold lg:font-bold text-grey600 lg:text-darkBlue">
+                      <h4 className="text-sm leading-[19px] lg:text-lg lg:leading-[25px] font-semibold lg:font-bold text-grey600 lg:text-darkBlue">
                         {item.title}
                       </h4>
-                      <h5 className="hidden lg:block text-sm text-grey600 leading-[19px]">
-                        {item.description}
-                      </h5>
+                      <div className="hidden lg:block text-sm text-grey600 leading-[19px]">
+                        <Select>
+                          <SelectTrigger
+                            icon={false}
+                            className="w-full lg:min-w-[140px] text-sm p-0 h-auto border-0 bg-transparent ring-0 focus:ring-0 outline-none shadow-none rounded-none text-grey600"
+                          >
+                            <SelectValue placeholder={item.description} />
+                          </SelectTrigger>
+                          <SelectContent className="text-xs">
+                            {item.options.map((option, idx) => (
+                              <SelectItem
+                                key={idx}
+                                value={option}
+                              >
+                                {option}
+                              </SelectItem>
+                            ))}
+                          </SelectContent>
+                        </Select>
+                      </div>
                     </div>
                   </button>
                   {index < heroItems.length - 1 && (
