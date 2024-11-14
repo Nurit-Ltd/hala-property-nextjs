@@ -144,17 +144,22 @@ const Blog = () => {
         <div className="container_fluid py-[32px] xl:pt-[100px]  ">
           {/* Heading */}
           <div className="flex flex-col items-center max-w-[1038px] mx-auto  gap-2  ">
-            <h2 className="text-xl   xl:text-[48px] font-bold  text-gray-900 leading-tight">
+            <h2 className="text-xl   xl:text-[48px] font-bold  text-darkBlue leading-tight">
               Featured <span className="text-primary">Blogs</span>
             </h2>
-            <p className="text-base xl:text-lg   text-center  text-gray-700">Stay updated with the latest trends and insights in the property market. These are our most-read articles, packed with expert tips and advice to help you make informed decisions, whether you&apos;re buying, selling, or investing in real estate.</p>
+            <p className="text-sm xl:text-lg   text-center  text-gray-700">Stay updated with the latest trends and insights in the property market. These are our most-read articles, packed with expert tips and advice to help you make informed decisions, whether you&apos;re buying, selling, or investing in real estate.</p>
           </div>
 
           {/* Blog Cards */}
           <div className="xl:flex justify-between gap-[32px] items-start mt-8   xl:my-[60px] ">
             <div className="xl:w-[52%]  flex flex-col mb-8 xl:mb-0 ">
-              <Image className=" rounded-2xl w-full h-auto" src={fiveTips} alt="blogHeader" />
-              <h3 className=" mt-6    xl:text-[32px] font-bold  text-gray-800 leading-tight">5 Tips for First-Time Home Buyers What You Need to Know</h3>
+              <Link href="/blog/123" className=" hover:opacity-90 transition  ">
+                <Image className=" rounded-2xl w-full h-auto" src={fiveTips} alt="blogHeader" />
+              </Link>
+              <Link href="/blog/123" className="text-gray-800 hover:text-primary transition">
+                <h3 className=" mt-6    xl:text-[32px] font-bold   leading-tight">5 Tips for First-Time Home Buyers What You Need to Know</h3>
+              </Link>
+
               <p className=" mt-2 text-sm xl:text-base       text-gray-700">Help first-time buyers navigate the process with key advice on budgeting, mortgage options, and avoiding common mistakes.</p>
               <Link href="/blog/123" className="mt-4 text-primary font-semibold flex items-center justify-start h-[22px]">
                 <span>Read details </span>
@@ -165,10 +170,15 @@ const Blog = () => {
               {rightBlogs.map((blog, index) => (
                 <div key={index} className="flex justify-between items-stretch mb-5">
                   <div className="w-[37%] xl:w-[33%]">
-                    <Image className=" rounded-2xl   h-full" src={blog.img} alt="blog title" />
+                    <Link href="/blog/123" className=" hover:opacity-90 transition  ">
+                      <Image className=" rounded-2xl   h-full" src={blog.img} alt="blog title" />
+                    </Link>
                   </div>
                   <div className="w-[60%] xl:w-[65%]  flex flex-col  ">
-                    <h3 className="   text-sm  xl:text-2xl font-bold  text-gray-800 leading-tight">{limitCharacters(blog.title, 50)}</h3>
+                    <Link href="/blog/123" className="text-gray-800 hover:text-primary transition">
+                      <h3 className="   text-sm  xl:text-2xl font-bold    leading-tight">{limitCharacters(blog.title, 50)}</h3>
+                    </Link>
+
                     <p className=" mt-[6px] xl:mt-3 text-xs xl:text-base       text-gray-700">{limitCharacters(blog.description, 70)}</p>
                     <Link href="/blog/123" className=" mt-2 xl:mt-4 text-sm xl:text-base text-primary font-semibold flex items-center justify-start h-[22px]">
                       <span>Read details </span>
@@ -186,7 +196,7 @@ const Blog = () => {
         {/* Categories */}
         <div className="flex justify-start lg:justify-center items-center flex-nowrap overflow-scroll xl:overflow-auto  gap-4">
           {categories.map((category, index) => (
-            <button key={index} onClick={() => setActiveCategory(category.name)} className={`border flex-shrink-0 h-[42px] border-gray-400 hover:border-primary font-semibold text-base text-gray-700 hover:text-primary transition flex justify-center items-center rounded-lg px-5 py-[10px] gap-2 ${activeCategory === category.name ? "border-primary text-primary bg-primary/5" : ""}`}>
+            <button key={index} onClick={() => setActiveCategory(category.name)} className={`border flex-shrink-0 h-[42px] border-[#CBD5E0] hover:border-primary font-semibold text-base text-gray-700 hover:text-primary transition flex justify-center items-center rounded-lg px-5 py-[10px] gap-2 ${activeCategory === category.name ? "border-primary text-primary bg-primary/5" : ""}`}>
               <category.icon />
               <span>{category.name}</span>
             </button>
@@ -199,7 +209,9 @@ const Blog = () => {
             .filter((blog) => blog.category.includes(activeCategory))
             .map((blog, index) => (
               <div key={index} className="   flex flex-col gap-4  max-w-[500px] mx-auto ">
-                <Image src={blog.img} alt="blog title" className="rounded-lg h-[236px] lg:h-[293px]" />
+                <Link href="/blog/123" className=" hover:opacity-90 transition   ">
+                  <Image src={blog.img} alt="blog title" className="rounded-lg h-[236px] lg:h-[293px]" />
+                </Link>
                 <div className="flex justify-start items-center font-medium text-gray-600 text-base  gap-[10px]">
                   <Image src={roger} alt="author" className="w-6 h-6 rounded-full" />
                   <span className="text-sm text-gray-700">Roger Shields</span>
@@ -208,7 +220,10 @@ const Blog = () => {
                   <span className="w-1 h-1 bg-gray-600 rounded-full"></span>
                   <span>6 min read</span>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-800">{limitCharacters(blog.title, 50)}</h3>
+                <Link href="/blog/123" className="text-gray-800 hover:text-primary transition">
+                  <h3 className="text-2xl font-bold  ">{limitCharacters(blog.title, 50)}</h3>
+                </Link>
+
                 <p className="text-base mt-2 text-gray-600">{limitCharacters(blog.description, 90)}</p>
                 <Link href="/blog/123" className="text-primary text-base mt-4 lg:mt-2 font-semibold flex items-center justify-start h-[22px]">
                   <span>Read details </span>
