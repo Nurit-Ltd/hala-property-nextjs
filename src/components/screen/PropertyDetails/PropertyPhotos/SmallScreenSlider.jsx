@@ -34,7 +34,7 @@ const SmallScreenSlider = () => {
                 {slide.buttons.map((button, btnIndex) => (
                   <button
                     key={btnIndex}
-                    className="h-[30px] px-3 py-1.5 rounded-md bg-black/[25px] border border-white/[60%] flex items-center justify-center gap-1 text-xs font-medium text-white app-button-box-pro"
+                    className="h-[30px] px-3 py-1.5 rounded-md bg-black/[25%] border border-white/[60%] flex items-center justify-center gap-1 text-xs font-medium text-white app-button-box-pro"
                   >
                     <Image src={button.icon} alt={button.label} />
                     {button.label}
