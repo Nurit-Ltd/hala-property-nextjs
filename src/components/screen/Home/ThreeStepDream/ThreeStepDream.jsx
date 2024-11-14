@@ -53,7 +53,7 @@ const ThreeStepDream = () => {
               className="mySwiper"
             >
               {stepsCard.map((step) => (
-                <SwiperSlide key={step.id} className="!pb-6">
+                <SwiperSlide key={step.id} className="!pb-6 lg:pb-0">
                   <ThreeStepDreamCard key={step.id} step={step} />
                 </SwiperSlide>
               ))}
