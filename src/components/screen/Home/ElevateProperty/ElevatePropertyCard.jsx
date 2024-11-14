@@ -18,8 +18,8 @@ const ElevatePropertyCard = ({ card }) => {
           }}
         ></div>
         <div className="absolute bottom-0 left-0 right-0 p-6 space-y-3">
-          <h4 className="text-[32px] font-bold text-white">{card.title}</h4>
-          <h5 className="text-sm text-white/[90%]">{card.description}</h5>
+          <h4 className="text-lg md:text-[32px] font-bold text-white">{card.title}</h4>
+          <h5 className="text-xs md:text-sm text-white/[90%]">{card.description}</h5>
         </div>
       </div>
     </div>

@@ -4,6 +4,7 @@ import Image from "next/image";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import shapesText from "../../../../assets/home/shapes.svg";
 import ElevatePropertyCard from "./ElevatePropertyCard";
@@ -62,14 +63,25 @@ const ElevateProperty = () => {
                   spaceBetween: 20,
                 }
               }}
-              className="mySwiper w-full" // Ensure Swiper takes full width
+              pagination={{
+                clickable: true,
+                el: ".custom-ele-pagination",
+                renderBullet: (index, className) => {
+                  return `<span class="${className} custom-ele-bullet"></span>`;
+                },
+              }}
+              navigation
+              modules={[Pagination, Navigation]}
+              className="mySwiper w-full"
             >
               {elevatePropertyCardData.map((card) => (
-                <SwiperSlide key={card.id} className="flex justify-center">
+                <SwiperSlide key={card.id} className="flex justify-center !pb-6 lg:pb-0">
                   <ElevatePropertyCard card={card} />
                 </SwiperSlide>
+                
               ))}
             </Swiper>
+            <div className="custom-ele-pagination mt-4 flex items-center justify-center xl:hidden"></div>
           </div>
         </div>
       </div>
