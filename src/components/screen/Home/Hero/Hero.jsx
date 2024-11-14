@@ -32,7 +32,7 @@ const Hero = () => {
                   key={index}
                   className="flex items-center"
                 >
-                  <button className="px-2.5 lg:px-6 flex items-center gap-[5px] lg:gap-3">
+                  <div className="px-2.5 lg:px-6 flex items-center gap-[5px] lg:gap-3">
                     <Image
                       src={item.icon}
                       alt={`${item.title}-hero`}
@@ -63,7 +63,7 @@ const Hero = () => {
                         </Select>
                       </div>
                     </div>
-                  </button>
+                  </div>
                   {index < heroItems.length - 1 && (
                     <div className="w-[1px] h-5 lg:h-8 mx-1.5 lg:mx-5 bg-grayLine"></div>
                   )}
