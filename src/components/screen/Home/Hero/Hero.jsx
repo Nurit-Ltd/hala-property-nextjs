@@ -1,3 +1,11 @@
+import { Button } from "@/components/ui/button";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { heroItems } from "@/data/heroData";
 import Image from "next/image";
 import searchIcon from "../../../../assets/home/hero-search-icon.svg";
@@ -20,27 +28,55 @@ const Hero = () => {
           <div className="h-12 lg:h-[98px] pr-2.5 lg:pr-6 bg-white border-[.5px] border-[#F4F4F4] hero-info-box rounded-full flex items-center justify-between gap-5 lg:gap-12">
             <div className="flex items-center">
               {heroItems.map((item, index) => (
-                <div key={index} className="flex items-center">
-                  <button className="px-2.5 lg:px-6 flex items-center gap-[5px] lg:gap-3">
-                    <Image src={item.icon} alt={`${item.title}-hero`} className="w-4 h-4 lg:w-7 lg:h-7" />
+                <div
+                  key={index}
+                  className="flex items-center"
+                >
+                  <div className="px-2.5 lg:px-6 flex items-center gap-[5px] lg:gap-3">
+                    <Image
+                      src={item.icon}
+                      alt={`${item.title}-hero`}
+                      className="w-4 h-4 lg:w-7 lg:h-7"
+                    />
                     <div className="flex flex-col items-start">
-                      <h4 className="text-sm leading-[19px] lg:text-lg lg:leading-[25px]   font-semibold lg:font-bold text-grey600 lg:text-darkBlue">
+                      <h4 className="text-sm leading-[19px] lg:text-lg lg:leading-[25px] font-semibold lg:font-bold text-grey600 lg:text-darkBlue">
                         {item.title}
                       </h4>
-                      <h5 className="hidden lg:block text-sm text-grey600 leading-[19px]">
-                        {item.description}
-                      </h5>
+                      <div className="hidden lg:block text-sm text-grey600 leading-[19px]">
+                        <Select>
+                          <SelectTrigger
+                            icon={false}
+                            className="w-full lg:min-w-[140px] text-sm p-0 h-auto border-0 bg-transparent ring-0 focus:ring-0 outline-none shadow-none rounded-none text-grey600"
+                          >
+                            <SelectValue placeholder={item.description} />
+                          </SelectTrigger>
+                          <SelectContent className="text-xs">
+                            {item.options.map((option, idx) => (
+                              <SelectItem
+                                key={idx}
+                                value={option}
+                              >
+                                {option}
+                              </SelectItem>
+                            ))}
+                          </SelectContent>
+                        </Select>
+                      </div>
                     </div>
-                  </button>
+                  </div>
                   {index < heroItems.length - 1 && (
                     <div className="w-[1px] h-5 lg:h-8 mx-1.5 lg:mx-5 bg-grayLine"></div>
                   )}
                 </div>
               ))}
             </div>
-            <button className="w-8 h-8 lg:w-16 lg:h-16 rounded-full bg-primary hero-search-box flex items-center justify-center">
-              <Image src={searchIcon} alt="searchIcon" className="w-3 h-3 lg:w-7 lg:h-7" />
-            </button>
+            <Button className="w-8 h-8 lg:w-16 lg:h-16 rounded-full bg-primary hover:scale-95 transition-all duration-300 hero-search-box flex items-center justify-center">
+              <Image
+                src={searchIcon}
+                alt="searchIcon"
+                className="w-3 h-3 lg:w-7 lg:h-7"
+              />
+            </Button>
           </div>
         </div>
       </div>
