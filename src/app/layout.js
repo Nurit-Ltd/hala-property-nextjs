@@ -1,6 +1,7 @@
 import Footer from "@/components/shared/Footer/Footer";
 import Navbar from "@/components/shared/Navbar/Navbar";
 import NavSmall from "@/components/shared/Navbar/NavSmall";
+import { AiProvider } from "@/contexts/AiContext";
 import "./globals.css";
 
 export const metadata = {
@@ -12,15 +13,17 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="relative">
-        <div className="fixed top-0 left-0 right-0 z-50">
-          <Navbar />
-        </div>
-        <div>
-          <NavSmall />
-        </div>
-        <main>{children}</main>
+        <AiProvider>
+          <div className="fixed top-0 left-0 right-0 z-50">
+            <Navbar />
+          </div>
+          <div>
+            <NavSmall />
+          </div>
+          <main>{children}</main>
 
-        <Footer />
+          <Footer />
+        </AiProvider>
       </body>
     </html>
   );

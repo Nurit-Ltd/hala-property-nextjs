@@ -8,10 +8,12 @@ import { SlidersHorizontal } from "lucide-react";
 import { useState } from "react";
 import FilterContent from "./FilterContent";
 
+import { useAiContext } from "@/contexts/AiContext";
+
 const TabFilter = () => {
   const [activeTab, setActiveTab] = useState(1);
   const [isOpen, setIsOpen] = useState(false);
-  const [isAiOpen, setIsAiOpen] = useState(true);
+  const { isAiOpen, setIsAiOpen } = useAiContext();
 
   // Define an array of tab objects
   const tabs = [

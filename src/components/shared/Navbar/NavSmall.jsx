@@ -13,9 +13,22 @@ import signInIcon from "../../../assets/home/signInIcon.svg";
 import aiSp from "../../../assets/home/sparkles-ai.svg";
 import whatsApp from "../../../assets/home/whatsApp.svg";
 
+import { useAiContext } from "@/contexts/AiContext";
+import { useRouter } from "next/navigation";
+
 const NavSmall = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+
+  const router = useRouter();
+
+  const { isAiOpen, setIsAiOpen } = useAiContext();
+
+  const handleAiClick = () => {
+    setIsAiOpen(!isAiOpen);
+    // navigate to "/buy"
+    router.push("/buy"); // Navigate to the "/buy" route
+  };
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
@@ -48,7 +61,7 @@ const NavSmall = () => {
               <h4 className="text-lg font-bold text-white">Hala Property</h4>
             </Link>
             <div className="flex items-center gap-4">
-              <button>
+              <button onClick={handleAiClick}>
                 <Image src={aiIcon} alt="aiIcon" />
               </button>
               <button onClick={toggleMenu}>
@@ -63,11 +76,7 @@ const NavSmall = () => {
 
       {isMenuOpen && <div onClick={toggleMenu} className="fixed top-[60px] inset-x-0 bottom-0 bg-black opacity-50 z-50"></div>}
 
-      <div
-        className={`fixed top-[60px] right-0 z-50 h-full w-[70%] bg-white shadow-lg transition-transform duration-300 ease-in-out ${
-          isMenuOpen ? "translate-x-0" : "translate-x-full"
-        }`}
-      >
+      <div className={`fixed top-[60px] right-0 z-50 h-full w-[70%] bg-white shadow-lg transition-transform duration-300 ease-in-out ${isMenuOpen ? "translate-x-0" : "translate-x-full"}`}>
         <div className="flex flex-col min-h-[calc(100vh-100px)]">
           {/* Top section */}
           <div id="top-side" className="px-4 pt-4 pb-5 flex items-center justify-between">
@@ -135,13 +144,10 @@ const NavSmall = () => {
               <Image src={whatsApp} alt="whatsApp" />
               WhatsApp
             </Link>
-            <Link
-              href="#"
-              className="w-full h-[38px] nav-ai-button-box rounded-lg border border-white/[30%] flex items-center justify-center gap-2"
-            >
+            <button onClick={handleAiClick} className="w-full h-[38px] nav-ai-button-box rounded-lg border border-white/[30%] flex items-center justify-center gap-2">
               <Image src={aiSp} alt="aiSp" />
               <h4 className="font-semibold text-white">Find Property with AI</h4>
-            </Link>
+            </button>
           </div>
         </div>
       </div>
