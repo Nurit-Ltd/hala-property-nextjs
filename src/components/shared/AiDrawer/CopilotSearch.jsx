@@ -7,7 +7,7 @@ import { PiPaperPlaneRight } from "react-icons/pi";
 const QA = [
   {
     question: "Are you able to find the best properties in UAE?",
-    answer: "I can definitely help guide you! Whether you are looking for luxurious apartments in Dubai or cozy villas in Abu Dhabi, this site should have you covered. What type of property are you thinking about?",
+    answer: "I can definitely help guide you! Whether you &apos; re looking for luxurious apartments in Dubai or cozy villas in Abu Dhabi, this site should have you covered. What type of property are you thinking about?",
   },
   {
     question: "I’ve been considering the Brookfield and Maple Grove areas. I’ve heard they’re family-friendly and have good schools.",
@@ -15,7 +15,7 @@ const QA = [
   },
   {
     question: "What types of properties are available in Dubai?",
-    answer: "Dubai offers a wide range of properties, including high-rise apartments, beachfront villas, and luxury penthouses. Each area has its own unique character, so there is something for everyone.",
+    answer: "Dubai offers a wide range of properties, including high-rise apartments, beachfront villas, and luxury penthouses. Each area has its own unique character, so there &apos; s something for everyone.",
   },
 ];
 
@@ -37,11 +37,7 @@ const CopilotSearch = ({ setOpen }) => {
         <div className="w-full  max-w-[352px] h-[177px] mx-auto mt-[18px] mb-[42px] flex flex-col items-center ">
           <Image src={copilotIcon} alt="copilot" className="w-[72px]" />
           <h5 className="font-bold h-[25px] mt-4 text-darkBlue text-lg">Your Copilot AI Assistant</h5>
-<<<<<<< HEAD
           <p className="text-center mt-1 text-[#687588] text-sm">Its the AI-powered companion that keeps you organized and efficient, so you can focus on what matters most</p>
-=======
-          <p className="text-center mt-1 text-[#687588] text-sm">It&apos;s the AI-powered companion that keeps you organized and efficient, so you can focus on what matters most</p>
->>>>>>> de225cfed7aa278eb301b95bc5569b98ea47d649
         </div>
         {/* Question and Answer */}
         <div className="">
