@@ -1,8 +1,10 @@
 import locationIcon from "../assets/home/location-icon.svg";
 import logo from "../assets/home/logo-main.svg";
 import emailICon from "../assets/home/mail-icon.svg";
-import dollarIcon from "../assets/home/usd-icon.svg";
-import worldMapIcon from "../assets/home/world-icon.svg";
+// import dollarIcon from "../assets/home/usd-icon.svg";
+// import worldMapIcon from "../assets/home/world-icon.svg";
+import { HiOutlineCurrencyDollar } from "react-icons/hi";
+import { TbWorld } from "react-icons/tb";
 
 export const footerData = {
   companyInfo: {
@@ -32,8 +34,8 @@ export const footerData = {
     { label: "Tiktok", href: "#" },
   ],
   languageOptions: [
-    { label: "English", icon: worldMapIcon },
-    { label: "USD", icon: dollarIcon },
+    { label: "English", icon: TbWorld },
+    { label: "USD", icon: HiOutlineCurrencyDollar },
   ],
   copyright: "© 2024 Hala Property, Inc. All Rights Reserved.",
 };

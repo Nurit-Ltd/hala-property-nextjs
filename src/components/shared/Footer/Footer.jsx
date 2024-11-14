@@ -45,7 +45,7 @@ const Footer = () => {
                 <ul className="space-y-3">
                   {footerData.menu.map((item, index) => (
                     <li key={index}>
-                      <Link href={item.href} className="text-sm">
+                      <Link href={item.href} className="text-sm hover:text-primary">
                         {item.label}
                       </Link>
                     </li>
@@ -59,7 +59,7 @@ const Footer = () => {
                 <ul className="space-y-3">
                   {footerData.resources.map((item, index) => (
                     <li key={index}>
-                      <Link href={item.href} className="text-sm">
+                      <Link href={item.href} className="text-sm hover:text-primary">
                         {item.label}
                       </Link>
                     </li>
@@ -73,7 +73,7 @@ const Footer = () => {
                 <ul className="flex flex-row items-center lg:flex-col lg:items-start lg:space-y-3 gap-6 lg:gap-0">
                   {footerData.socialLinks.map((link, index) => (
                     <li key={index}>
-                      <Link href={link.href} className="text-sm">
+                      <Link href={link.href} className="text-sm hover:text-primary">
                         {link.label}
                       </Link>
                     </li>
@@ -97,7 +97,7 @@ const Footer = () => {
                   />
                   <button
                     type="submit"
-                    className="w-[30%] lg:w-full h-11 lg:h-[42px] py-1.5 px-8 bg-primary text-white rounded-md flex items-center justify-center text-sm font-semibold"
+                    className="w-[30%] lg:w-full h-11 lg:h-[42px] py-1.5 px-8 bg-primary hover:bg-[#004BDCCC] text-white rounded-md flex items-center justify-center text-sm font-semibold"
                   >
                     Subscribe
                   </button>
@@ -120,10 +120,11 @@ const Footer = () => {
                 {footerData.languageOptions.map((option, index) => (
                   <button
                     key={index}
-                    className="h-9 bg-white border-[0.5px] border-grey50 rounded-[3px] px-3 py-1.5 flex items-center gap-2"
+                    className="h-9 bg-white hover:bg-primary border-[0.5px] border-grey50 hover:border-primary text-darkBlue hover:text-white rounded-[3px] duration-200 px-3 py-1.5 flex items-center gap-2"
                   >
-                    <Image src={option.icon} alt={`${option.label} Icon`} />
-                    <h4 className="font-bold text-darkBlue">{option.label}</h4>
+                    {/* <Image src={option.icon} alt={`${option.label} Icon`} /> */}
+                    <option.icon className="text-xl" />
+                    <h4 className="font-bold">{option.label}</h4>
                   </button>
                 ))}
               </div>
