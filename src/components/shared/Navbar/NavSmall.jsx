@@ -63,8 +63,12 @@ const NavSmall = () => {
 
       {isMenuOpen && <div onClick={toggleMenu} className="fixed top-[60px] inset-x-0 bottom-0 bg-black opacity-50 z-50"></div>}
 
-      <div className={`fixed top-[60px] right-0 z-50 h-full w-[70%] bg-white shadow-lg transition-transform duration-300 ease-in-out ${isMenuOpen ? "translate-x-0" : "translate-x-full"}`}>
-        <div className="flex flex-col min-h-screen">
+      <div
+        className={`fixed top-[60px] right-0 z-50 h-full w-[70%] bg-white shadow-lg transition-transform duration-300 ease-in-out ${
+          isMenuOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        <div className="flex flex-col min-h-[calc(100vh-60px)]">
           {/* Top section */}
           <div id="top-side" className="px-4 pt-4 pb-5 flex items-center justify-between">
             <h4 className="text-darkBlue font-bold">Welcome</h4>
@@ -74,7 +78,7 @@ const NavSmall = () => {
           </div>
 
           {/* Middle section with scroll */}
-          <div id="middle-side" className="flex-grow overflow-y-auto px-4 pb-5">
+          <div id="middle-side" className="h-[240px] flex-grow overflow-y-auto px-4 pb-5">
             <div className="w-full h-[1px] bg-grey300 my-4"></div>
             <div className="py-2 flex items-center gap-4">
               <Image src={heartMenu} alt="heartMenu" />
@@ -127,11 +131,14 @@ const NavSmall = () => {
               <Image src={signInIcon} alt="signInIcon" />
               <h4 className="font-semibold text-white">Sign in</h4>
             </Link>
-            <button className="w-full h-[38px] border border-[#03A841] bg-transparent rounded-lg flex items-center justify-center gap-2 font-semibold text-[#03A841]">
+            <Link href="#" className="w-full h-[38px] border border-[#03A841] bg-transparent rounded-lg flex items-center justify-center gap-2 font-semibold text-[#03A841]">
               <Image src={whatsApp} alt="whatsApp" />
               WhatsApp
-            </button>
-            <Link href="#" className="w-full h-[38px] bg-primary rounded-lg border border-white/[30%] flex items-center justify-center gap-2">
+            </Link>
+            <Link
+              href="#"
+              className="w-full h-[38px] nav-ai-button-box rounded-lg border border-white/[30%] flex items-center justify-center gap-2"
+            >
               <Image src={aiSp} alt="aiSp" />
               <h4 className="font-semibold text-white">Find Property with AI</h4>
             </Link>
