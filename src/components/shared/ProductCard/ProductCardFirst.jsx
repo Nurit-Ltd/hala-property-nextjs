@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import bedCardIcon from "../../../assets/home/bed-card-icon.svg";
 import downScales from "../../../assets/home/downScales.svg";
@@ -10,11 +11,13 @@ const ProductCardFirst = ({ card }) => {
   return (
     <div className="rounded-2xl border border-grayBorder product-card-shadow-first">
       <div className="relative">
-        <Image
-          src={card.image}
-          alt={`cardProduct${card.id}`}
-          className="w-full h-[190px] md:h-[256px] rounded-br-lg rounded-bl-lg rounded-tl-2xl rounded-tr-2xl"
-        />
+        <Link href={`/property-details/${card.id}`}>
+          <Image
+            src={card.image}
+            alt={`cardProduct${card.id}`}
+            className="w-full h-[190px] md:h-[256px] rounded-br-lg rounded-bl-lg rounded-tl-2xl rounded-tr-2xl"
+          />
+        </Link>
         <div className="absolute top-[15px] left-[15px] flex items-center gap-[10px]">
           <div className="rounded-md border-[.5px] bg-black/[25%] border-white/[20%] w-20 h-7 flex items-center justify-center backdrop-blur-card-custom text-sm font-semibold text-white">
             {card.label}
