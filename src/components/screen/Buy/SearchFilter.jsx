@@ -21,7 +21,7 @@ const SearchFilter = () => {
       {/* Property type */}
       <div>
         <Select>
-          <SelectTrigger className="w-full lg:w-[230px]">
+          <SelectTrigger className="w-full lg:w-[230px] gap-4 font-semibold">
             <SelectValue placeholder="Property Type" />
           </SelectTrigger>
           <SelectContent>
@@ -39,7 +39,7 @@ const SearchFilter = () => {
       {/* city */}
       <div className="hidden sm:block">
         <Select>
-          <SelectTrigger className="w-full lg:w-[230px]">
+          <SelectTrigger className="w-full lg:w-[230px] gap-4 font-semibold">
             <SelectValue placeholder="City" />
           </SelectTrigger>
           <SelectContent>
@@ -56,7 +56,7 @@ const SearchFilter = () => {
       {/* price */}
       <div className="hidden md:block">
         <Select>
-          <SelectTrigger className="w-full lg:w-[230px]">
+          <SelectTrigger className="w-full lg:w-[230px] gap-4 font-semibold">
             <SelectValue placeholder="Price" />
           </SelectTrigger>
           <SelectContent>
@@ -76,7 +76,7 @@ const SearchFilter = () => {
       {/* Developers */}
       <div className="hidden lg:block">
         <Select>
-          <SelectTrigger className="w-full lg:w-[230px]">
+          <SelectTrigger className="w-full lg:w-[230px] gap-4 font-semibold">
             <SelectValue placeholder="Developers" />
           </SelectTrigger>
           <SelectContent>
@@ -105,7 +105,7 @@ const SearchFilter = () => {
         >
           Clear filter <MdClose />{" "}
         </Button>
-        <Button className="bg-primary text-white rounded-full">
+        <Button className="bg-primary text-white rounded-full hidden md:inline-flex">
           <LuSearch />
           Search
         </Button>
