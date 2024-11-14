@@ -10,10 +10,8 @@ import { TbBuildingBank } from "react-icons/tb";
 import { FaRegEye } from "react-icons/fa6";
 import { HiOutlineAnnotation } from "react-icons/hi";
 import { FaLink } from "react-icons/fa6";
-import { FaFacebookF } from "react-icons/fa6";
-import { FaXTwitter } from "react-icons/fa6";
-import { FaLinkedinIn } from "react-icons/fa6";
-import { FaShareNodes } from "react-icons/fa6";
+import { FaFacebookF, FaXTwitter, FaLinkedinIn, FaShareNodes } from "react-icons/fa6";
+
 import { FaMagnifyingGlass } from "react-icons/fa6";
 import fiveTips from "@/assets/blog/5-tips.jpg";
 
