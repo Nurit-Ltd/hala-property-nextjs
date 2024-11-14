@@ -27,6 +27,7 @@ import ecoFriendly from "@/assets/blog/eco-friendly.jpg";
 import whatToLook from "@/assets/blog/what-to-look.jpg";
 import theFuture from "@/assets/blog/the-future.jpg";
 import whatToExpect from "@/assets/blog/what-to-expect.jpg";
+import Link from "next/link";
 
 const limitCharacters = (text, limit) => {
   return text.length > limit ? text.slice(0, limit) + "..." : text;
@@ -146,7 +147,7 @@ const Blog = () => {
             <h2 className="text-xl   xl:text-[48px] font-bold  text-gray-900 leading-tight">
               Featured <span className="text-primary">Blogs</span>
             </h2>
-            <p className="text-base xl:text-lg   text-center  text-gray-700">Stay updated with the latest trends and insights in the property market. These are our most-read articles, packed with expert tips and advice to help you make informed decisions, whether you're buying, selling, or investing in real estate.</p>
+            <p className="text-base xl:text-lg   text-center  text-gray-700">Stay updated with the latest trends and insights in the property market. These are our most-read articles, packed with expert tips and advice to help you make informed decisions, whether you&apos;re buying, selling, or investing in real estate.</p>
           </div>
 
           {/* Blog Cards */}
@@ -155,10 +156,10 @@ const Blog = () => {
               <Image className=" rounded-2xl w-full h-auto" src={fiveTips} alt="blogHeader" />
               <h3 className=" mt-6    xl:text-[32px] font-bold  text-gray-800 leading-tight">5 Tips for First-Time Home Buyers What You Need to Know</h3>
               <p className=" mt-2 text-sm xl:text-base       text-gray-700">Help first-time buyers navigate the process with key advice on budgeting, mortgage options, and avoiding common mistakes.</p>
-              <a href="/blog/123" className="mt-4 text-primary font-semibold flex items-center justify-start h-[22px]">
+              <Link href="/blog/123" className="mt-4 text-primary font-semibold flex items-center justify-start h-[22px]">
                 <span>Read details </span>
                 <FaArrowRightLong className="text-primary ml-1 mt-[5px] " />
-              </a>
+              </Link>
             </div>
             <div className="xl:w-[45%]   ">
               {rightBlogs.map((blog, index) => (
@@ -169,10 +170,10 @@ const Blog = () => {
                   <div className="w-[60%] xl:w-[65%]  flex flex-col  ">
                     <h3 className="   text-sm  xl:text-2xl font-bold  text-gray-800 leading-tight">{limitCharacters(blog.title, 50)}</h3>
                     <p className=" mt-[6px] xl:mt-3 text-xs xl:text-base       text-gray-700">{limitCharacters(blog.description, 70)}</p>
-                    <a href="/blog/123" className=" mt-2 xl:mt-4 text-sm xl:text-base text-primary font-semibold flex items-center justify-start h-[22px]">
+                    <Link href="/blog/123" className=" mt-2 xl:mt-4 text-sm xl:text-base text-primary font-semibold flex items-center justify-start h-[22px]">
                       <span>Read details </span>
                       <FaArrowRightLong className="text-primary ml-1 mt-[5px] " />
-                    </a>
+                    </Link>
                   </div>
                 </div>
               ))}
@@ -209,10 +210,10 @@ const Blog = () => {
                 </div>
                 <h3 className="text-2xl font-bold text-gray-800">{limitCharacters(blog.title, 50)}</h3>
                 <p className="text-base mt-2 text-gray-600">{limitCharacters(blog.description, 90)}</p>
-                <a href="/blog/123" className="text-primary text-base mt-4 lg:mt-2 font-semibold flex items-center justify-start h-[22px]">
+                <Link href="/blog/123" className="text-primary text-base mt-4 lg:mt-2 font-semibold flex items-center justify-start h-[22px]">
                   <span>Read details </span>
                   <FaArrowRightLong className="text-primary ml-1 mt-[5px] " />
-                </a>
+                </Link>
               </div>
             ))}
         </div>
