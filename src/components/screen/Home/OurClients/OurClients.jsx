@@ -34,6 +34,7 @@ const OurClients = () => {
               1280: {
                 slidesPerView: 3,
                 spaceBetween: 30,
+               
               },
             }}
             modules={[Pagination, Navigation]}

@@ -41,15 +41,24 @@ const ThreeStepDream = () => {
                   spaceBetween: 30,
                 },
               }}
+              pagination={{
+                clickable: true,
+                el: ".custom-pagination",
+                renderBullet: (index, className) => {
+                  return `<span class="${className} custom-bullet"></span>`;
+                },
+              }}
+              navigation
               modules={[Pagination, Navigation]}
               className="mySwiper"
             >
               {stepsCard.map((step) => (
-                <SwiperSlide key={step.id}>
+                <SwiperSlide key={step.id} className="!pb-6 lg:pb-0">
                   <ThreeStepDreamCard key={step.id} step={step} />
                 </SwiperSlide>
               ))}
             </Swiper>
+            <div className="custom-pagination mt-4 flex items-center justify-center"></div>
           </div>
         </div>
       </div>

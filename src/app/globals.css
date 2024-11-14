@@ -386,6 +386,26 @@ body {
   cursor: pointer;
 }
 
+/* slider pagination's added */
+/* Customize pagination bullets */
+/* Customize pagination bullets */
+
+/* Customize pagination bullets */
+.custom-bullet {
+  width: 6px;
+  height: 6px;
+  background-color: #beceef; /* primary color */
+  border-radius: 50%;
+  opacity: 0.5;
+  transition: opacity 0.3s;
+}
+
+.custom-bullet.swiper-pagination-bullet-active {
+  opacity: 1;
+  background-color: #0954e5;
+}
+
+/* //######################################## */
 /* filter */
 .filter-check-texts {
   @apply inline-block text-sm leading-none peer-disabled:cursor-not-allowed text-[#323B49];

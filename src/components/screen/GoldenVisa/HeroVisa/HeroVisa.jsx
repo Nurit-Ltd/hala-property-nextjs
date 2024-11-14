@@ -9,7 +9,7 @@ const HeroVisa = () => {
   return (
     <section className="mt-15 lg:mt-24 pt-6 md:pt-0 bg-[url('/golden-visa/visa-hero-bg.png')] w-full h-[380px] md:h-[640px] bg-cover relative">
       <div className="container_fluid relative w-full h-[352px] md:h-[609px] flex items-center justify-center z-20">
-        <div className="max-w-[940px] mx-auto flex flex-col items-center justify-center  space-y-6 md:space-y-10 relative z-20">
+        <div className="max-w-[443px] md:max-w-[640px] lg:max-w-[940px] mx-auto flex flex-col items-center justify-center  space-y-6 md:space-y-10 relative z-20">
           <div className="space-y-4">
             <div className="space-y-2 md:space-y-4">
               <h1 className="text-xl md:text-[38px] lg:text-[60px] md:leading-[48px] lg:leading-[78px] font-Merriweather text-darkBlue font-bold text-center">
@@ -22,7 +22,7 @@ const HeroVisa = () => {
                 </span>{" "}
                 Through Property Investment
               </h1>
-              <h3 className="text-base md:text-2xl font-bold text-grey700 text-center">
+              <h3 className="text-base md:text-2xl font-medium md:font-bold text-grey700 text-center">
                 Unlock long-term residency by investing in prime UAE real estate
               </h3>
             </div>
