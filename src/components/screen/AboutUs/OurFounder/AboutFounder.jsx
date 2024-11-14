@@ -6,17 +6,17 @@ import twi from "../../../../assets/about-us/twi.svg";
 
 const AboutFounder = () => {
   return (
-    <div className="space-y-6">
+    <div className="space-y-4 lg:space-y-6">
       <div className="space-y-[2px]">
-        <h3 className="text-[32px] leading-[48px] font-bold text-darkBlue">
+        <h3 className="text-xl lg:text-[32px] lg:leading-[48px] font-bold text-darkBlue">
           Sarah Mitchell
         </h3>
-        <h4 className="text-lg font-medium text-grey600">
+        <h4 className="text-sm lg:text-lg font-medium text-grey600">
           Founder & CEO, Hala Property
         </h4>
       </div>
       <div className="space-y-8">
-        <h5 className="text-lg  text-grey700">
+        <h5 className="text-sm lg:text-lg  text-grey700">
           Sarah Mitchell has over 15+ years of experience in the real estate
           industry, specializing in residential, commercial, and luxury
           properties. She started her career as a real estate agent, quickly
