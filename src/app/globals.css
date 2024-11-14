@@ -111,6 +111,11 @@ body {
 
   box-shadow: 0px 2px 12px 0px #0000001f inset;
 }
+.fixed-box-details {
+  box-shadow: 0px -4px 12px -2px #10182814;
+
+  box-shadow: 0px -12px 16px -4px #10182814;
+}
 @media (max-width: 640px) {
   .product-card-shadow-first {
     box-shadow: 0px 1px 2px 0px #1018280f, 0px 1px 3px 0px #1018281a;
