@@ -66,6 +66,8 @@ const FilterContent = ({ setOpen }) => {
 
   const [priceRange, setPriceRange] = useState([1000000, 8500000]);
   const [sizeRange, setSizeRange] = useState([1250, 2350]);
+  // const [isChecked, setIsChecked] = useState(false);
+  const [checkedItems, setCheckedItems] = useState({});
 
   const handleToggle = (title) => {
     setToggleFilters((prev) => ({
@@ -80,6 +82,13 @@ const FilterContent = ({ setOpen }) => {
     } else {
       setSizeRange(range);
     }
+  };
+
+  const handleChecked = (id) => {
+    setCheckedItems((prev) => ({
+      ...prev,
+      [id]: !prev[id],
+    }));
   };
 
   return (
@@ -180,10 +189,15 @@ const FilterContent = ({ setOpen }) => {
                       className="flex items-center justify-between gap-4"
                     >
                       <div className="flex items-center space-x-2">
-                        <Checkbox id={option.id} />
+                        <Checkbox
+                          onChange={() => handleChecked(option.id)}
+                          id={option.id}
+                          checked={!!checkedItems[option.id]} // Default to false if undefined
+                        />
                         <label
                           htmlFor={option.id}
-                          className="filter-check-texts"
+                          className="filter-check-texts cursor-pointer"
+                          onClick={() => handleChecked(option.id)}
                         >
                           {option.label}
                         </label>
