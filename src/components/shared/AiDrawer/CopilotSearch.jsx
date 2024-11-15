@@ -25,7 +25,7 @@ const CopilotSearch = ({ setOpen }) => {
   return (
     <div className="w-full relative h-full ">
       {/* height h-screen minus 96px */}
-      <div className="flex w-full relative items-center py-4 px-6 justify-between gap-2  shadow pb-4 border-b border-[#CBD5E0]">
+      <div className="flex w-full relative items-center py-4 px-6 justify-between gap-2    pb-4 border-b border-[#CBD5E0]">
         <div className="flex items-center justify-center  gap-3 ">
           <Image src={copilotIcon} alt="copilot" className="w-[32px]" />
           <h5 className="font-bold text-darkBlue text-lg">Search with Copilot</h5>
@@ -33,7 +33,7 @@ const CopilotSearch = ({ setOpen }) => {
         <IoMdClose onClick={() => setOpen(false)} className="cursor-pointer text-[32px] text-[#04074E] " />
       </div>
       {/* Copilot Icon */}
-      <div className="max-h-[calc(100vh-230px)] xl:max-h-[calc(100vh-320px)] overflow-y-scroll  px-6">
+      <div className="max-h-[calc(100vh-230px)] xl:max-h-[calc(100vh-320px)] overflow-y-scroll  px-6 custom-scrollbar">
         <div className="w-full  max-w-[352px] h-[177px] mx-auto mt-[18px] mb-[42px] flex flex-col items-center ">
           <Image src={copilotIcon} alt="copilot" className="w-[72px]" />
           <h5 className="font-bold h-[25px] mt-4 text-darkBlue text-lg">Your Copilot AI Assistant</h5>
