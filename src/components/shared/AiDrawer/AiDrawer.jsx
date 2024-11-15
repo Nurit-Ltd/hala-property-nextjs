@@ -42,7 +42,7 @@ const AiDrawer = ({ open, setOpen, side = "left" }) => {
                 event.stopPropagation();
               }}
             >
-              <div className={cn("  overflow-y-scroll xl:top-[96px]  relative  custom-scrollbar bg-white   shadow-xl  w-screen  h-screen lg:h-full  lg:max-w-[400px]")}>
+              <div className={cn("  overflow-y-scroll xl:top-[96px]  relative  custom-scrollbar-no-width bg-white   shadow-xl  w-screen  h-screen lg:h-full  lg:max-w-[400px]")}>
                 <CopilotSearch setOpen={setOpen} />
               </div>
             </div>
