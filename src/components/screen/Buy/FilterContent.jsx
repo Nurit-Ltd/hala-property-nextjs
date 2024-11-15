@@ -151,7 +151,7 @@ const FilterContent = ({ setOpen }) => {
                 )}
 
                 {filter.type === "rangeSlider" && (
-                  <div className="space-y-2">
+                  <div className="space-y-4">
                     {filter.title === "Price Range" && (
                       <div className="flex justify-between gap-2 text-sm text-gray-500">
                         <Button
