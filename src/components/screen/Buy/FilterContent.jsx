@@ -49,7 +49,7 @@ const filtersData = [
   {
     title: "Size Range",
     range: { min: 1250, max: 2350 },
-    type: "rangeSlider",
+    type: "sizeRangeSelect",
   },
 ];
 
@@ -64,7 +64,7 @@ const FilterContent = ({ setOpen }) => {
   const [selectedBedrooms, setSelectedBedrooms] = useState("Any");
   const [selectedBathrooms, setSelectedBathrooms] = useState("Any");
 
-  const [priceRange, setPriceRange] = useState([1000000, 8500000]);
+  const [priceRange, setPriceRange] = useState([2000000, 6500000]);
   const [sizeRange, setSizeRange] = useState([1250, 2350]);
   // const [isChecked, setIsChecked] = useState(false);
   const [checkedItems, setCheckedItems] = useState({});
@@ -125,7 +125,7 @@ const FilterContent = ({ setOpen }) => {
             {toggleFilters[filter.title] && (
               <div className="mt-4 space-y-4">
                 {filter.type === "buttonGroup" && (
-                  <div className="flex items-center gap-2 flex-wrap">
+                  <div className="flex items-center rounded-lg overflow-hidden border">
                     {filter.options.map((option) => (
                       <button
                         key={option}
@@ -134,14 +134,14 @@ const FilterContent = ({ setOpen }) => {
                             ? setSelectedBedrooms(option)
                             : setSelectedBathrooms(option)
                         }
-                        className={`px-3 py-1 text-sm border border-gray-300 rounded-lg 
+                        className={`px-3 w-full py-1 text-sm border-r last:border-r-0 border-gray-300 inline-block  
                           ${
                             (filter.title === "Bedrooms" &&
                               selectedBedrooms === option) ||
                             (filter.title === "Bathrooms" &&
                               selectedBathrooms === option)
-                              ? "bg-blue-600 text-white"
-                              : "hover:bg-blue-100"
+                              ? "bg-primary text-white"
+                              : "hover:bg-blue-50"
                           }`}
                       >
                         {option}
@@ -152,18 +152,26 @@ const FilterContent = ({ setOpen }) => {
 
                 {filter.type === "rangeSlider" && (
                   <div className="space-y-2">
-                    <div className="flex justify-between text-sm text-gray-500">
-                      <span>
-                        {filter.title === "Price Range"
-                          ? `AED ${priceRange[0].toLocaleString()}`
-                          : `${sizeRange[0]} SQF`}
-                      </span>
-                      <span>
-                        {filter.title === "Price Range"
-                          ? `AED ${priceRange[1].toLocaleString()}`
-                          : `${sizeRange[1]} SQF`}
-                      </span>
-                    </div>
+                    {filter.title === "Price Range" && (
+                      <div className="flex justify-between gap-2 text-sm text-gray-500">
+                        <Button
+                          variant="outline"
+                          className="bg-[#F1F2F4] justify-between  border border-grey400  py-0.5 px-2 w-full rounded-[4px] text-xs text-grey700"
+                        >
+                          {filter.title === "Price Range" &&
+                            `AED ${priceRange[0].toLocaleString()}`}
+                          <IoMdClose />
+                        </Button>
+                        <Button
+                          variant="outline"
+                          className="bg-[#F1F2F4]  justify-between border border-grey400  py-1 px-2 w-full rounded-[4px] text-xs text-grey700"
+                        >
+                          {filter.title === "Price Range" &&
+                            `AED ${priceRange[1].toLocaleString()}`}
+                          <IoMdClose />
+                        </Button>
+                      </div>
+                    )}
                     <RangeSlider
                       min={filter.range.min}
                       max={filter.range.max}
@@ -179,6 +187,29 @@ const FilterContent = ({ setOpen }) => {
                       }
                       className="range-slider w-full"
                     />
+                  </div>
+                )}
+
+                {filter.type === "sizeRangeSelect" && (
+                  <div className="space-y-2">
+                    <div className="flex justify-between gap-2 text-sm text-gray-500">
+                      <Button
+                        variant="outline"
+                        className="bg-[#F1F2F4] justify-between  border border-grey400  py-0.5 px-2 w-full rounded-[4px] text-xs text-grey700"
+                      >
+                        {filter.title === "Size Range" &&
+                          `${sizeRange[0].toLocaleString()} SQF`}
+                        <IoMdClose />
+                      </Button>
+                      <Button
+                        variant="outline"
+                        className="bg-[#F1F2F4]  justify-between border border-grey400  py-1 px-2 w-full rounded-[4px] text-xs text-grey700"
+                      >
+                        {filter.title === "Size Range" &&
+                          `${sizeRange[1].toLocaleString()} SQF`}
+                        <IoMdClose />
+                      </Button>
+                    </div>
                   </div>
                 )}
 
@@ -218,10 +249,16 @@ const FilterContent = ({ setOpen }) => {
           <Button
             variant="outline"
             className="text-[#04074E] gap-1"
+            onClick={() => setOpen(false)}
           >
             <ClearFilterIcon /> Clear Filter
           </Button>
-          <Button className="bg-primary text-white w-full">Confirm</Button>
+          <Button
+            onClick={() => setOpen(false)}
+            className="bg-primary text-white w-full"
+          >
+            Confirm
+          </Button>
         </div>
       </div>
     </div>
