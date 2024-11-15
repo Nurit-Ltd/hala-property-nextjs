@@ -54,20 +54,30 @@ const filtersData = [
 ];
 
 const FilterContent = ({ setOpen }) => {
-  const [toggleFilters, setToggleFilters] = useState(
-    filtersData.reduce((acc, filter) => {
+  const initialState = {
+    toggleFilters: filtersData.reduce((acc, filter) => {
       acc[filter.title] = true;
       return acc;
-    }, {})
+    }, {}),
+    selectedBedrooms: "Any",
+    selectedBathrooms: "Any",
+    priceRange: [1000000, 8500000],
+    sizeRange: [1250, 2350],
+    checkedItems: {},
+  };
+
+  const [toggleFilters, setToggleFilters] = useState(
+    initialState.toggleFilters
   );
-
-  const [selectedBedrooms, setSelectedBedrooms] = useState("Any");
-  const [selectedBathrooms, setSelectedBathrooms] = useState("Any");
-
-  const [priceRange, setPriceRange] = useState([2000000, 6500000]);
-  const [sizeRange, setSizeRange] = useState([1250, 2350]);
-  // const [isChecked, setIsChecked] = useState(false);
-  const [checkedItems, setCheckedItems] = useState({});
+  const [selectedBedrooms, setSelectedBedrooms] = useState(
+    initialState.selectedBedrooms
+  );
+  const [selectedBathrooms, setSelectedBathrooms] = useState(
+    initialState.selectedBathrooms
+  );
+  const [priceRange, setPriceRange] = useState(initialState.priceRange);
+  const [sizeRange, setSizeRange] = useState(initialState.sizeRange);
+  const [checkedItems, setCheckedItems] = useState(initialState.checkedItems);
 
   const handleToggle = (title) => {
     setToggleFilters((prev) => ({
@@ -89,6 +99,15 @@ const FilterContent = ({ setOpen }) => {
       ...prev,
       [id]: !prev[id],
     }));
+  };
+
+  const resetFilters = () => {
+    setToggleFilters(initialState.toggleFilters);
+    setSelectedBedrooms(initialState.selectedBedrooms);
+    setSelectedBathrooms(initialState.selectedBathrooms);
+    setPriceRange(initialState.priceRange);
+    setSizeRange(initialState.sizeRange);
+    setCheckedItems(initialState.checkedItems);
   };
 
   return (
@@ -191,7 +210,7 @@ const FilterContent = ({ setOpen }) => {
                 )}
 
                 {filter.type === "sizeRangeSelect" && (
-                  <div className="space-y-2">
+                  <div className="space-y-4">
                     <div className="flex justify-between gap-2 text-sm text-gray-500">
                       <Button
                         variant="outline"
@@ -210,6 +229,14 @@ const FilterContent = ({ setOpen }) => {
                         <IoMdClose />
                       </Button>
                     </div>
+                    <RangeSlider
+                      min={filter.range.min}
+                      max={filter.range.max}
+                      step={50}
+                      value={sizeRange}
+                      onInput={(range) => handleRangeChange(range, "size")}
+                      className="range-slider w-full"
+                    />
                   </div>
                 )}
 
@@ -249,7 +276,7 @@ const FilterContent = ({ setOpen }) => {
           <Button
             variant="outline"
             className="text-[#04074E] gap-1"
-            onClick={() => setOpen(false)}
+            onClick={resetFilters}
           >
             <ClearFilterIcon /> Clear Filter
           </Button>
