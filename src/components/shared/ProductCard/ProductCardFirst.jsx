@@ -96,7 +96,8 @@ const ProductCardFirst = ({ card }) => {
         </div>
         <div className="mt-1 mb-2 w-full h-[1px] bg-grey300"></div>
         <div className="space-y-1">
-          <h3 className="text-xl font-bold text-grey900">{card.location}</h3>
+
+          <Link href={`/property-details/${card.id}`} className="text-xl font-bold text-grey900">{card.location}</Link>
           <h4
             className="text-grey600 leading-6 overflow-hidden"
             style={{
