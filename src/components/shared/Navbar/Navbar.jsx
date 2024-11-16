@@ -20,24 +20,23 @@ const Navbar = () => {
 
   const handleAiClick = () => {
     setIsAiOpen(!isAiOpen);
-    // navigate to "/buy"
-    router.push("/buy"); // Navigate to the "/buy" route
+    router.push("/buy");
   };
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      // Set the current path on initial load
       setCurrentPath(window.location.pathname);
     }
   }, []);
 
   const handleClick = (path) => {
     setCurrentPath(path);
+    setIsOpen(false);
   };
 
-  // for dropdown
-
-  const toggleDropdown = () => setIsOpen(!isOpen);
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen);
+  };
 
   // Close dropdown when clicking outside
   useEffect(() => {
@@ -50,16 +49,18 @@ const Navbar = () => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  // Check if the current path matches any dropdown item
+  const isDropdownActive = ["/about-us", "/contact-us", "/blog"].includes(
+    currentPath
+  );
+
   return (
     <nav className="hidden lg:block bg-darkBlue navbar-box-shadow max-w-[1920px] mx-auto">
       <div className="container_fluid">
         <div className="w-full h-24 flex items-center">
           <div className="w-full h-12 flex items-center justify-between">
             {/* Logo section */}
-            <Link
-              href={"/"}
-              className="flex items-center gap-1 xl:gap-2.5"
-            >
+            <Link href={"/"} className="flex items-center gap-1 xl:gap-2.5">
               <Image
                 src={logo}
                 alt="mainLogo"
@@ -93,13 +94,18 @@ const Navbar = () => {
               >
                 <button
                   onClick={toggleDropdown}
-                  className={`inline-flex items-center gap-1.5 px-3 py-1.5 ${
-                    isOpen
-                      ? "text-white border-b-[1.5px] border-white font-bold duration-200"
+                  className={`inline-flex items-center gap-1.5 px-3 py-1.5 duration-300 ${
+                    isDropdownActive || isOpen
+                      ? "text-white border-b-[1.5px] border-white font-bold"
                       : "text-grey500 font-semibold"
                   }`}
                 >
-                  More <IoIosArrowDown />
+                  More{" "}
+                  <IoIosArrowDown
+                    className={`transition-transform duration-300 ease-in-out ${
+                      isOpen ? "rotate-180" : "rotate-0"
+                    }`}
+                  />
                 </button>
 
                 <div
@@ -113,21 +119,36 @@ const Navbar = () => {
                     <Link
                       href="/about-us"
                       passHref
-                      className="block px-3 py-1.5 font-medium text-grey600 hover:bg-primary50 hover:text-grey900 duration-300 rounded"
+                      onClick={() => handleClick("/about-us")}
+                      className={`block px-3 py-1.5 font-medium rounded duration-300 ${
+                        currentPath === "/about-us"
+                          ? "bg-primary50 text-grey900"
+                          : "text-grey600 hover:bg-primary50 hover:text-grey900"
+                      }`}
                     >
                       About Us
                     </Link>
                     <Link
                       href="/contact-us"
                       passHref
-                      className="block px-4 py-2 font-medium text-grey600 hover:bg-primary50 hover:text-grey900 duration-300 rounded"
+                      onClick={() => handleClick("/contact-us")}
+                      className={`block px-4 py-2 font-medium rounded duration-300 ${
+                        currentPath === "/contact-us"
+                          ? "bg-primary50 text-grey900"
+                          : "text-grey600 hover:bg-primary50 hover:text-grey900"
+                      }`}
                     >
                       Contact Us
                     </Link>
                     <Link
                       href="/blog"
                       passHref
-                      className="block px-4 py-2 font-medium text-grey600 hover:bg-primary50 hover:text-grey900 duration-300 rounded"
+                      onClick={() => handleClick("/blog")}
+                      className={`block px-4 py-2 font-medium rounded duration-300 ${
+                        currentPath === "/blog"
+                          ? "bg-primary50 text-grey900"
+                          : "text-grey600 hover:bg-primary50 hover:text-grey900"
+                      }`}
                     >
                       Blog
                     </Link>
@@ -142,10 +163,7 @@ const Navbar = () => {
                 href={"#"}
                 className="w-10 h-10 rounded-full hover:bg-white/[20%] bg-white/[10%] backdrop-blur-[9px] flex items-center justify-center relative"
               >
-                <Image
-                  src={heartIcon}
-                  alt="heartIcon"
-                />
+                <Image src={heartIcon} alt="heartIcon" />
                 <div className="absolute top-[-4px] right-[-4px] w-4 h-4 rounded-full bg-baseRed flex items-center justify-center">
                   <span className="font-medium text-[10px] text-white">2</span>
                 </div>
@@ -155,10 +173,7 @@ const Navbar = () => {
                   onClick={handleAiClick}
                   className="cursor-pointer px-2 xl:px-5 py-2 h-12 rounded-lg border border-white/[30%] nav-ai-button-box flex items-center justify-center gap-1 xl:gap-2 text-xs xl:text-base text-white font-medium"
                 >
-                  <Image
-                    src={starIcon}
-                    alt="starIcon"
-                  />
+                  <Image src={starIcon} alt="starIcon" />
                   Find Property with AI
                 </button>
                 <Link
