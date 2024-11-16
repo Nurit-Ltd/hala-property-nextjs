@@ -1,5 +1,5 @@
-import ProductCard from "@/components/shared/ProductCard/ProductCard";
 import { threeStepsProduct } from "@/data/ThreeStepsData";
+import DreamProductCard from "./DreamProductCard";
 
 const ThreeStepDreamCard = ({ step }) => {
   return (
@@ -18,15 +18,12 @@ const ThreeStepDreamCard = ({ step }) => {
             <h5 className="h-9 lg:h-12 text-xs lg:text-base font-medium text-[#525D74]">{step.description}</h5>
           </div>
         </div>
-        <div className="px-1 pt-1 pb-1 lg:px-2.5 lg:pt-2.5 lg:pb-4 rounded-[10px] bg-white three-steps-pro-card">
+        <div className="">
           {threeStepsProduct
             .slice(step.productIndex, step.productIndex + 1)
             .map((card) => (
-              <ProductCard key={card.id} card={card} />
+              <DreamProductCard key={card.id} card={card} />
             ))}
-          <button className="w-full h-[26px] lg:h-9 rounded lg:rounded-md flex items-center justify-center bg-primary text-white buy-home-submit text-[10px] lg:text-sm font-semibold">
-            {step.buttonLabel}
-          </button>
         </div>
       </div>
     </div>
