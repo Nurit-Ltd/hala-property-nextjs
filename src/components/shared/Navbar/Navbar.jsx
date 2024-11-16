@@ -95,7 +95,7 @@ const Navbar = () => {
                 <button
                   onClick={toggleDropdown}
                   className={`inline-flex items-center gap-1.5 px-3 py-1.5 duration-300 ${
-                    isDropdownActive || isOpen
+                    isDropdownActive
                       ? "text-white border-b-[1.5px] border-white font-bold"
                       : "text-grey500 font-semibold"
                   }`}
