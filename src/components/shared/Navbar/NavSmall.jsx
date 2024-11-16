@@ -89,10 +89,10 @@ const NavSmall = () => {
           {/* Middle section with scroll */}
           <div id="middle-side" className="h-[240px] flex-grow overflow-y-auto px-4 pb-5">
             <div className="w-full h-[1px] bg-grey300 my-4"></div>
-            <div className="py-2 flex items-center gap-4">
+            <Link href={"#"} className="py-2 flex items-center gap-4">
               <Image src={heartMenu} alt="heartMenu" />
               <h4 className="font-semibold text-grey600">Favorites</h4>
-            </div>
+            </Link>
             <div className="w-full h-[1px] bg-grey300 my-4"></div>
             <ul className="space-y-4">
               {navItems.map((item, index) => (
@@ -124,7 +124,7 @@ const NavSmall = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link href="/contact" className="font-semibold text-grey600">
+                      <Link href="/contact-us" className="font-semibold text-grey600">
                         Contact
                       </Link>
                     </li>
