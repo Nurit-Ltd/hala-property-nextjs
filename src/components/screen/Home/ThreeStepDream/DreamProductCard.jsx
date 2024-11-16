@@ -59,10 +59,10 @@ const DreamProductCard = ({ card }) => {
       </div>
       <div className="pt-4 px-1.5 space-y-3">
         <div className="py-2 md:py-3 px-3 md:px-4 bg-primary/[5%] border border-[#E6EEFC] rounded bg-opacity-50 space-y-[2px] md:space-y-1">
-        <div class="h-[5px] md:h-2 w-[177px] md:w-[239px] bg-primary50 rounded-[1.7px]"></div>
-        <div class="h-[5px] md:h-2 w-[68px] md:w-[92px] bg-primary50 rounded-[1.7px]"></div>
+        <div className="h-[5px] md:h-2 w-[177px] md:w-[239px] bg-primary50 rounded-[1.7px]"></div>
+        <div className="h-[5px] md:h-2 w-[68px] md:w-[92px] bg-primary50 rounded-[1.7px]"></div>
         </div>
-        <div class="h-[5px] md:h-2 w-[165px] md:w-[222px] bg-primary50 rounded-[1.7px]"></div>
+        <div className="h-[5px] md:h-2 w-[165px] md:w-[222px] bg-primary50 rounded-[1.7px]"></div>
         <button className="w-full h-[26px] lg:h-9 rounded lg:rounded-md flex items-center justify-center bg-primary text-white buy-home-submit text-[10px] lg:text-sm font-semibold">
           Buy now
         </button>

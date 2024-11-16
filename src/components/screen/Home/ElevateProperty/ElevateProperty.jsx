@@ -67,7 +67,7 @@ const ElevateProperty = () => {
                 clickable: true,
                 el: ".custom-ele-pagination",
                 renderBullet: (index, className) => {
-                  return `<span class="${className} custom-ele-bullet"></span>`;
+                  return `<span className="${className} custom-ele-bullet"></span>`;
                 },
               }}
               navigation
