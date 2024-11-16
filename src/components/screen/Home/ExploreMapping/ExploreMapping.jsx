@@ -10,7 +10,12 @@ const ExploreMapping = () => {
           <div className="mt-8 md:mt-0 order-2 md:order-1">
             <iframe
               src="/map-fram.svg"
-              className="w-full h-[215px] md:h-[492px]"
+              className="w-full h-[492px] hidden md:block"
+              title="Map"
+            ></iframe>
+            <iframe
+              src="/map-fram-sm.svg"
+              className="w-full h-[220px] md:hidden"
               title="Map"
             ></iframe>
           </div>

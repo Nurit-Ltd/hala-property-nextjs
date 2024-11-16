@@ -7,7 +7,7 @@ const BenefitCard = () => {
       {benefits.slice(0, 3).map((benefit, index) => (
         <div
           key={index}
-          className="w-full px-6 py-6 lg:py-8 rounded-lg lg:rounded-2xl border border-grey400 bg-white/[4%] lg:bg-white space-y-3 text-center lg:our-client-card-box"
+          className="w-full px-6 py-6 lg:py-8 rounded-lg lg:rounded-2xl border border-grey400 bg-white/[4%] lg:bg-white space-y-3 text-center lg:our-client-card-box freedom-visa cursor-default"
         >
           <h3 className="text-lg lg:text-2xl font-bold text-darkBlue">
             {benefit.title}
@@ -23,7 +23,7 @@ const BenefitCard = () => {
         {benefits.slice(3).map((benefit, index) => (
           <div
             key={index}
-            className="w-full md:max-w-[34%] px-6 py-6 lg:py-8 rounded-lg lg:rounded-2xl border border-grey400 bg-white/[4%] lg:bg-white space-y-3 text-center lg:our-client-card-box"
+            className="w-full md:max-w-[34%] px-6 py-6 lg:py-8 rounded-lg lg:rounded-2xl border border-grey400 bg-white/[4%] lg:bg-white space-y-3 text-center lg:our-client-card-box freedom-visa cursor-default"
           >
             <h3 className="text-lg lg:text-2xl font-bold text-darkBlue">
               {benefit.title}

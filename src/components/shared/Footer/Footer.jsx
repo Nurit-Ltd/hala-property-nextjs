@@ -31,11 +31,17 @@ const Footer = () => {
                   </h5>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Image
-                    src={footerData.companyInfo.emailIcon}
-                    alt="Email Icon"
-                  />
-                  <h5 className="text-sm">{footerData.companyInfo.email}</h5>
+                  <Link
+                    href={`mailto:${footerData.companyInfo.email}`}
+                    passHref
+                    className="flex items-center gap-3"
+                  >
+                    <Image
+                      src={footerData.companyInfo.emailIcon}
+                      alt="Email Icon"
+                    />
+                    <h5 className="text-sm">{footerData.companyInfo.email}</h5>
+                  </Link>
                 </div>
               </div>
 
@@ -45,7 +51,10 @@ const Footer = () => {
                 <ul className="space-y-3">
                   {footerData.menu.map((item, index) => (
                     <li key={index}>
-                      <Link href={item.href} className="text-sm hover:text-primary">
+                      <Link
+                        href={item.href}
+                        className="text-sm hover:text-primary"
+                      >
                         {item.label}
                       </Link>
                     </li>
@@ -59,7 +68,10 @@ const Footer = () => {
                 <ul className="space-y-3">
                   {footerData.resources.map((item, index) => (
                     <li key={index}>
-                      <Link href={item.href} className="text-sm hover:text-primary">
+                      <Link
+                        href={item.href}
+                        className="text-sm hover:text-primary"
+                      >
                         {item.label}
                       </Link>
                     </li>
@@ -73,7 +85,10 @@ const Footer = () => {
                 <ul className="flex flex-row items-center lg:flex-col lg:items-start lg:space-y-3 gap-6 lg:gap-0">
                   {footerData.socialLinks.map((link, index) => (
                     <li key={index}>
-                      <Link href={link.href} className="text-sm hover:text-primary">
+                      <Link
+                        href={link.href}
+                        className="text-sm hover:text-primary"
+                      >
                         {link.label}
                       </Link>
                     </li>
