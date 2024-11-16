@@ -171,7 +171,7 @@ const Navbar = () => {
               <div className="flex items-center gap-2 xl:gap-4">
                 <button
                   onClick={handleAiClick}
-                  className="cursor-pointer px-2 xl:px-5 py-2 h-12 rounded-lg border border-white/[30%] nav-ai-button-box flex items-center justify-center gap-1 xl:gap-2 text-xs xl:text-base text-white font-medium"
+                  className="cursor-pointer px-2 xl:px-5 py-2 h-12 rounded-lg border border-white/[30%] nav-ai-button-box flex items-center justify-center gap-1 xl:gap-2 text-xs xl:text-base text-white font-medium duration-500"
                 >
                   <Image src={starIcon} alt="starIcon" />
                   Find Property with AI
