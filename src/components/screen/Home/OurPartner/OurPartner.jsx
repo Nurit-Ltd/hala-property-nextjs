@@ -46,22 +46,22 @@ const OurPartner = () => {
                   spaceBetween: 20,
                 },
               }}
-              className="mySwiper w-full items-center"
+              className="mySwiper w-full items-center h-[23px]"
             >
-              <SwiperSlide className="flex justify-center">
-                <Image src={companyLogo1} alt="companyLogo1" className="h-[11px]" />
+              <SwiperSlide>
+                <Image src={companyLogo1} alt="companyLogo1" className="h-[15px]" />
               </SwiperSlide>
-              <SwiperSlide className="flex justify-center">
-                <Image src={companyLogo2} alt="companyLogo2" className="h-[35px]" />
+              <SwiperSlide>
+                <Image src={companyLogo5} alt="companyLogo5" className="h-[15px]" />
               </SwiperSlide>
-              <SwiperSlide className="flex justify-center">
+              <SwiperSlide>
                 <Image src={companyLogo3} alt="companyLogo3" className="h-[14px]" />
               </SwiperSlide>
-              <SwiperSlide className="flex justify-center">
-                <Image src={companyLogo4} alt="companyLogo4" className="h-[14px]" />
+              <SwiperSlide>
+                <Image src={companyLogo4} alt="companyLogo4" className="h-[15px]" />
               </SwiperSlide>
-              <SwiperSlide className="flex justify-center">
-                <Image src={companyLogo5} alt="companyLogo5" className="h-[14px]" />
+              <SwiperSlide>
+                <Image src={companyLogo5} alt="companyLogo5" className="h-[15px]" />
               </SwiperSlide>
             </Swiper>
           </div>
