@@ -45,7 +45,7 @@ const ThreeStepDream = () => {
                 clickable: true,
                 el: ".custom-pagination",
                 renderBullet: (index, className) => {
-                  return `<span class="${className} custom-bullet"></span>`;
+                  return `<span className="${className} custom-bullet"></span>`;
                 },
               }}
               navigation

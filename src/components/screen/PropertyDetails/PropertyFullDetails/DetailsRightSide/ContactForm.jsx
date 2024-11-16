@@ -42,7 +42,7 @@ const ContactForm = () => {
           <div className="flex items-center gap-2">
             <input
               type="checkbox"
-              class="w-[17px] h-[17px] border-[1.5px] border-grey500 rounded cursor-pointer"
+              className="w-[17px] h-[17px] border-[1.5px] border-grey500 rounded cursor-pointer"
             />
             <h4 className="text-grey600">
               Notify me via email when listings appear
@@ -51,7 +51,7 @@ const ContactForm = () => {
           <div className="flex items-center gap-2">
             <input
               type="checkbox"
-              class="w-[17px] h-[17px] border-[1.5px] border-grey500 rounded cursor-pointer"
+              className="w-[17px] h-[17px] border-[1.5px] border-grey500 rounded cursor-pointer"
             />
             <h4 className="text-grey600">
             I agree to Terms of Use and Privacy Policy
