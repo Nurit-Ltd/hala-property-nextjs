@@ -422,17 +422,35 @@ body {
 .custom-bullet {
   width: 6px;
   height: 6px;
-  background-color: #beceef; /* primary color */
+  background-color: #beceef;
   border-radius: 50%;
   opacity: 0.5;
   transition: opacity 0.3s;
 }
 
 .custom-bullet.swiper-pagination-bullet-active {
+  width: 24px;
+  height: 6px;
+  border-radius: 8px;
   opacity: 1;
   background-color: #0954e5;
 }
-
+/* for ele */
+.custom-ele-bullet {
+  width: 6px;
+  height: 6px;
+  background-color: #beceef;
+  border-radius: 50%;
+  opacity: 0.5;
+  transition: opacity 0.3s;
+}
+.custom-ele-bullet.swiper-pagination-bullet-active {
+  width: 24px;
+  height: 6px;
+  border-radius: 8px;
+  opacity: 1;
+  background-color: #0954e5;
+}
 /* //######################################## */
 /* filter */
 .filter-check-texts {
