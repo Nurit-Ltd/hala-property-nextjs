@@ -466,3 +466,24 @@ body {
   height: 2px !important;
   background: #ceddfa !important;
 }
+
+/* Base styling for all slides */
+.swiper-slide-custom {
+  /* background-color: #2d3748; Default background for inactive slides */
+  opacity: 0.5; /* Make inactive slides less visible */
+  transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* Active slide */
+.swiper-slide-active,
+.swiper-slide-next {
+  /* background-color: #4a90e2; Highlighted background color for active slides */
+  opacity: 1;
+}
+
+/* Adjacent slides (next and previous) */
+
+.swiper-slide-prev {
+  /* background-color: #3a3f47; Slightly different background for next/prev slides */
+  opacity: 0.8;
+}

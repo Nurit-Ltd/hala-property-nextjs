@@ -37,7 +37,7 @@ export const testimonials = [
   {
     id: 5,
     text: "“Very user-friendly platform with plenty of useful options for property search. Loved the experience!”",
-    name: "Jane Doe",
+    name: "Jimmy Doe",
     position: "Realtor",
     image: clientTwo,
     rating: 4,

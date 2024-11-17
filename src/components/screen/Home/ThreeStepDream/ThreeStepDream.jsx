@@ -12,7 +12,7 @@ const ThreeStepDream = () => {
       <div className="container_fluid">
         <div className="pt-6 pb-8 md:pt-15 md:pb-25">
           <h2 className="section-header-title text-darkBlue text-center">
-            3 Step to Find Your <span className="text-primary">Dream Home</span>
+            3 Steps to Find Your <span className="text-primary">Dream Home</span>
           </h2>
           <div className="hidden lg:block">
             <div className="mt-12 grid grid-cols-2 xl:grid-cols-3 gap-5">
@@ -22,7 +22,7 @@ const ThreeStepDream = () => {
             </div>
           </div>
           {/* slider use for small screen */}
-          <div className="mt-6 lg:hidden">
+          <div className="mt-6 pt-6 lg:hidden">
             <Swiper
               spaceBetween={16}
               slidesPerView={1.2}
