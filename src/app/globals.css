@@ -84,22 +84,12 @@ body {
 }
 .nav-ai-button-box {
   box-shadow: 0px 2px 4px 0px #1b1c1d2e;
-  background: linear-gradient(92.14deg, #3b48df 0%, #cd34db 102.52%),
-    radial-gradient(
-      100% 100% at 50% 0%,
-      rgba(255, 255, 255, 0.2) 0%,
-      rgba(255, 255, 255, 0) 100%
-    );
+  background: linear-gradient(92.14deg, #3b48df 0%, #cd34db 102.52%), radial-gradient(100% 100% at 50% 0%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
   transition: transform 0.5s ease !important;
 }
 .nav-ai-button-box:hover {
   box-shadow: 0px 2px 4px 0px #1b1c1d2e;
-  background: linear-gradient(92.14deg, #cd34db 0%, #3b48df 102.52%),
-    radial-gradient(
-      100% 100% at 50% 0%,
-      rgba(255, 255, 255, 0.2) 0%,
-      rgba(255, 255, 255, 0) 100%
-    );
+  background: linear-gradient(92.14deg, #cd34db 0%, #3b48df 102.52%), radial-gradient(100% 100% at 50% 0%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
 }
 .tong {
   box-shadow: 7px -7px 0 7px #f7f5f2;
@@ -132,12 +122,10 @@ body {
 }
 
 .freedom-visa:hover {
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
-    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 .for-hover-card-box:hover {
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
-    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 .for-hover-box:hover {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
