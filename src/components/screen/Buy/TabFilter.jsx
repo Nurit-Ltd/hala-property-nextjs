@@ -25,7 +25,7 @@ const TabFilter = () => {
   ];
 
   return (
-    <div className="overflow-hidden">
+    <div className=" ">
       <div className="mt-6 mb-8 flex items-center justify-between gap-2 w-full overflow-y-scroll custom-scrollbar-tab">
         <div>
           <Button onClick={() => setIsOpen(!isOpen)} variant="outline" className="rounded-full bg-[#F6F5F1] border-grey400 py-2.5 px-4 gap-2">
