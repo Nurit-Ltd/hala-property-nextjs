@@ -18,7 +18,7 @@ const PropertyPhotos = ({ propertyImage }) => {
           </div>
           <div className="absolute left-4 bottom-4 flex items-center gap-2 z-20">
             {absoluteData.map((button, btnIndex) => (
-              <button key={btnIndex} className="h-[38px] px-3 py-2 rounded-md bg-black/[25%] hover:bg-darkBlue border border-white/[60%] hover:border-white/[90%] flex items-center transition-all justify-center gap-1 font-semibold text-white   app-button-box-pro">
+              <button key={btnIndex} className="h-[38px] px-3 py-2 rounded-md bg-black/[25%] hover:bg-darkBlue focus:bg-darkBlue border border-white/[60%] focus:border-white/[90%] hover:border-white/[90%] flex items-center transition-all justify-center gap-1 font-semibold text-white   app-button-box-pro">
                 <Image src={button.icon} alt={button.label} className="w-5 h-5 " />
                 {button.label}
               </button>

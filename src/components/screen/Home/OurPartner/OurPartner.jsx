@@ -30,14 +30,14 @@ const OurPartner = () => {
               <Image src={companyLogo5} alt="companyLogo5" />
             </div>
           </div>
-          <div className="mt-8 md:mt-15 xl:hidden flex items-center h-6">
+          <div className="mt-8 md:mt-15 xl:hidden flex items-center h-6 px-4">
             <Swiper
               spaceBetween={20}
               slidesPerView={3.1}
               centeredSlides={false}
               breakpoints={{
                 640: {
-                  slidesPerView: 4,
+                  slidesPerView: 3,
                   spaceBetween: 20,
                 },
               }}
