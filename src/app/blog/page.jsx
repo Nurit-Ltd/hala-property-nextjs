@@ -194,7 +194,7 @@ const Blog = () => {
 
       <div className="container_fluid pt-[72px] pb-12 lg:pb-[100px] px-4 2xl:px-0 ">
         {/* Categories */}
-        <div className="flex justify-start lg:justify-center items-center flex-nowrap overflow-scroll xl:overflow-auto  gap-4">
+        <div className="flex justify-start lg:justify-center items-center flex-nowrap overflow-scroll xl:overflow-auto  gap-4 custom-scrollbar-no-width">
           {categories.map((category, index) => (
             <button key={index} onClick={() => setActiveCategory(category.name)} className={`border flex-shrink-0 h-[42px] border-[#CBD5E0] hover:border-primary font-semibold text-base text-gray-700 hover:text-primary transition flex justify-center items-center rounded-lg px-5 py-[10px] gap-2 ${activeCategory === category.name ? "border-primary text-primary bg-primary/5" : ""}`}>
               <category.icon />

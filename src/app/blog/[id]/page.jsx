@@ -125,7 +125,7 @@ const SingleBlog = () => {
       <div className="container_fluid pt-[72px]  px-4 2xl:px-0 ">
         {/* Categories */}
         <h2 className="text-xl   font-bold  text-gray-900 leading-tight">Categories</h2>
-        <div className="flex justify-start   items-center flex-nowrap overflow-scroll xl:overflow-auto  gap-4 mt-4">
+        <div className="flex justify-start   items-center flex-nowrap overflow-scroll xl:overflow-auto  gap-4 mt-4 custom-scrollbar-no-width">
           {categories.map((category, index) => (
             <button key={index} className={`border flex-shrink-0 h-[42px] border-[#CBD5E0] hover:border-primary font-semibold text-base text-gray-700 hover:text-primary transition flex justify-center items-center rounded-lg px-5 py-[10px] gap-2  `}>
               <category.icon />
@@ -224,11 +224,15 @@ const SingleBlog = () => {
                     <HiOutlineAnnotation />
                     <span>0 </span> <span className="font-medium">Comments</span>
                   </div>
-                  <div onClick={handleCopyUrl} className="relative flex xl:ml-auto items-center justify-center gap-2 cursor-pointer hover:text-primary transition">
+                  <button className={` ml-auto      hover:text-darkBlue transition flex items-center justify-center gap-2 text-[#323B49]`}>
+                    <FaShareNodes className="text-base" />
+                    <span className="font-medium">Share</span>
+                  </button>
+                  {/* <div onClick={handleCopyUrl} className="relative flex xl:ml-auto items-center justify-center gap-2 cursor-pointer hover:text-primary transition">
                     <FaLink />
                     <span>Copy Link</span>
                     {showTooltip && <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-48 bg-darkBlue text-white text-sm py-2 px-4 rounded shadow-lg">Blog URL copied to clipboard!</div>}
-                  </div>
+                  </div> */}
                 </div>
                 <hr className="border-t border-[#CBD5E0] " />
               </div>

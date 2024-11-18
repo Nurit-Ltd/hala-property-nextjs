@@ -15,6 +15,10 @@ import whatsApp from "../../../assets/home/whatsApp.svg";
 
 import { useAiContext } from "@/contexts/AiContext";
 import { useRouter } from "next/navigation";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import locationIcon from "@/assets/home/location-hero.svg";
+import usd from "@/assets/nav/Flag_of_the_United_States.svg";
+import uae from "@/assets/nav/Flag_of_the_United_Arab_Emirates.svg";
 
 const NavSmall = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -77,7 +81,7 @@ const NavSmall = () => {
       {isMenuOpen && <div onClick={toggleMenu} className="fixed top-[60px] inset-x-0 bottom-0 bg-black opacity-50 z-50"></div>}
 
       <div className={`fixed top-[60px] right-0 z-50 h-full w-[70%] bg-white shadow-lg transition-transform duration-300 ease-in-out ${isMenuOpen ? "translate-x-0" : "translate-x-full"}`}>
-        <div className="flex flex-col min-h-[calc(100vh-100px)]">
+        <div className="flex flex-col min-h-[calc(100vh-160px)]">
           {/* Top section */}
           <div id="top-side" className="px-4 pt-4 pb-5 flex items-center justify-between">
             <h4 className="text-darkBlue font-bold">Welcome</h4>
@@ -85,24 +89,30 @@ const NavSmall = () => {
               <Image src={closeIcon} alt="closeIcon" />
             </button>
           </div>
+          <div className="px-4">
+            <Link onClick={toggleMenu} href="/auth" className="w-full h-[38px] bg-primary rounded-lg flex items-center justify-center gap-2">
+              <Image src={signInIcon} alt="signInIcon" />
+              <h4 className="font-semibold text-white">Sign in</h4>
+            </Link>
+          </div>
 
           {/* Middle section with scroll */}
           <div id="middle-side" className="h-[240px] flex-grow overflow-y-auto px-4 pb-5">
             <div className="w-full h-[1px] bg-grey300 my-4"></div>
-            <Link href={"#"} className="py-2 flex items-center gap-4">
-              <Image src={heartMenu} alt="heartMenu" />
-              <h4 className="font-semibold text-grey600">Favorites</h4>
-            </Link>
-            <div className="w-full h-[1px] bg-grey300 my-4"></div>
             <ul className="space-y-4">
               {navItems.map((item, index) => (
                 <li key={index}>
-                  <Link href={`${item.path}`} className="font-semibold text-grey600">
+                  <Link onClick={toggleMenu} href={`${item.path}`} className="font-semibold text-grey600">
                     {item.label}
                   </Link>
                 </li>
               ))}
             </ul>
+            <div className="w-full h-[1px] bg-grey300 my-4"></div>
+            <Link onClick={toggleMenu} href={"#"} className="py-2 flex items-center gap-4">
+              <Image src={heartMenu} alt="heartMenu" />
+              <h4 className="font-semibold text-grey600">Favorites</h4>
+            </Link>
             <div className="w-full h-[1px] bg-grey300 my-4"></div>
             <div className="pb-4 w-full">
               <button onClick={toggleDropdown} className="flex items-center justify-between w-full font-semibold text-grey600">
@@ -114,17 +124,17 @@ const NavSmall = () => {
                 <div className="mt-4 px-4">
                   <ul className="space-y-3">
                     <li>
-                      <Link href="/about-us" className="font-semibold text-grey600">
+                      <Link onClick={toggleMenu} href="/about-us" className="font-semibold text-grey600">
                         About Us
                       </Link>
                     </li>
                     <li>
-                      <Link href="/blog" className="font-semibold text-grey600">
+                      <Link onClick={toggleMenu} href="/blog" className="font-semibold text-grey600">
                         Blog
                       </Link>
                     </li>
                     <li>
-                      <Link href="/contact-us" className="font-semibold text-grey600">
+                      <Link onClick={toggleMenu} href="/contact-us" className="font-semibold text-grey600">
                         Contact
                       </Link>
                     </li>
@@ -133,14 +143,9 @@ const NavSmall = () => {
               )}
             </div>
           </div>
-
           {/* Bottom section */}
           <div id="bottom-side" className="px-4 py-5 flex flex-col gap-2">
-            <Link href="/auth" className="w-full h-[38px] bg-primary rounded-lg flex items-center justify-center gap-2">
-              <Image src={signInIcon} alt="signInIcon" />
-              <h4 className="font-semibold text-white">Sign in</h4>
-            </Link>
-            <Link href="#" className="w-full h-[38px] border border-[#03A841] bg-transparent rounded-lg flex items-center justify-center gap-2 font-semibold text-[#03A841]">
+            <Link onClick={toggleMenu} href="#" className="w-full h-[38px] border border-[#03A841] bg-transparent rounded-lg flex items-center justify-center gap-2 font-semibold text-[#03A841]">
               <Image src={whatsApp} alt="whatsApp" />
               WhatsApp
             </Link>
@@ -148,6 +153,46 @@ const NavSmall = () => {
               <Image src={aiSp} alt="aiSp" />
               <h4 className="font-semibold text-white">Find Property with AI</h4>
             </button>
+          </div>
+          <div className=" px-4 flex justify-center gap-4 lg:gap-8 mt-10 ">
+            <div className="country flex flex-col items-center">
+              <h3 className="font-semibold text-base mb-2 text-grey600">Country</h3>
+              <div className=" max-w-[150px] h-[30px] flex items-center justify-center px-2 lg:px-4 py-2 rounded-md border    text-grey600  ">
+                <Select defaultValue="uae">
+                  <SelectTrigger icon={true} className="w-full lg:min-w-[140px] text-sm p-0 h-auto border-0 bg-transparent ring-0 focus:ring-0 outline-none shadow-none rounded-none text-grey600 flex  items-center gap-3">
+                    <SelectValue placeholder="Select Country" />
+                  </SelectTrigger>
+                  <SelectContent className="text-xs">
+                    <SelectItem value="uae">
+                      <div className="flex gap-2">
+                        <Image src={uae} alt="country" className=" w-7  " />
+                        UAE
+                      </div>
+                    </SelectItem>
+                    <SelectItem value="usa">
+                      <div className="flex gap-2">
+                        <Image src={usd} alt="country" className=" w-7  " />
+                        USA
+                      </div>
+                    </SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+            </div>
+            <div className="language flex flex-col items-center">
+              <h3 className="font-semibold text-base mb-2 text-grey600">Language</h3>
+              <div className=" max-w-[150px] h-[30px] flex items-center justify-center px-4 py-2 rounded-md border    text-grey600  ">
+                <Select defaultValue="english">
+                  <SelectTrigger icon={true} className="w-full lg:min-w-[140px] text-sm p-0 h-auto border-0 bg-transparent ring-0 focus:ring-0 outline-none shadow-none rounded-none text-grey600 flex  items-center gap-3">
+                    <SelectValue placeholder="Selected Language" />
+                  </SelectTrigger>
+                  <SelectContent className="text-xs">
+                    <SelectItem value="arabic">Arabic</SelectItem>
+                    <SelectItem value="english">English</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -5,15 +5,16 @@ import emailICon from "../assets/home/mail-icon.svg";
 // import worldMapIcon from "../assets/home/world-icon.svg";
 import { HiOutlineCurrencyDollar } from "react-icons/hi";
 import { TbWorld } from "react-icons/tb";
+import { FaFacebookF, FaLinkedinIn, FaXTwitter, FaTiktok } from "react-icons/fa6";
 
 export const footerData = {
   companyInfo: {
     name: "Hala Property",
     address: "Dubai Creek Harbour Dubai, United Arab Emirates",
     email: "info@halaproperty.com",
-    logo:logo,
-    locationIcon:locationIcon,
-    emailIcon:emailICon
+    logo: logo,
+    locationIcon: locationIcon,
+    emailIcon: emailICon,
   },
   menu: [
     { label: "Home", href: "#" },
@@ -28,10 +29,10 @@ export const footerData = {
     { label: "Privacy Policy", href: "#" },
   ],
   socialLinks: [
-    { label: "Facebook", href: "#" },
-    { label: "X", href: "#" },
-    { label: "LinkedIn", href: "#" },
-    { label: "Tiktok", href: "#" },
+    { label: "Facebook", icon: FaFacebookF, href: "#" },
+    { label: "X", icon: FaXTwitter, href: "#" },
+    { label: "LinkedIn", icon: FaLinkedinIn, href: "#" },
+    { label: "Tiktok", icon: FaTiktok, href: "#" },
   ],
   languageOptions: [
     { label: "English", icon: TbWorld },

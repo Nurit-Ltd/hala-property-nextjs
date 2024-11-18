@@ -30,10 +30,10 @@ const CopilotSearch = ({ setOpen }) => {
           <Image src={copilotIcon} alt="copilot" className="w-[32px]" />
           <h5 className="font-bold text-darkBlue text-lg">Search with Copilot</h5>
         </div>
-        <IoMdClose onClick={() => setOpen(false)} className="cursor-pointer text-[32px] text-[#04074E] " />
+        <IoMdClose onClick={() => setOpen(false)} className="cursor-pointer text-[32px] text-[#04074E] hover:rotate-90 transition-all " />
       </div>
       {/* Copilot Icon */}
-      <div className="max-h-[calc(100vh-230px)] xl:max-h-[calc(100vh-320px)] overflow-y-scroll  px-6 custom-scrollbar">
+      <div className="max-h-[calc(100vh-280px)] xl:max-h-[calc(100vh-320px)] overflow-y-scroll  px-6 custom-scrollbar">
         <div className="w-full  max-w-[352px] h-[177px] mx-auto mt-[18px] mb-[42px] flex flex-col items-center ">
           <Image src={copilotIcon} alt="copilot" className="w-[72px]" />
           <h5 className="font-bold h-[25px] mt-4 text-darkBlue text-lg">Your Copilot AI Assistant</h5>

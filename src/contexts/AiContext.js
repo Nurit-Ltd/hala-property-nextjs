@@ -8,8 +8,9 @@ const AiContext = createContext();
 // Create a provider component
 export const AiProvider = ({ children }) => {
   const [isAiOpen, setIsAiOpen] = useState(false);
+  const [signInPopUpShow, setSignInPopUpShow] = useState(false);
 
-  return <AiContext.Provider value={{ isAiOpen, setIsAiOpen }}>{children}</AiContext.Provider>;
+  return <AiContext.Provider value={{ isAiOpen, setIsAiOpen, signInPopUpShow, setSignInPopUpShow }}>{children}</AiContext.Provider>;
 };
 
 // Custom hook to use the AiContext
