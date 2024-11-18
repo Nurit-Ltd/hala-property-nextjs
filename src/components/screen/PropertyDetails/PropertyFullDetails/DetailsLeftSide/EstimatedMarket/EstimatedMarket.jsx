@@ -15,16 +15,9 @@ const EstimatedMarket = () => {
       <div className="flex items-center justify-between">
         <h3 className="property-text-title">Estimated Market Value</h3>
         <div className="flex items-center gap-2 md:gap-3">
-          <h5 className="text-[10px] md:text-base font-medium text-grey600">
-            Price History
-          </h5>
+          <h5 className="text-[10px] md:text-base font-medium text-grey600">Price History</h5>
           <label className="inline-flex items-center cursor-pointer">
-            <input
-              type="checkbox"
-              className="sr-only peer"
-              checked={isChecked}
-              onChange={handleToggle}
-            />
+            <input type="checkbox" className="sr-only peer" checked={isChecked} onChange={handleToggle} />
             <div
               className={`relative w-11 h-6 bg-gray-200 rounded-full peer 
           peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full 

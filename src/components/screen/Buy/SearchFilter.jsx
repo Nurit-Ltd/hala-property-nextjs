@@ -1,13 +1,7 @@
 "use client";
 import FilterDrawer from "@/components/shared/FilterDrawer";
 import { Button } from "@/components/ui/button";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { ChevronDown } from "lucide-react";
 import { useState } from "react";
 import { LuSearch } from "react-icons/lu";
@@ -17,11 +11,11 @@ import SearchFilterContent from "./SearchFilterContent";
 const SearchFilter = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="bg-white py-1 px-2 lg:p-6 -mt-[22.5px] lg:-mt-[2.90625rem]  rounded-[100px] flex items-center justify-between md:justify-start  2xl:justify-between gap-4 2xl:gap-1 border shadow-md border-[#CBD5E0] lg:flex-wrap">
+    <div className="bg-white py-1 px-2 lg:p-6 -mt-[22.5px] lg:-mt-[2.90625rem]  rounded-[100px] flex items-center justify-between md:justify-start  2xl:justify-between gap-4 2xl:gap-1 border shadow-md border-[#CBD5E0] lg:flex-wrap ">
       {/* Property type */}
       <div>
         <Select>
-          <SelectTrigger className="w-full lg:w-[230px] gap-4 font-semibold">
+          <SelectTrigger className="w-full lg:w-[230px] gap-4 font-semibold hover:bg-primary/5 hover:text-primary   hover:border-primary transition-all">
             <SelectValue placeholder="Property Type" />
           </SelectTrigger>
           <SelectContent>
@@ -39,7 +33,7 @@ const SearchFilter = () => {
       {/* city */}
       <div className="hidden sm:block">
         <Select>
-          <SelectTrigger className="w-full lg:w-[230px] gap-4 font-semibold">
+          <SelectTrigger className="w-full lg:w-[230px] gap-4 font-semibold hover:bg-primary/5 hover:text-primary   hover:border-primary transition-all">
             <SelectValue placeholder="City" />
           </SelectTrigger>
           <SelectContent>
@@ -56,7 +50,7 @@ const SearchFilter = () => {
       {/* price */}
       <div className="hidden md:block">
         <Select>
-          <SelectTrigger className="w-full lg:w-[230px] gap-4 font-semibold">
+          <SelectTrigger className="w-full lg:w-[230px] gap-4 font-semibold hover:bg-primary/5 hover:text-primary   hover:border-primary transition-all">
             <SelectValue placeholder="Price" />
           </SelectTrigger>
           <SelectContent>
@@ -76,7 +70,7 @@ const SearchFilter = () => {
       {/* Developers */}
       <div className="hidden lg:block">
         <Select>
-          <SelectTrigger className="w-full lg:w-[230px] gap-4 font-semibold">
+          <SelectTrigger className="w-full lg:w-[230px] gap-4 font-semibold hover:bg-primary/5 hover:text-primary   hover:border-primary transition-all">
             <SelectValue placeholder="Developers" />
           </SelectTrigger>
           <SelectContent>
@@ -92,17 +86,10 @@ const SearchFilter = () => {
       {/* buttons */}
 
       <div className="flex items-center gap-1 lg:gap-4">
-        <Button
-          onClick={() => setIsOpen(!isOpen)}
-          variant="outline"
-          className="text-lg font-normal rounded-full inline-flex md:hidden"
-        >
+        <Button onClick={() => setIsOpen(!isOpen)} variant="outline" className="text-lg font-normal rounded-full inline-flex md:hidden">
           More <ChevronDown />{" "}
         </Button>
-        <Button
-          variant="outline"
-          className="text-[#687588] border-none rounded-full hidden md:inline-flex"
-        >
+        <Button variant="outline" className="text-[#687588] border-none rounded-full hidden md:inline-flex">
           Clear filter <MdClose />{" "}
         </Button>
         <Button className="bg-primary text-white rounded-full hidden md:inline-flex">
@@ -112,11 +99,7 @@ const SearchFilter = () => {
       </div>
 
       {isOpen && (
-        <FilterDrawer
-          side="right"
-          open={isOpen}
-          setOpen={setIsOpen}
-        >
+        <FilterDrawer side="right" open={isOpen} setOpen={setIsOpen}>
           <SearchFilterContent setOpen={setIsOpen} />
         </FilterDrawer>
       )}
