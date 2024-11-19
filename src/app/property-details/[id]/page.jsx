@@ -35,7 +35,7 @@ const PropertyDetailsPage = () => {
         </div>
       </div>
       {signInPopUpShow && (
-        <div className="fixed top-0 left-0 right-0 bottom-0 z-40 py-[60px] lg:py-[80px]">
+        <div className="fixed top-0 left-0 right-0 bottom-0 z-40 pt-[40px] pb-[100px] lg:py-[80px]">
           <div
             onClick={(e) => {
               e.preventDefault();
@@ -43,7 +43,7 @@ const PropertyDetailsPage = () => {
             }}
             className="absolute top-0 left-0 right-0 bottom-0 z-30 bg-black/50"
           ></div>
-          <div className="relative z-40 mt-10 max-w-[596px] mx-auto ">
+          <div className="relative z-40 mt-10 pb-20 max-w-[596px] mx-auto px-4 overflow-y-scroll  h-[90vh]  ">
             <AuthForm />
             <div className=" absolute top-5 right-5 ">
               <IoMdClose onClick={() => setSignInPopUpShow(false)} className="cursor-pointer text-[32px] text-[#04074E]   hover:rotate-90 transition-all " />
