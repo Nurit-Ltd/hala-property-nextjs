@@ -487,3 +487,20 @@ body {
   /* background-color: #3a3f47; Slightly different background for next/prev slides */
   opacity: 0.8;
 }
+
+/* Map animation related */
+
+@keyframes drop {
+  0% {
+    transform: translate(-50%, -200%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -100%);
+    opacity: 1;
+  }
+}
+
+.animate-drop {
+  animation: drop 0.5s ease-in-out;
+}
