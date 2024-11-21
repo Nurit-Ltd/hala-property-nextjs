@@ -1,11 +1,17 @@
 import ExploreTabs from "./ExploreTabs";
+import CustomMap from "@/components/screen/mapView/Map";
 
 const ExploreTheArea = () => {
+  const Center = {
+    // 25.190583, 55.362625
+    lat: 25.180447,
+    lng: 55.276073,
+  };
   return (
     <div className="relative mt-6 md:mt-12">
       <h3 className="property-text-title">Explore the Area</h3>
       <div className="mt-1.5 md:mt-4 space-y-[6px] md:space-y-2 border border-grey400 rounded-lg">
-        <iframe
+        {/* <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509849!2d144.9537353155044!3d-37.81627974202153!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d43f1f9a6c7%3A0x5045675218ce6e0!2z5Zub5piO44G_5Zu977yZ5Lit5aSu5p2R5paH5Lu2!5e0!3m2!1sen!2sjp!4v1612381447201!5m2!1sen!2sjp"
           width="100%"
           
@@ -19,7 +25,13 @@ const ExploreTheArea = () => {
           allowFullScreen=""
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-        ></iframe>
+        ></iframe> */}
+        <div className="hidden md:block">
+          <CustomMap zoom={11} minHeight="367px" mapTypeControl={true} zoomControl={true} center={Center} />
+        </div>
+        <div className="md:hidden block">
+          <CustomMap zoom={11} minHeight="161px" mapTypeControl={true} zoomControl={true} markerSize="half" />
+        </div>
 
         <ExploreTabs />
       </div>
