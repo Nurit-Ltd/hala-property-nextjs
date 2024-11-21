@@ -9,7 +9,7 @@ const allMarkers = [
     name: "Ghadeer Al Tair",
     image: "icon.png",
     position: { lat: 25.159734, lng: 55.26152 },
-    price: "5.9",
+    price: "5.8",
     category: ["InDemand", "ROI"],
   },
   {
@@ -25,7 +25,7 @@ const allMarkers = [
     name: "Minerva Ridge",
     image: "icon.png",
     position: { lat: 25.143887, lng: 55.220408 },
-    price: "5.9",
+    price: "5.7",
     category: ["ProjectRating", "InDemand", "ROI"],
   },
   {
@@ -41,7 +41,7 @@ const allMarkers = [
     name: "Rosina Groves",
     image: "icon.png",
     price: "5.9",
-    position: { lat: 25.20086, lng: 55.267694 },
+    position: { lat: 25.25086, lng: 55.267694 },
     category: ["RentalYield", "ProjectRating", "InDemand", "ROI", "New"],
   },
   {
@@ -210,12 +210,15 @@ const mapStyles = [
 ];
 
 const Center = {
-  // 25.190583, 55.362625
-  lat: 25.190583,
-  lng: 55.362625,
+  // 25.136615, 55.317752
+  lat: 25.136615,
+  lng: 55.317752,
+  // 25.158676, 55.319732
+  // lat: 25.158676,
+  // lng: 55.319732,
 };
 
-function CustomMap({ center = Center, category = "all", zoom = 13, minHeight = "90vh", mapTypeControl = false, zoomControl = false, markerSize = "full" }) {
+function CustomMap({ center = Center, category = "all", zoom = 13, minHeight = "90vh", mapTypeControl = false, zoomControl = true, markerSize = "full" }) {
   const [mapInstance, setMapInstance] = useState(null);
   const [markers, setMarkers] = useState(allMarkers);
   const [mapType, setMapType] = useState("roadmap");
