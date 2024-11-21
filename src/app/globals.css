@@ -504,3 +504,30 @@ body {
 .animate-drop {
   animation: drop 0.5s ease-in-out;
 }
+
+.desktopMap .gm-bundled-control {
+  position: fixed !important;
+  right: 40px !important;
+  bottom: 180px !important;
+}
+
+@media (min-width: 1024px) {
+  .desktopMap .gm-bundled-control {
+    right: 570px !important;
+    bottom: 80px !important;
+  }
+}
+
+@media (min-width: 1536px) {
+  .desktopMap .gm-bundled-control {
+    right: 860px !important;
+    bottom: 80px !important;
+  }
+}
+
+@media (min-width: 1921px) {
+  .desktopMap .gm-bundled-control {
+    left: 50% !important;
+    bottom: 80px !important;
+  }
+}

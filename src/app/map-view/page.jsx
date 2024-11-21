@@ -46,7 +46,7 @@ const MapViewPage = () => {
         <div className="hidden lg:block">
           <div>
             <div className="mapouter">
-              <div className="gmap_canvas">
+              <div className="gmap_canvas desktopMap">
                 <CustomMap category={activeCategory} minHeight="1433px" />
 
                 {/* <Image alt="map-view" width={1728} height={1433} className="gmap_iframe h-screen lg:h-full w-full object-cover object-left-top" src="/map.png" /> */}
@@ -67,9 +67,9 @@ const MapViewPage = () => {
             </div>
 
             {/* cards  */}
-            <div className="lg:absolute top-28 desk:top-6  bg-white border border-grey400 drop-shadow  max-w-[750px] w-full left-24 desk:left-auto  desk:right-16 bottom-8 overflow-y-scroll custom-scrollbar-tab rounded-[16px]">
+            <div className="lg:absolute top-28 desk:top-6  bg-white border border-grey400 drop-shadow  max-w-[500px] 2xl:max-w-[750px] w-full  right-8 2xl:right-16 bottom-8 overflow-y-scroll custom-scrollbar-tab rounded-[16px]">
               <div className="p-4 ">
-                <div className="flex items-center justify-between gap-1.5">
+                <div className="flex items-center  flex-wrap justify-center gap-4 2xl:justify-between 2xl:gap-1.5">
                   <div>
                     <Select>
                       <SelectTrigger className="w-full gap-16 font-semibold">
@@ -140,7 +140,7 @@ const MapViewPage = () => {
                     </Select>
                   </div>
                 </div>
-                <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6">
+                <div className="mt-8 grid grid-cols-1 2xl:grid-cols-2 gap-4 lg:gap-6">
                   {cardData.map((card) => (
                     <ProductCard key={card.id} card={card} />
                   ))}
@@ -152,7 +152,7 @@ const MapViewPage = () => {
         <div className="block lg:hidden">
           <div className={`${isMapView ? "block" : "hidden"}`}>
             <div className="mapouter">
-              <div className="gmap_canvas">
+              <div className="gmap_canvas desktopMap">
                 <CustomMap category={activeCategory} minHeight="95vh" zoom={12} center={Center} />
                 {/* <Image alt="map-view" width={1728} height={1433} className="gmap_iframe h-screen lg:h-full w-full object-cover object-left-top" src="/map.png" /> */}
               </div>
