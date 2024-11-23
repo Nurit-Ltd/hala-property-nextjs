@@ -82,11 +82,10 @@ react-tailwind-starter/
 │   └── main.jsx
 ├── .eslintrc.cjs
 ├── .gitignore
-├── index.html
 ├── package.json
 ├── postcss.config.js
 ├── tailwind.config.js
-├── vite.config.js
+├── next.config.mjs
 └── README.md
 ```
 
