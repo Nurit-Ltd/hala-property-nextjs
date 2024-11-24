@@ -23,21 +23,21 @@ const ElevatePropertySlider = () => {
     const diff = (index - activeIndex + elevatePropertyCardData.length) % elevatePropertyCardData.length;
     console.log("index", index, "activeIndex", activeIndex, "diff", diff);
 
-    if (diff === 0) return "w-[562px] z-30  "; // Active
-    if (diff === 1) return "w-[330px] z-20"; // Next
-    if (diff === 2) return "w-[200px] z-10"; // Previous or 2nd next
-    return "w-[140px] opacity-50"; // Remaining
+    if (diff === 0) return "w-[90%]  md:w-[562px] z-30  "; // Active
+    if (diff === 1) return "w-[10%] md:w-[330px] z-20"; // Next
+    if (diff === 2) return "hidden md:block md:w-[50px]  xl:w-[200px] z-10"; // Previous or 2nd next
+    return "hidden md:block xl:w-[140px] opacity-50"; // Remaining
   };
 
   return (
-    <div className="relative flex items-center   container_fluid mx-auto overflow-hidden">
+    <div className="relative w-full flex items-center justify-center md:justify-start  container_fluid mx-auto overflow-hidden">
       {/* Previous Button */}
       <button onClick={handlePrev} className="absolute left-4 bg-black/60 text-white p-2 rounded-full z-40 hover:bg-black transition">
         &#10094;
       </button>
 
       {/* Slider */}
-      <div className="flex items-center space-x-4">
+      <div className="flex items-center w-full space-x-4">
         {elevatePropertyCardData.map((slide, index) => (
           <a key={slide.id} href="#" className={`relative flex-shrink-0 h-[300px] rounded-lg bg-cover bg-center cursor-pointer transition-all duration-1000 ease-in-out ${getSlideClasses(slide.id)}`} onMouseEnter={() => handleHover(slide.id)}>
             <Image src={slide.imageUrl} alt={slide.title} fill className="object-cover w-full rounded-2xl " />

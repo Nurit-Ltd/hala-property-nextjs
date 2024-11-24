@@ -9,6 +9,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import shapesText from "../../../../assets/home/shapes.svg";
 import ElevatePropertyCard from "./ElevatePropertyCard";
 import ElevatePropertySlider from "./ElevatePropertySlider";
+import ElevateSlider from "./ElevateSlider";
 
 const ElevateProperty = () => {
   return (
@@ -32,11 +33,12 @@ const ElevateProperty = () => {
             <h4 className="text-sm md:text-lg text-grey700 text-center  ">&quot;Elevate your property experiences with cutting-edge technology and personalized services that bring luxury, efficiency, and ease to your space. From seamless automation to tailored management solutions, we redefine how you interact with your property, ensuring every moment is optimized for comfort and convenience.&quot;</h4>
           </div>
         </div>
-        <div className="pt-8 pb-6 md:pt-25 md:pb-20  mt-6 md:mt-10 xl:mt-0 ">
+        <div className="pt-8 pb-6 md:pt-25 md:pb-20  mt-6 md:mt-10 xl:mt-0 w-full">
           {/* <Swiper
             spaceBetween={16}
-            slidesPerView={1.1}
+            slidesPerView={"auto"}
             centeredSlides={false}
+            width={1280}
             breakpoints={{
               640: {
                 slidesPerView: 1,
@@ -63,7 +65,7 @@ const ElevateProperty = () => {
             className="mySwiper w-full  "
           >
             {elevatePropertyCardData.map((card) => (
-              <SwiperSlide key={card.id} className="flex justify-center !pb-6 lg:pb-0 ">
+              <SwiperSlide key={card.id} className="flex justify-center gap-x-4 !pb-6 lg:pb-0 ">
                 <ElevatePropertyCard card={card} />
               </SwiperSlide>
             ))}
