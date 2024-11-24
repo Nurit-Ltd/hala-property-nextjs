@@ -9,7 +9,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import shapesText from "../../../../assets/home/shapes.svg";
 import ElevatePropertyCard from "./ElevatePropertyCard";
 import ElevatePropertySlider from "./ElevatePropertySlider";
-import ElevateSlider from "./ElevateSlider";
 
 const ElevateProperty = () => {
   return (
