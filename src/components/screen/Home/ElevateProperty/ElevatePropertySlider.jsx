@@ -21,10 +21,12 @@ const ElevatePropertySlider = () => {
 
   const getSlideClasses = (index) => {
     const diff = (index - activeIndex + elevatePropertyCardData.length) % elevatePropertyCardData.length;
+    console.log("index", index, "activeIndex", activeIndex, "diff", diff);
 
     if (diff === 0) return "w-[562px] z-30"; // Active
-    if (diff === 1) return "w-[337px] z-20"; // Next
+    if (diff === 1) return "w-[330px] z-20"; // Next
     if (diff === elevatePropertyCardData.length - 1 || diff === 2) return "w-[200px] z-10"; // Previous or 2nd next
+
     return "w-[140px] opacity-50"; // Remaining
   };
 
@@ -38,8 +40,7 @@ const ElevatePropertySlider = () => {
       {/* Slider */}
       <div className="flex items-center space-x-4">
         {elevatePropertyCardData.map((slide, index) => (
-          <a key={slide.id} href="#" className={`relative flex-shrink-0 h-[300px] rounded-lg bg-cover bg-center cursor-pointer transition-all duration-500 ease-in-out ${getSlideClasses(index)}`} onMouseEnter={() => handleHover(index)}>
-            {/* <span className="absolute bottom-2 left-2 bg-black/70 text-white text-sm px-2 py-1 rounded">{slide.title}</span> */}
+          <a key={slide.id} href="#" className={`relative flex-shrink-0 h-[300px] rounded-lg bg-cover bg-center cursor-pointer transition-all duration-1000 ease-in-out ${getSlideClasses(slide.id)}`} onMouseEnter={() => handleHover(slide.id)}>
             <Image src={slide.imageUrl} alt={slide.title} fill className="object-cover w-full rounded-2xl " />
             <div
               className="absolute top-0 left-0 right-0 opacity-90 w-full h-full rounded-2xl"
