@@ -23,10 +23,9 @@ const ElevatePropertySlider = () => {
     const diff = (index - activeIndex + elevatePropertyCardData.length) % elevatePropertyCardData.length;
     console.log("index", index, "activeIndex", activeIndex, "diff", diff);
 
-    if (diff === 0) return "w-[562px] z-30"; // Active
+    if (diff === 0) return "w-[562px] z-30  "; // Active
     if (diff === 1) return "w-[330px] z-20"; // Next
-    if (diff === elevatePropertyCardData.length - 1 || diff === 2) return "w-[200px] z-10"; // Previous or 2nd next
-
+    if (diff === 2) return "w-[200px] z-10"; // Previous or 2nd next
     return "w-[140px] opacity-50"; // Remaining
   };
 
