@@ -1,13 +1,9 @@
 "use client";
-import { elevatePropertyCardData } from "@/data/elevatePropertyCardData";
 import Image from "next/image";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Navigation, Pagination } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
 import shapesText from "../../../../assets/home/shapes.svg";
-import ElevatePropertyCard from "./ElevatePropertyCard";
 import ElevatePropertySlider from "./ElevatePropertySlider";
 
 const ElevateProperty = () => {
@@ -23,53 +19,27 @@ const ElevateProperty = () => {
               <span className="section-header-title text-primary   relative">
                 Property Experiences{" "}
                 <span className="absolute right-[-20px] md:right-[-18px] xl:right-[-45px] top-[-5px] md:top-[-2px] xl:top-[-15px]">
-                  <Image src={shapesText} alt="shapesText" className="w-5 h-5 xl:w-[45px] xl:h-[45px]" />
+                  <Image
+                    src={shapesText}
+                    alt="shapesText"
+                    className="w-5 h-5 xl:w-[45px] xl:h-[45px]"
+                  />
                 </span>
               </span>
             </h2>
           </div>
           <div>
-            <h4 className="text-sm md:text-lg text-grey700 text-center  ">&quot;Elevate your property experiences with cutting-edge technology and personalized services that bring luxury, efficiency, and ease to your space. From seamless automation to tailored management solutions, we redefine how you interact with your property, ensuring every moment is optimized for comfort and convenience.&quot;</h4>
+            <h4 className="text-sm md:text-lg text-grey700 text-center  ">
+              &quot;Elevate your property experiences with cutting-edge
+              technology and personalized services that bring luxury,
+              efficiency, and ease to your space. From seamless automation to
+              tailored management solutions, we redefine how you interact with
+              your property, ensuring every moment is optimized for comfort and
+              convenience.&quot;
+            </h4>
           </div>
         </div>
         <div className="pt-8 pb-6 md:pt-25 md:pb-20  mt-6 md:mt-10 xl:mt-0 w-full">
-          {/* <Swiper
-            spaceBetween={16}
-            slidesPerView={"auto"}
-            centeredSlides={false}
-            width={1280}
-            breakpoints={{
-              640: {
-                slidesPerView: 1,
-                spaceBetween: 16,
-              },
-              1024: {
-                slidesPerView: 2,
-                spaceBetween: 20,
-              },
-              1280: {
-                slidesPerView: 4,
-                spaceBetween: 20,
-              },
-            }}
-            pagination={{
-              clickable: true,
-              el: ".custom-ele-pagination",
-              renderBullet: (index, className) => {
-                return `<span className="${className} custom-ele-bullet"></span>`;
-              },
-            }}
-            navigation
-            modules={[Pagination, Navigation]}
-            className="mySwiper w-full  "
-          >
-            {elevatePropertyCardData.map((card) => (
-              <SwiperSlide key={card.id} className="flex justify-center gap-x-4 !pb-6 lg:pb-0 ">
-                <ElevatePropertyCard card={card} />
-              </SwiperSlide>
-            ))}
-          </Swiper>
-          <div className="custom-ele-pagination mt-4 flex items-center justify-center "></div> */}
           <ElevatePropertySlider />
         </div>
       </div>
