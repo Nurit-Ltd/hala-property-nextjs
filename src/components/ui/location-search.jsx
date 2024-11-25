@@ -74,7 +74,7 @@ const SearchBar = ({ className }) => {
             Location
           </h4>
           <input
-            className="p-0 border-none w-full outline-none placeholder:text-[#687588] text-sm"
+            className="p-0 border-none w-full outline-none placeholder:text-grey600 text-grey600 text-sm"
             placeholder="Choose your area..."
             onFocus={() => setInputFocus(true)}
             value={inputFocus ? searchQuery : selectedLocation} // Show selected location when not searching
@@ -143,6 +143,8 @@ const SearchBar = ({ className }) => {
           </div>
         </div>
       </div>
+
+      <div className="w-[1px] h-5 lg:h-8 mx-1.5 lg:mx-5 bg-grayLine"></div>
     </div>
   );
 };

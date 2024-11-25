@@ -1,7 +1,7 @@
 "use client";
 
 import * as SelectPrimitive from "@radix-ui/react-select";
-import { Check, ChevronDown, ChevronUp } from "lucide-react";
+import { Check, ChevronUp } from "lucide-react";
 import * as React from "react";
 
 import { cn } from "@/lib/utils";
@@ -16,18 +16,10 @@ const SelectTrigger = React.forwardRef(
   ({ className, children, icon = true, ...props }, ref) => (
     <SelectPrimitive.Trigger
       ref={ref}
-      className={cn(
-        "flex h-10 w-full items-center justify-between rounded-full border border-[#CBD5E0] bg-white px-3 py-2 ring-offset-white placeholder:text-neutral-500 focus:outline-none focus:ring-2 focus:ring-neutral-950 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1 dark:border-neutral-800 dark:bg-neutral-950 dark:ring-offset-neutral-950 dark:placeholder:text-neutral-400 dark:focus:ring-neutral-300 text-[#04074E] text-lg leading-[25.2px]",
-        className
-      )}
+      className={cn("", className)}
       {...props}
     >
       {children}
-      {icon && (
-        <SelectPrimitive.Icon asChild>
-          <ChevronDown className="h-4 w-4 opacity-50" />
-        </SelectPrimitive.Icon>
-      )}
     </SelectPrimitive.Trigger>
   )
 );
@@ -59,7 +51,7 @@ const SelectScrollDownButton = React.forwardRef(
       )}
       {...props}
     >
-      <ChevronDown className="h-4 w-4" />
+      {/* <ChevronDown className="h-4 w-4" /> */}
     </SelectPrimitive.ScrollDownButton>
   )
 );
@@ -72,7 +64,7 @@ const SelectContent = React.forwardRef(
       <SelectPrimitive.Content
         ref={ref}
         className={cn(
-          "relative z-50 max-h-96 min-w-[8rem] overflow-hidden rounded-md border border-neutral-200 bg-white text-neutral-950 shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 dark:border-neutral-800 dark:bg-neutral-950 dark:text-neutral-50",
+          "relative z-50 top-[26px] max-h-96 w-full 2xl:w-[406px]  rounded-md border border-neutral-200 bg-white text-neutral-950 shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 dark:border-neutral-800 dark:bg-neutral-950 dark:text-neutral-50",
           position === "popper" &&
             "data-[side=bottom]:translate-y-1 data-[side=left]:-translate-x-1 data-[side=right]:translate-x-1 data-[side=top]:-translate-y-1",
           className
