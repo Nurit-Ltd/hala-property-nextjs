@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
+import { HiOutlineMapPin } from "react-icons/hi2";
 import bedCardIcon from "../../../assets/home/bed-card-icon.svg";
 import downScales from "../../../assets/home/downScales.svg";
 import shower from "../../../assets/home/shower-icon.svg";
@@ -54,15 +55,24 @@ const ProductCardFirst = ({ card }) => {
             }`}
           >
             {isFavorited ? (
-              <AiFillHeart size={20} className="text-white" />
+              <AiFillHeart
+                size={20}
+                className="text-white"
+              />
             ) : (
-              <AiOutlineHeart size={20} className="text-white" />
+              <AiOutlineHeart
+                size={20}
+                className="text-white"
+              />
             )}
           </button>
         </div>
         {card.isVerified && (
           <div className="absolute bottom-[15px] right-[15px] w-[88px] h-7 rounded-md bg-primary bg-opacity-100 hover:bg-opacity-85 flex items-center justify-center gap-1 cursor-default">
-            <Image src={verifiedIcon} alt="verifiedIcon" />
+            <Image
+              src={verifiedIcon}
+              alt="verifiedIcon"
+            />
             <h5 className="text-sm font-semibold text-white">Verified</h5>
           </div>
         )}
@@ -85,32 +95,36 @@ const ProductCardFirst = ({ card }) => {
           <div className="w-[1px] h-8 bg-grey300"></div>
           <div className="flex items-center gap-2">
             <div className="flex items-center gap-[6px]">
-              <Image src={bedCardIcon} alt="bedCardIcon" />
+              <Image
+                src={bedCardIcon}
+                alt="bedCardIcon"
+              />
               <h4 className="font-medium text-grey600">{card.beds}</h4>
             </div>
             <div className="flex items-center gap-[6px]">
-              <Image src={shower} alt="showerIcon" />
+              <Image
+                src={shower}
+                alt="showerIcon"
+              />
               <h4 className="font-medium text-grey600">{card.baths}</h4>
             </div>
           </div>
         </div>
         <div className="mt-1 mb-2 w-full h-[1px] bg-grey300"></div>
         <div className="space-y-1">
-
-          <Link href={`/property-details/${card.id}`} className="text-xl font-bold text-grey900">{card.location}</Link>
-          <h4
-            className="text-grey600 leading-6 overflow-hidden"
-            style={{
-              display: "-webkit-box",
-              WebkitBoxOrient: "vertical",
-              WebkitLineClamp: 3,
-              overflow: "hidden",
-              textOverflow: "ellipsis",
-              maxHeight: "48px",
-            }}
+          <Link
+            href={`/property-details/${card.id}`}
+            className="text-xl font-bold text-grey900"
           >
-            {card.description}
-          </h4>
+            {card.location}
+          </Link>
+          <p className="text-grey600 text-base leading-6 overflow-hidden">
+            <b className="text-[#323B49]">Developer:</b> {card.developer}
+          </p>
+          <div className="flex items-center gap-1 text-grey600">
+            <HiOutlineMapPin className="w-5 h-5" />
+            <p>{card.location}</p>
+          </div>
         </div>
       </div>
     </div>

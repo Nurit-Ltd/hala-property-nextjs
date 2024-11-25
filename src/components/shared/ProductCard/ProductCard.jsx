@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
+import { HiOutlineMapPin } from "react-icons/hi2";
 import bedCardIcon from "../../../assets/home/bed-card-icon.svg";
 import downScales from "../../../assets/home/downScales.svg";
 import shower from "../../../assets/home/shower-icon.svg";
@@ -113,20 +114,19 @@ const ProductCard = ({ card }) => {
         </div>
         <div className="mt-1 mb-2 w-full h-[1px] bg-grey300"></div>
         <div className="space-y-1">
-        <Link href={`/property-details/${card.id}`} className="text-xl font-bold text-grey900">{card.location}</Link>
-          <h4
-            className="text-grey600 leading-6 overflow-hidden"
-            style={{
-              display: "-webkit-box",
-              WebkitBoxOrient: "vertical",
-              WebkitLineClamp: 3,
-              overflow: "hidden",
-              textOverflow: "ellipsis",
-              maxHeight: "48px",
-            }}
+          <Link
+            href={`/property-details/${card.id}`}
+            className="text-xl font-bold text-grey900"
           >
-            {card.description}
-          </h4>
+            {card.location}
+          </Link>
+          <p className="text-grey600 text-base leading-6 overflow-hidden">
+            <b className="text-[#323B49]">Developer:</b> {card.developer}
+          </p>
+          <div className="flex items-center gap-1 text-grey600">
+            <HiOutlineMapPin className="w-5 h-5" />
+            <p>{card.location}</p>
+          </div>
         </div>
       </div>
     </div>

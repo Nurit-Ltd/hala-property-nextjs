@@ -20,6 +20,7 @@ export const cardData = [
     location: "Aisha Harbors",
     description:
       "Experience refined urban living with stunning views of Downtown Dubai and Ras Al Khor Wildlife Sanctuary coupled with exceptional amenities.",
+    developer: "Denesik, Toy and Fahey",
     isVerified: true,
   },
   {
@@ -36,6 +37,7 @@ export const cardData = [
     location: "Konopelski Street",
     description:
       "Experience refined urban living with stunning views of Downtown Dubai and Ras Al Khor Wildlife Sanctuary coupled with amenities.",
+    developer: "Kassulke and Sons",
     isVerified: true,
   },
   {
@@ -52,6 +54,7 @@ export const cardData = [
     location: "Minerva Ridge",
     description:
       "Experience refined urban living with stunning views of Downtown Dubai and Ras Al Khor Wildlife Sanctuary coupled with amenities.",
+    developer: "Lemke, Cronin and Watsica",
     isVerified: true,
   },
   {
@@ -68,6 +71,7 @@ export const cardData = [
     location: "Konopelski Street",
     description:
       "Experience refined urban living with stunning views of Downtown Dubai and Ras Al Khor Wildlife Sanctuary coupled with amenities.",
+    developer: "Jakubowski and Sons",
     isVerified: true,
   },
   {
@@ -84,6 +88,7 @@ export const cardData = [
     location: "Rosina Groves",
     description:
       "Experience refined urban living with stunning views of Downtown Dubai and Ras Al Khor Wildlife Sanctuary coupled with amenities.",
+    developer: "Hilpert LLC",
     isVerified: true,
   },
   {
@@ -100,6 +105,7 @@ export const cardData = [
     location: "Haag Turnpike",
     description:
       "Experience refined urban living with stunning views of Downtown Dubai and Ras Al Khor Wildlife Sanctuary coupled with amenities.",
+    developer: "Prosacco, Hills and Langworth",
     isVerified: true,
   },
 ];
