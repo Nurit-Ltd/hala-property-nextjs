@@ -4,7 +4,7 @@ import SearchBar from "@/components/ui/location-search";
 import { Select, SelectContent, SelectTrigger } from "@/components/ui/select";
 import { heroItems } from "@/data/heroData";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import RangeSlider from "react-range-slider-input";
 import "react-range-slider-input/dist/style.css";
 import searchIcon from "../../../../assets/home/hero-search-icon.svg";
@@ -18,6 +18,21 @@ const formatToMillion = (number) => {
 const Hero = () => {
   const [selectedBedrooms, setSelectedBedrooms] = useState("Select bedrooms");
   const [priceRange, setPriceRange] = useState(null); // Initially null to show "Set your budget"
+
+  // Determine initial placeholder for selectedBedrooms based on screen size
+  useEffect(() => {
+    const matchMediaQuery = window.matchMedia("(max-width: 767px)");
+    if (matchMediaQuery.matches) {
+      setSelectedBedrooms("Any");
+    }
+    const handleMediaChange = (e) => {
+      setSelectedBedrooms(e.matches ? "Select bedrooms" : "Any");
+    };
+    matchMediaQuery.addEventListener("change", handleMediaChange);
+    return () => {
+      matchMediaQuery.removeEventListener("change", handleMediaChange);
+    };
+  }, []);
 
   const handlePriceChange = (range) => {
     setPriceRange(range); // Update price range when user interacts with the slider
@@ -68,7 +83,14 @@ const Hero = () => {
                             {formatToMillion(priceRange[1])}
                           </span>
                         ) : (
-                          <span>Set your budget</span>
+                          <>
+                            <span className="hidden md:inline-block">
+                              Set your budget
+                            </span>
+                            <span className="inline-block md:hidden">
+                              Budget
+                            </span>
+                          </>
                         )}
                       </div>
                     </SelectTrigger>
@@ -93,7 +115,7 @@ const Hero = () => {
                               <button
                                 key={option}
                                 onClick={() => handleBedroomSelect(option)}
-                                className={`px-6 py-1.5 border-r border-[#CBD5E0] last:border-none ${
+                                className={`px-4 lg:px-6 py-1.5 border-r border-[#CBD5E0] last:border-none ${
                                   selectedBedrooms === option
                                     ? "bg-[#CBD5E0] text-primary"
                                     : "text-gray-700"

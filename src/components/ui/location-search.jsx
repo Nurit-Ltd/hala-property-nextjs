@@ -30,6 +30,20 @@ const SearchBar = ({ className }) => {
   const ref = useRef(null);
 
   useEffect(() => {
+    const matchMediaQuery = window.matchMedia("(max-width: 767px)");
+    if (matchMediaQuery.matches) {
+      setSelectedLocation("Choose area...");
+    }
+    const handleMediaChange = (e) => {
+      setSelectedLocation(e.matches ? "Choose your area..." : "Choose area...");
+    };
+    matchMediaQuery.addEventListener("change", handleMediaChange);
+    return () => {
+      matchMediaQuery.removeEventListener("change", handleMediaChange);
+    };
+  }, []);
+
+  useEffect(() => {
     const handleKeyDown = (event) => {
       if (event.ctrlKey && event.key === "e") {
         event.preventDefault(); // Prevent browser's default search bar opening
@@ -88,7 +102,7 @@ const SearchBar = ({ className }) => {
           inputFocus
             ? "opacity-100 h-auto translate-y-0 mt-2"
             : "translate-y-[-10px] opacity-0 h-0"
-        } bg-white border border-gray-200 w-full 2xl:w-[460px] transition-all duration-500 overflow-hidden flex flex-col rounded-md absolute top-[65px] left-0 z-10`}
+        } bg-white border border-gray-200 w-[300px] 2xl:w-[460px] transition-all duration-500 overflow-hidden flex flex-col rounded-md absolute top-7 lg:top-[65px] left-0 z-10`}
       >
         <div>
           <div className="p-4">
