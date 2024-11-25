@@ -47,10 +47,10 @@ const Hero = () => {
       <div className="container_fluid">
         <div className="flex flex-col items-center justify-center space-y-4 lg:space-y-8">
           <div className="max-w-[903px] mx-auto space-y-2 lg:space-y-3">
-            <h1 className="text-2xl lg:text-[72px] lg:leading-[93px] font-Merriweather font-bold text-white text-center">
+            <h1 className="text-2xl lg:text-[54px] lg:leading-[93px] font-Merriweather font-bold text-white text-center">
               The Future of Real Estate
             </h1>
-            <h3 className="max-w-max sm:max-w-[520px] lg:max-w-[749px] mx-auto text-sm leading-[18px] lg:text-2xl lg:leading-9 text-center text-white">
+            <h3 className="max-w-max sm:max-w-[520px] lg:max-w-[777px] mx-auto text-sm leading-[18px] lg:text-xl lg:leading-[150%] text-center text-white">
               Experience a smarter, faster way to find your perfect property.
               Discover luxurious homes and investment opportunities tailored to
               your lifestyle, all at your fingertips.
