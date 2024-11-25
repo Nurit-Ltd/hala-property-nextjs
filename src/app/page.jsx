@@ -8,11 +8,14 @@ import OurClients from "@/components/screen/Home/OurClients/OurClients";
 import OurPartner from "@/components/screen/Home/OurPartner/OurPartner";
 import ThreeStepDream from "@/components/screen/Home/ThreeStepDream/ThreeStepDream";
 import TrendProperties from "@/components/screen/Home/TrendProperties/TrendProperties";
+import { ModalProvider } from "@/components/ui/modal";
 
 export default function Home() {
   return (
     <>
-      <Hero />
+      <ModalProvider>
+        <Hero />
+      </ModalProvider>
       <LuxuryProperties />
       <FasterInvestments />
       <TrendProperties />
@@ -22,7 +25,6 @@ export default function Home() {
       <OurPartner />
       <OurClients />
       <FreqAskQuestions />
-      
     </>
   );
 }

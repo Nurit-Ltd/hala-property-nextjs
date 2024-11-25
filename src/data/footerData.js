@@ -3,9 +3,11 @@ import logo from "../assets/home/logo-main.svg";
 import emailICon from "../assets/home/mail-icon.svg";
 // import dollarIcon from "../assets/home/usd-icon.svg";
 // import worldMapIcon from "../assets/home/world-icon.svg";
+import { FaFacebookSquare, FaLinkedin } from "react-icons/fa";
+import { FaTiktok, FaXTwitter } from "react-icons/fa6";
+
 import { HiOutlineCurrencyDollar } from "react-icons/hi";
 import { TbWorld } from "react-icons/tb";
-import { FaFacebookF, FaLinkedinIn, FaXTwitter, FaTiktok } from "react-icons/fa6";
 
 export const footerData = {
   companyInfo: {
@@ -29,9 +31,9 @@ export const footerData = {
     { label: "Privacy Policy", href: "#" },
   ],
   socialLinks: [
-    { label: "Facebook", icon: FaFacebookF, href: "#" },
+    { label: "Facebook", icon: FaFacebookSquare, href: "#" },
     { label: "X", icon: FaXTwitter, href: "#" },
-    { label: "LinkedIn", icon: FaLinkedinIn, href: "#" },
+    { label: "LinkedIn", icon: FaLinkedin, href: "#" },
     { label: "Tiktok", icon: FaTiktok, href: "#" },
   ],
   languageOptions: [

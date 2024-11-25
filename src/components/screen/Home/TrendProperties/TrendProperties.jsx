@@ -26,7 +26,10 @@ const TrendProperties = () => {
           <div className="hidden lg:block">
             <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
               {cardData.map((card) => (
-                <ProductCard key={card.id} card={card} />
+                <ProductCard
+                  key={card.id}
+                  card={card}
+                />
               ))}
             </div>
           </div>
@@ -60,8 +63,11 @@ const TrendProperties = () => {
               ))}
             </Swiper>
           </div>
-          <div className="mt-12 flex items-center justify-center">
-            <Link href={"./buy"} className="w-[144px] h-12 rounded-[40px] border border-darkBlue flex items-center justify-center gap-1 bg-transparent font-bold text-base text-darkBlue hover:bg-darkBlue hover:text-white duration-200">
+          <div className="mt-8 lg:mt-16 flex items-center justify-center">
+            <Link
+              href="/buy"
+              className="w-[144px] h-12 rounded-[40px] border border-darkBlue flex items-center justify-center gap-1 bg-transparent font-bold text-base text-darkBlue hover:bg-darkBlue hover:text-white duration-200"
+            >
               View More
               <FaAngleRight />
             </Link>
