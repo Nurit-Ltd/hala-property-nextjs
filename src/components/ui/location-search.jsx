@@ -20,7 +20,7 @@ const locations = [
   { name: "Al Nahda", city: "Dubai" },
 ];
 
-const SearchBar = ({ className, shortcut = true }) => {
+const SearchBar = ({ className }) => {
   const [inputFocus, setInputFocus] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedLocation, setSelectedLocation] = useState(
@@ -53,35 +53,37 @@ const SearchBar = ({ className, shortcut = true }) => {
   );
 
   const handleLocationSelect = (location) => {
-    setSelectedLocation(location.name); // Update input placeholder with selected location
+    setSelectedLocation(location.name); // Update selected location
     setSearchQuery(""); // Clear the search query
     setInputFocus(false); // Close the dropdown
   };
 
   return (
-    <div className={cn("relative flex items-center ", className)}>
+    <div
+      className={cn("relative flex items-center ", className)}
+      ref={ref}
+    >
       <div className="px-2.5 lg:px-6 flex items-center gap-[5px] lg:gap-3 ">
         <Image
           src={locationIcon}
           alt={`location-hero`}
           className="w-4 h-4 lg:w-7 lg:h-7"
         />
-        <div className="flex   flex-col  ">
+        <div className="flex flex-col">
           <h4 className="hidden text-left lg:block text-sm leading-[19px] lg:text-lg lg:leading-[25px] font-semibold lg:font-bold text-grey600 lg:text-darkBlue">
             Location
           </h4>
           <input
-            className="p-0 border-none  w-full outline-none placeholder:text-[#687588] text-sm"
-            placeholder={selectedLocation}
-            onClick={() => setInputFocus(true)}
-            value={searchQuery}
+            className="p-0 border-none w-full outline-none placeholder:text-[#687588] text-sm"
+            placeholder="Choose your area..."
+            onFocus={() => setInputFocus(true)}
+            value={inputFocus ? searchQuery : selectedLocation} // Show selected location when not searching
             onChange={(e) => setSearchQuery(e.target.value)}
           />
         </div>
       </div>
 
       <div
-        ref={ref}
         className={`${
           inputFocus
             ? "opacity-100 h-auto translate-y-0 mt-2"
@@ -141,7 +143,6 @@ const SearchBar = ({ className, shortcut = true }) => {
           </div>
         </div>
       </div>
-      <div className="w-[1px] h-5 lg:h-8 mx-1.5 lg:mx-5 bg-grayLine"></div>
     </div>
   );
 };
