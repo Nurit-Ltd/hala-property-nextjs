@@ -18,7 +18,6 @@ import FilterContent from "./FilterContent";
 
 const SearchFilter = () => {
   const [isOpen, setIsOpen] = useState(false);
-  console.log("isOpen", isOpen);
   return (
     <div>
       <div className="bg-white py-1 px-2 lg:p-6 -mt-[2.90625rem]  rounded-[100px] hidden lg:flex items-center justify-between md:justify-start  2xl:justify-between gap-4 2xl:gap-1 border shadow-md border-[#CBD5E0] lg:flex-wrap ">
