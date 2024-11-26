@@ -1,6 +1,7 @@
 "use client";
+import SearchBarMobile from "@/components/shared/SearchBar/SearchBarMobile";
 import { Button } from "@/components/ui/button";
-import SearchBar from "@/components/ui/location-search";
+import LocationSearch from "@/components/ui/location-search";
 import { Select, SelectContent, SelectTrigger } from "@/components/ui/select";
 import { heroItems } from "@/data/heroData";
 import Image from "next/image";
@@ -8,8 +9,6 @@ import { useEffect, useState } from "react";
 import RangeSlider from "react-range-slider-input";
 import "react-range-slider-input/dist/style.css";
 import searchIcon from "../../../../assets/home/hero-search-icon.svg";
-
-const LocationArea = SearchBar;
 
 const formatToMillion = (number) => {
   return `${(number / 1000000).toFixed(1)} MN`; // Format numbers to "X.X MN"
@@ -56,9 +55,9 @@ const Hero = () => {
               your lifestyle, all at your fingertips.
             </h3>
           </div>
-          <div className="h-12 lg:h-[98px] pr-2.5 lg:pr-6 bg-white border-[.5px] border-[#F4F4F4] hero-info-box rounded-full flex items-center justify-between gap-5 lg:gap-12">
+          <div className="hidden  h-12 lg:h-[98px] pr-2.5 lg:pr-6 bg-white border-[.5px] border-[#F4F4F4] hero-info-box rounded-full lg:flex items-center justify-between gap-5 lg:gap-12">
             <div className="flex items-center">
-              <LocationArea />
+              <LocationSearch />
               {heroItems.map((item, index) => (
                 <div
                   key={index}
@@ -169,6 +168,9 @@ const Hero = () => {
                 className="w-3 h-3 lg:w-7 lg:h-7"
               />
             </Button>
+          </div>
+          <div className="block lg:hidden w-full">
+            <SearchBarMobile />
           </div>
         </div>
       </div>

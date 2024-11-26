@@ -20,7 +20,7 @@ const locations = [
   { name: "Al Nahda", city: "Dubai" },
 ];
 
-const SearchBar = ({ className }) => {
+const LocationSearch = ({ className }) => {
   const [inputFocus, setInputFocus] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedLocation, setSelectedLocation] = useState(
@@ -163,4 +163,4 @@ const SearchBar = ({ className }) => {
   );
 };
 
-export default SearchBar;
+export default LocationSearch;
