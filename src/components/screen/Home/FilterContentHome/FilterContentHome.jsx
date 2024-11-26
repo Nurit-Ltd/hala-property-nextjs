@@ -1,7 +1,7 @@
 "use client";
-import { ClearFilterIcon } from "@/components/shared/SVG";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { IoMdClose } from "react-icons/io";
 import RangeSlider from "react-range-slider-input";
@@ -32,6 +32,7 @@ const FilterContentHome = ({ setOpen }) => {
     sizeRange: [1250, 2350],
     checkedItems: {},
   };
+  const router = useRouter();
 
   const [toggleFilters, setToggleFilters] = useState(
     initialState.toggleFilters
@@ -230,15 +231,18 @@ const FilterContentHome = ({ setOpen }) => {
         </div>
 
         <div className="flex justify-between mt-4 gap-4">
-          <Button
+          {/*     <Button
             variant="outline"
             className="text-[#04074E] gap-1"
             onClick={resetFilters}
           >
             <ClearFilterIcon /> Clear Filter
-          </Button>
+          </Button> */}
           <Button
-            onClick={() => setOpen(false)}
+            onClick={() => {
+              setOpen(false);
+              router.push("/buy");
+            }}
             className="bg-primary text-white w-full"
           >
             Confirm
