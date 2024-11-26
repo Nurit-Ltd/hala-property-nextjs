@@ -2,6 +2,7 @@
 
 import { elevatePropertyCardData } from "@/data/elevatePropertyCardData";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 
 const ElevatePropertySlider = () => {
@@ -59,9 +60,9 @@ const ElevatePropertySlider = () => {
       {/* Slider */}
       <div className="flex items-center w-full space-x-4">
         {elevatePropertyCardData.map((slide, index) => (
-          <a
+          <Link
             key={slide.id}
-            href="#"
+            href="/buy"
             className={`relative flex-shrink-0 h-[300px] rounded-lg bg-cover bg-center cursor-pointer transition-all duration-1000 ease-in-out ${getSlideClasses(
               slide.id
             )}`}
@@ -86,7 +87,7 @@ const ElevatePropertySlider = () => {
               </h4>
               {/* <h5 className="text-xs md:text-sm text-white/[90%]">{slide.description}</h5> */}
             </div>
-          </a>
+          </Link>
         ))}
       </div>
 
