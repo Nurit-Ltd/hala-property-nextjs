@@ -16,7 +16,11 @@ const locations = [
   { name: "Al Nahda", city: "Dubai" },
 ];
 
-const SearchBarMobile = () => {
+const SearchBarMobile = ({
+  placeholder_text = "Location",
+  filterClick,
+  locationIcon = true,
+}) => {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedLocation, setSelectedLocation] = useState("");
   const [inputFocus, setInputFocus] = useState(false);
@@ -59,13 +63,15 @@ const SearchBarMobile = () => {
       <div className="flex items-center gap-2 justify-between">
         <div className="rounded-[24px] border border-grey300 py-2 pl-3 pr-2 bg-white w-full flex-1">
           <div className="flex items-center gap-2">
-            <LocationIcon className="text-grey600 w-4" />
+            {!locationIcon ? null : (
+              <LocationIcon className="text-grey600 w-4" />
+            )}
             <input
               type="text"
               name="location"
               id="location"
               className="border-none placeholder:text-grey600 text-xs flex-1 outline-none"
-              placeholder="Location"
+              placeholder={placeholder_text}
               onFocus={() => setInputFocus(true)}
               value={inputFocus ? searchQuery : selectedLocation} // Show selected location when not searching
               onChange={(e) => setSearchQuery(e.target.value)}
@@ -96,7 +102,14 @@ const SearchBarMobile = () => {
             </div>
           )}
         </div>
-        <div className="cursor-pointer w-8 h-8 py-1.5 px-2 bg-primary rounded-[24px] inline-flex items-center justify-center text-white">
+        <div
+          onClick={() => {
+            console.log("Filter icon clicked");
+            filterClick(); // Toggle filter state
+          }}
+          role="button"
+          className="cursor-pointer w-8 h-8 py-1.5 px-2 bg-primary rounded-[24px] inline-flex items-center justify-center text-white"
+        >
           <FilterIcon />
         </div>
       </div>

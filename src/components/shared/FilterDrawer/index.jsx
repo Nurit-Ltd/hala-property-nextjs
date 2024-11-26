@@ -45,10 +45,7 @@ const FilterDrawer = ({ open, setOpen, side = "left", children }) => {
       <div className={cn({ "fixed inset-0 overflow-hidden": open })}>
         <div className="absolute inset-0 overflow-hidden">
           <div
-            className={cn(
-              "pointer-events-none fixed max-w-full",
-              classNames[side]
-            )}
+            className={cn("pointer-events-none fixed w-full", classNames[side])}
           >
             <div
               className={cn(
@@ -63,7 +60,7 @@ const FilterDrawer = ({ open, setOpen, side = "left", children }) => {
             >
               <div
                 className={cn(
-                  "h-full overflow-y-scroll custom-scrollbar bg-white p-4 shadow-xl w-[300px] md:w-[336px]"
+                  "h-full overflow-y-scroll custom-scrollbar bg-white p-4 shadow-xl w-full md:w-[336px]"
                 )}
               >
                 {children}

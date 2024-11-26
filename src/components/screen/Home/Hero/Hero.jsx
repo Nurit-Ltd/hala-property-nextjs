@@ -1,4 +1,5 @@
 "use client";
+import FilterDrawer from "@/components/shared/FilterDrawer";
 import SearchBarMobile from "@/components/shared/SearchBar/SearchBarMobile";
 import { Button } from "@/components/ui/button";
 import LocationSearch from "@/components/ui/location-search";
@@ -9,12 +10,14 @@ import { useEffect, useState } from "react";
 import RangeSlider from "react-range-slider-input";
 import "react-range-slider-input/dist/style.css";
 import searchIcon from "../../../../assets/home/hero-search-icon.svg";
+import FilterContentHome from "../FilterContentHome/FilterContentHome";
 
 const formatToMillion = (number) => {
   return `${(number / 1000000).toFixed(1)} MN`; // Format numbers to "X.X MN"
 };
 
 const Hero = () => {
+  const [isOpen, setIsOpen] = useState(false);
   const [selectedBedrooms, setSelectedBedrooms] = useState("Select bedrooms");
   const [priceRange, setPriceRange] = useState(null); // Initially null to show "Set your budget"
 
@@ -170,7 +173,19 @@ const Hero = () => {
             </Button>
           </div>
           <div className="block lg:hidden w-full">
-            <SearchBarMobile />
+            {isOpen && (
+              <FilterDrawer
+                side="left"
+                open={isOpen}
+                setOpen={setIsOpen}
+              >
+                <FilterContentHome setOpen={setIsOpen} />
+              </FilterDrawer>
+            )}
+            <SearchBarMobile
+              placeholder_text="Location"
+              filterClick={() => setIsOpen(!isOpen)} // Toggling the `isOpen` state
+            />
           </div>
         </div>
       </div>
