@@ -2,6 +2,7 @@
 
 import { elevatePropertyCardData } from "@/data/elevatePropertyCardData";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 
 const ElevatePropertySlider = () => {
@@ -27,7 +28,7 @@ const ElevatePropertySlider = () => {
     const diff =
       (index - activeIndex + elevatePropertyCardData.length) %
       elevatePropertyCardData.length;
-    console.log("index", index, "activeIndex", activeIndex, "diff", diff);
+    // console.log("index", index, "activeIndex", activeIndex, "diff", diff);
 
     if (diff === 0) return "w-[90%]  md:w-[562px] z-30  "; // Active
     if (diff === 1) return "w-[10%] md:w-[330px] z-20"; // Next
@@ -59,9 +60,9 @@ const ElevatePropertySlider = () => {
       {/* Slider */}
       <div className="flex items-center w-full space-x-4">
         {elevatePropertyCardData.map((slide, index) => (
-          <a
+          <Link
             key={slide.id}
-            href="#"
+            href="/buy"
             className={`relative flex-shrink-0 h-[300px] rounded-lg bg-cover bg-center cursor-pointer transition-all duration-1000 ease-in-out ${getSlideClasses(
               slide.id
             )}`}
@@ -71,7 +72,7 @@ const ElevatePropertySlider = () => {
               src={slide.imageUrl}
               alt={slide.title}
               fill
-              className="object-cover w-full rounded-2xl "
+              className="object-cover w-full rounded-2xl"
             />
             <div
               className="absolute top-0 left-0 right-0 opacity-90 w-full h-full rounded-2xl"
@@ -86,7 +87,7 @@ const ElevatePropertySlider = () => {
               </h4>
               {/* <h5 className="text-xs md:text-sm text-white/[90%]">{slide.description}</h5> */}
             </div>
-          </a>
+          </Link>
         ))}
       </div>
 

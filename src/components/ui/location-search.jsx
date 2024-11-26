@@ -20,7 +20,7 @@ const locations = [
   { name: "Al Nahda", city: "Dubai" },
 ];
 
-const SearchBar = ({ className }) => {
+const LocationSearch = ({ className }) => {
   const [inputFocus, setInputFocus] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedLocation, setSelectedLocation] = useState(
@@ -28,20 +28,6 @@ const SearchBar = ({ className }) => {
   );
 
   const ref = useRef(null);
-
-  useEffect(() => {
-    const matchMediaQuery = window.matchMedia("(max-width: 767px)");
-    if (matchMediaQuery.matches) {
-      setSelectedLocation("Choose area...");
-    }
-    const handleMediaChange = (e) => {
-      setSelectedLocation(e.matches ? "Choose your area..." : "Choose area...");
-    };
-    matchMediaQuery.addEventListener("change", handleMediaChange);
-    return () => {
-      matchMediaQuery.removeEventListener("change", handleMediaChange);
-    };
-  }, []);
 
   useEffect(() => {
     const handleKeyDown = (event) => {
@@ -163,4 +149,4 @@ const SearchBar = ({ className }) => {
   );
 };
 
-export default SearchBar;
+export default LocationSearch;

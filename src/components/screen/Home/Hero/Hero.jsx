@@ -1,6 +1,8 @@
 "use client";
+import FilterDrawer from "@/components/shared/FilterDrawer";
+import SearchBarMobile from "@/components/shared/SearchBar/SearchBarMobile";
 import { Button } from "@/components/ui/button";
-import SearchBar from "@/components/ui/location-search";
+import LocationSearch from "@/components/ui/location-search";
 import { Select, SelectContent, SelectTrigger } from "@/components/ui/select";
 import { heroItems } from "@/data/heroData";
 import Image from "next/image";
@@ -8,14 +10,14 @@ import { useEffect, useState } from "react";
 import RangeSlider from "react-range-slider-input";
 import "react-range-slider-input/dist/style.css";
 import searchIcon from "../../../../assets/home/hero-search-icon.svg";
-
-const LocationArea = SearchBar;
+import FilterContentHome from "../FilterContentHome/FilterContentHome";
 
 const formatToMillion = (number) => {
   return `${(number / 1000000).toFixed(1)} MN`; // Format numbers to "X.X MN"
 };
 
 const Hero = () => {
+  const [isOpen, setIsOpen] = useState(false);
   const [selectedBedrooms, setSelectedBedrooms] = useState("Select bedrooms");
   const [priceRange, setPriceRange] = useState(null); // Initially null to show "Set your budget"
 
@@ -56,9 +58,9 @@ const Hero = () => {
               your lifestyle, all at your fingertips.
             </h3>
           </div>
-          <div className="h-12 lg:h-[98px] pr-2.5 lg:pr-6 bg-white border-[.5px] border-[#F4F4F4] hero-info-box rounded-full flex items-center justify-between gap-5 lg:gap-12">
+          <div className="hidden  h-12 lg:h-[98px] pr-2.5 lg:pr-6 bg-white border-[.5px] border-[#F4F4F4] hero-info-box rounded-full lg:flex items-center justify-between gap-5 lg:gap-12">
             <div className="flex items-center">
-              <LocationArea />
+              <LocationSearch />
               {heroItems.map((item, index) => (
                 <div
                   key={index}
@@ -169,6 +171,21 @@ const Hero = () => {
                 className="w-3 h-3 lg:w-7 lg:h-7"
               />
             </Button>
+          </div>
+          <div className="block lg:hidden w-full">
+            {isOpen && (
+              <FilterDrawer
+                side="left"
+                open={isOpen}
+                setOpen={setIsOpen}
+              >
+                <FilterContentHome setOpen={setIsOpen} />
+              </FilterDrawer>
+            )}
+            <SearchBarMobile
+              placeholder_text="Location"
+              filterClick={() => setIsOpen(!isOpen)} // Toggling the `isOpen` state
+            />
           </div>
         </div>
       </div>

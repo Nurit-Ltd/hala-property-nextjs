@@ -59,7 +59,7 @@ const NavSmall = () => {
 
   return (
     <div className="lg:hidden">
-      <div className="fixed top-0 left-0 right-0 z-[999] bg-darkBlue w-full h-[60px] flex items-center border-b border-black/[8%]">
+      <div className="fixed top-0 left-0 right-0 z-[50] bg-darkBlue w-full h-[60px] flex items-center border-b border-black/[8%]">
         <div className="w-full container_fluid">
           <nav className="w-full flex items-center justify-between">
             <Link
