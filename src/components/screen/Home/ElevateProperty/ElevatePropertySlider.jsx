@@ -72,7 +72,7 @@ const ElevatePropertySlider = () => {
               src={slide.imageUrl}
               alt={slide.title}
               fill
-              className="object-cover w-full rounded-2xl "
+              className="object-cover w-full rounded-2xl"
             />
             <div
               className="absolute top-0 left-0 right-0 opacity-90 w-full h-full rounded-2xl"
