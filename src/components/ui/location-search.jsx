@@ -30,20 +30,6 @@ const LocationSearch = ({ className }) => {
   const ref = useRef(null);
 
   useEffect(() => {
-    const matchMediaQuery = window.matchMedia("(max-width: 767px)");
-    if (matchMediaQuery.matches) {
-      setSelectedLocation("Choose area...");
-    }
-    const handleMediaChange = (e) => {
-      setSelectedLocation(e.matches ? "Choose your area..." : "Choose area...");
-    };
-    matchMediaQuery.addEventListener("change", handleMediaChange);
-    return () => {
-      matchMediaQuery.removeEventListener("change", handleMediaChange);
-    };
-  }, []);
-
-  useEffect(() => {
     const handleKeyDown = (event) => {
       if (event.ctrlKey && event.key === "e") {
         event.preventDefault(); // Prevent browser's default search bar opening
