@@ -28,7 +28,7 @@ const ElevatePropertySlider = () => {
     const diff =
       (index - activeIndex + elevatePropertyCardData.length) %
       elevatePropertyCardData.length;
-    console.log("index", index, "activeIndex", activeIndex, "diff", diff);
+    // console.log("index", index, "activeIndex", activeIndex, "diff", diff);
 
     if (diff === 0) return "w-[90%]  md:w-[562px] z-30  "; // Active
     if (diff === 1) return "w-[10%] md:w-[330px] z-20"; // Next
