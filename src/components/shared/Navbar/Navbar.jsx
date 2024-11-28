@@ -53,7 +53,7 @@ const Navbar = () => {
   const isDropdownActive = ["/about-us", "/contact-us", "/blog"].includes(currentPath);
 
   return (
-    <nav className="hidden lg:block bg-darkBlue navbar-box-shadow max-w-[1920px] mx-auto">
+    <nav className="hidden lg:block bg-darkBlue navbar-box-shadow !max-h-24  ">
       <div className="container_fluid">
         <div className="w-full h-24 flex items-center">
           <div className="w-full h-12 flex items-center justify-between">

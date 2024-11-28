@@ -121,7 +121,7 @@ const SingleBlog = () => {
   ];
 
   return (
-    <div className="pt-[60px] lg:pt-24 font-Manrope bg-white min-h-[70vh]  ">
+    <div className="  font-Manrope bg-white min-h-[70vh]  ">
       <div className="container_fluid pt-[72px]  px-4 2xl:px-0 ">
         {/* Categories */}
         <h2 className="text-xl   font-bold  text-gray-900 leading-tight">Categories</h2>

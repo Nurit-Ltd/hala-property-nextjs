@@ -251,7 +251,7 @@ function CustomMap({ center = Center, category = "all", zoom = 13, minHeight = "
 
   return isLoaded ? (
     <>
-      <GoogleMap center={center} zoom={zoom} mapContainerStyle={{ width: "100%", height: "100%", minHeight: minHeight }} mapTypeId={mapType} onClick={() => setActiveMarker(null)} onLoad={(map) => setMapInstance(map)} options={{ styles: mapStyles, mapTypeControl: mapTypeControl, zoomControl: zoomControl, fullscreenControl: false, streetViewControl: false }}>
+      <GoogleMap center={center} zoom={zoom} mapContainerStyle={{ width: "100%", height: "100%", minHeight: minHeight }} mapTypeId={mapType} onClick={() => setActiveMarker(null)} onLoad={(map) => setMapInstance(map)} options={{ position: "relative", styles: mapStyles, mapTypeControl: mapTypeControl, zoomControl: zoomControl, fullscreenControl: false, streetViewControl: false }}>
         {markers.map(({ id, price, position }) => (
           <CustomMarker key={id} position={position} text={price} onClick={() => handleActiveMarker(id)} markerSize={markerSize} />
         ))}
