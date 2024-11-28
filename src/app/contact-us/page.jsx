@@ -34,7 +34,7 @@ const ContactUs = () => {
   // ];
 
   return (
-    <div className="pt-[60px] lg:pt-24 font-Manrope bg-white">
+    <div className="  font-Manrope bg-white">
       {/* Top Part */}
       <div className="relative h-[530px] xl:h-[650px]  bg-[#f7f5f2] xl:bg-white    ">
         {/* Heading */}

@@ -108,7 +108,7 @@ const Blog = () => {
   ];
 
   return (
-    <div className="pt-[60px] lg:pt-24 font-Manrope bg-white min-h-[70vh]  ">
+    <div className="  font-Manrope bg-white min-h-[70vh]  ">
       {/* Blog Header */}
       <div className="relative h-[256px] xl:h-[650px]">
         <div

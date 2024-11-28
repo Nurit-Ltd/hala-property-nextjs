@@ -13,15 +13,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="relative min-h-screen pb-16 lg:pb-0 lg:h-auto">
+      <body className="relative min-h-screen  ">
         <AiProvider>
-          <div className="fixed top-0 left-0 right-0 z-50">
+          <div className="sticky top-0 left-0  w-full z-50  ">
             <Navbar />
           </div>
           <div>
             <NavSmall />
           </div>
-          <main>{children}</main>
+          <main className="relative  ">{children}</main>
 
           <Footer />
           <NavBottom />

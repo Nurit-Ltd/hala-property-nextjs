@@ -42,7 +42,7 @@ const MapViewPage = () => {
 
   return (
     <>
-      <div className="  mt-15 lg:mt-24  overflow-hidden w-full relative">
+      <div className="    overflow-hidden w-full relative">
         <div className="hidden lg:block">
           <div>
             <div className="mapouter">
@@ -152,7 +152,7 @@ const MapViewPage = () => {
         <div className="block lg:hidden">
           <div className={`${isMapView ? "block" : "hidden"}`}>
             <div className="mapouter">
-              <div className="gmap_canvas desktopMap">
+              <div className="gmap_canvas desktopMap relative">
                 <CustomMap category={activeCategory} minHeight="95vh" zoom={12} center={Center} />
                 {/* <Image alt="map-view" width={1728} height={1433} className="gmap_iframe h-screen lg:h-full w-full object-cover object-left-top" src="/map.png" /> */}
               </div>
