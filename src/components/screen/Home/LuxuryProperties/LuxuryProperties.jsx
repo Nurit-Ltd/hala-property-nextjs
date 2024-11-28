@@ -12,7 +12,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 const LuxuryProperties = () => {
   return (
     <section>
-      <div className="xl:mt-[-130px] max-w-[1424px] mx-auto pt-6 pb-6 md:pt-12 md:pb-[60px] pl-4 pr-0 md:pl-[72px] md:pr-[72px] bg-white xl:rounded-3xl luxury-properties">
+      <div className="2xl:mt-[-130px] max-w-[1424px] mx-auto pt-6 pb-6 md:pt-12 md:pb-[60px] pl-4 pr-0 md:pl-[72px] md:pr-[72px] bg-white xl:rounded-3xl luxury-properties">
         <h2 className="section-header-title text-darkBlue text-center pr-4 md:pr-0">
           Luxury Properties{" "}
           <span className="text-primary">You&apos;ll Love</span>
@@ -37,7 +37,7 @@ const LuxuryProperties = () => {
           </button>
 
           <Swiper
-            spaceBetween={16} 
+            spaceBetween={16}
             slidesPerView={1.2}
             centeredSlides={false}
             navigation={{
@@ -47,7 +47,7 @@ const LuxuryProperties = () => {
             breakpoints={{
               640: {
                 slidesPerView: 2,
-                spaceBetween: 16, 
+                spaceBetween: 16,
               },
               1024: {
                 slidesPerView: 3,
@@ -62,7 +62,10 @@ const LuxuryProperties = () => {
             className="mySwiper"
           >
             {cardData.map((card) => (
-              <SwiperSlide key={card.id} className="pb-5">
+              <SwiperSlide
+                key={card.id}
+                className="pb-5"
+              >
                 <ProductCardFirst card={card} />
               </SwiperSlide>
             ))}
