@@ -3,7 +3,7 @@ import Image from "next/image";
 const ElevatePropertyCard = ({ card }) => {
   return (
     <div>
-      <div className="w-[304px] h-[372px] xl:w-[485px] xl:h-[580px] rounded-2xl relative">
+      <div className="w-[304px] h-[372px] xl:w-[485px] 2xl:h-[580px] rounded-2xl relative">
         <Image
           src={card.imageUrl}
           alt={card.title}
