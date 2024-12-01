@@ -1,113 +1,151 @@
-import { getCname } from "@lib/auth-server";
+// services/productServices.js
 import { baseURL, handleResponse } from "./CommonServices";
 
-const getShowingStoreProducts = async ({
+// Create Product (POST)
+const createProduct = async (body) => {
+  try {
+    const response = await fetch(`${baseURL}/products`, {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(body), // Send product data without cname
+    });
+
+    const product = await handleResponse(response);
+    return { product };
+  } catch (error) {
+    return { error: error.message };
+  }
+};
+
+// Get All Products (GET)
+const getAllProducts = async ({
   category = "",
   title = "",
   sort = "",
   limit = 18,
 }) => {
-  const cname = await getCname();
-  // console.log("cname", cname, typeof cname);
   try {
     const response = await fetch(
-      `${baseURL}/products/store?cname=${cname}&category=${category}&title=${title}&sort=${sort}&limit=${limit}`,
+      `${baseURL}/products/store?category=${category}&title=${title}&sort=${sort}&limit=${limit}`,
       {
-        method: "get",
+        method: "GET",
         cache: "no-cache",
       }
     );
 
     const products = await handleResponse(response);
-
     return {
       products: products.products,
-      popularProducts: products.products,
+      popularProducts: products.popularProducts,
       featureProducts: products.featureProducts,
       discountedProducts: products.discountedProducts,
     };
   } catch (error) {
-    return {
-      error: error.message,
-    };
+    return { error: error.message };
   }
 };
 
-const getShowingStoreProductsAndCategory = async ({ cname }) => {
+// Get Product by Slug (GET)
+const getProductBySlug = async ({ slug }) => {
   try {
     const response = await fetch(
-      `${baseURL}/products/categories/store?cname=${cname}`,
+      `${baseURL}/products/product/slug?slug=${slug}`,
       {
-        method: "get",
-        cache: "no-cache",
-      }
-    );
-
-    const products = await handleResponse(response);
-
-    return {
-      featureProducts: products?.featureProducts,
-      categoriesWithProducts: products?.categoriesWithProducts,
-    };
-  } catch (error) {
-    return {
-      error: error.message,
-    };
-  }
-};
-
-const getRelatedProducts = async ({ cname, ids, catIds, option }) => {
-  try {
-    const response = await fetch(
-      `${baseURL}/products/related/products?cname=${cname}`,
-      {
-        method: "PUT",
-        cache: "no-cache",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ ids, catIds, option }),
-      }
-    );
-
-    const products = await handleResponse(response);
-
-    return {
-      relatedProducts: products.products,
-    };
-  } catch (error) {
-    return {
-      error: error.message,
-    };
-  }
-};
-
-const getProductBySlug = async ({ cname, slug }) => {
-  try {
-    const response = await fetch(
-      `${baseURL}/products/product/slug?cname=${cname}&slug=${slug}`,
-      {
-        method: "get",
+        method: "GET",
         cache: "no-cache",
       }
     );
 
     const product = await handleResponse(response);
-
-    return {
-      product: product?.product,
-    };
+    return { product: product?.product };
   } catch (error) {
-    return {
-      error: error.message,
-    };
+    return { error: error.message };
   }
 };
 
+// Update Product (PUT)
+const updateProduct = async (slug, body) => {
+  try {
+    const response = await fetch(`${baseURL}/products/${slug}`, {
+      method: "PUT",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(body), // Send updated product data without cname
+    });
+
+    const updatedProduct = await handleResponse(response);
+    return { updatedProduct };
+  } catch (error) {
+    return { error: error.message };
+  }
+};
+
+// Delete Product (DELETE)
+const deleteProduct = async (slug) => {
+  try {
+    const response = await fetch(`${baseURL}/products/${slug}`, {
+      method: "DELETE",
+      headers: {
+        Accept: "application/json",
+      },
+    });
+
+    await handleResponse(response); // If the response is successful, return nothing
+    return { message: "Product deleted successfully" };
+  } catch (error) {
+    return { error: error.message };
+  }
+};
+
+// Get Related Products (PUT)
+const getRelatedProducts = async ({ ids, catIds, option }) => {
+  try {
+    const response = await fetch(`${baseURL}/products/related/products`, {
+      method: "PUT",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ ids, catIds, option }),
+    });
+
+    const products = await handleResponse(response);
+    return { relatedProducts: products.products };
+  } catch (error) {
+    return { error: error.message };
+  }
+};
+
+// Get Categories and Featured Products (GET)
+const getShowingStoreProductsAndCategory = async () => {
+  try {
+    const response = await fetch(`${baseURL}/products/categories/store`, {
+      method: "GET",
+      cache: "no-cache",
+    });
+
+    const products = await handleResponse(response);
+    return {
+      featureProducts: products?.featureProducts,
+      categoriesWithProducts: products?.categoriesWithProducts,
+    };
+  } catch (error) {
+    return { error: error.message };
+  }
+};
+
+// Export all services
 export {
+  createProduct,
+  deleteProduct,
+  getAllProducts,
   getProductBySlug,
   getRelatedProducts,
-  getShowingStoreProducts,
   getShowingStoreProductsAndCategory,
+  updateProduct,
 };
