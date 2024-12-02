@@ -10,7 +10,12 @@ const FasterInvestments = () => {
   return (
     <section className="relative">
       <div className="absolute inset-0 w-full h-full -z-0 pointer-events-none">
-        <Image src={bgLight} alt="bgLight" layout="fill" objectFit="cover" />
+        <Image
+          src={bgLight}
+          alt="bgLight"
+          fill
+          style={{ objectFit: "cover" }}
+        />
       </div>
       <div className="pt-4 md:pt-15 z-10">
         <div className="bg-darkBlue">
@@ -76,7 +81,6 @@ const FasterInvestments = () => {
           </div>
         </div>
       </div>
-      
     </section>
   );
 };

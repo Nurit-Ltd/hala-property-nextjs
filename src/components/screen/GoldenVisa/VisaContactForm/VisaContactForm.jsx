@@ -17,6 +17,8 @@ const VisaContactForm = () => {
                     src={shapesText}
                     alt="shapesText"
                     className="w-5 h-5 xl:w-[45px] xl:h-[45px]"
+                    width={45}
+                    height={45}
                   />
                 </div>
               </span>

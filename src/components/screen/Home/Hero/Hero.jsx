@@ -59,7 +59,7 @@ const Hero = () => {
                 <div key={index} className="flex items-center gap-5">
                   <Select>
                     <SelectTrigger className="w-full lg:min-w-[140px] text-sm border-none bg-transparent ring-0 focus:ring-0 outline-none shadow-none flex items-center gap-2 text-grey600">
-                      <Image src={item.icon} alt={`${item.title}-hero`} className="w-4 h-4 lg:w-7 lg:h-7" />
+                      <Image src={item.icon} alt={`${item.title}-hero`} className="w-4 h-4 lg:w-7 lg:h-7" width={28} height={28} />
                       <div className="flex flex-col items-start">
                         <h4 className="hidden text-left lg:block text-sm leading-[19px] lg:text-lg lg:leading-[25px] font-semibold lg:font-bold text-[#04074E]">{item.title}</h4>
                         {item.title === "Bedrooms" ? (
@@ -111,7 +111,7 @@ const Hero = () => {
               ))}
             </div>
             <Button className="w-8 h-8 lg:w-16 lg:h-16 rounded-full bg-primary hover:scale-95 transition-all duration-300 hero-search-box p-0 flex items-center justify-center">
-              <Image src={searchIcon} alt="searchIcon" className="w-3 h-3 lg:w-7 lg:h-7" />
+              <Image src={searchIcon} alt="searchIcon" className="w-3 h-3 lg:w-7 lg:h-7" width={28} height={28} />
             </Button>
           </div>
           <div className="block lg:hidden w-full">

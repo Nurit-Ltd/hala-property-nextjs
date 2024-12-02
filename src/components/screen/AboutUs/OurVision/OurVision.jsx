@@ -11,7 +11,7 @@ const OurVision = () => {
             <h2 className="section-header-title text-center lg:text-start">Our Visio<span className="relative">
             n
             <span className="absolute top-[-10px] right-[-30px] xl:right-[-40px]">
-            <Image src={shapes} alt="shapes" className="w-7 h-7 xl:w-11 xl:h-11" />
+            <Image src={shapes} alt="shapes" className="w-7 h-7 xl:w-11 xl:h-11" width={11} height={11} />
             </span>
             </span>
             

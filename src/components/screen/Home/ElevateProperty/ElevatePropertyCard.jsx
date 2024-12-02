@@ -7,8 +7,9 @@ const ElevatePropertyCard = ({ card }) => {
         <Image
           src={card.imageUrl}
           alt={card.title}
-          fill
           className="object-cover w-[304px] h-[372px] xl:w-[485px] xl:h-[580px] rounded-2xl "
+          width={485}
+          height={580}
         />
         <div
           className="absolute top-0 left-0 right-0 opacity-90 w-full h-full rounded-2xl"
