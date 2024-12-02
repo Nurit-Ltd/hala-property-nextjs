@@ -68,6 +68,8 @@ const LocationSearch = ({ className }) => {
           src={locationIcon}
           alt={`location-hero`}
           className="w-4 h-4 lg:w-7 lg:h-7"
+          width={24}
+          height={24}
         />
         <div className="flex flex-col">
           <h4 className="hidden text-left lg:block text-sm leading-[19px] lg:text-lg lg:leading-[25px] font-semibold lg:font-bold text-grey600 lg:text-darkBlue">
