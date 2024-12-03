@@ -12,6 +12,8 @@ const OurClientCard = ({ testimonial }) => {
             src={testimonial.image}
             alt={testimonial.name}
             className="rounded-full w-6 h-6 md:w-[56px] md:h-[56px]"
+            width={56}
+            height={56}
           />
           <div>
             <h4 className="text-xs md:text-lg font-bold text-[#050C28]">
